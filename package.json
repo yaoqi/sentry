@@ -150,5 +150,8 @@
   "toolchain": {
     "node": "8.15.1",
     "yarn": "1.13.0"
+  },
+  "installConfig": {
+    "pnp": true
   }
 }
