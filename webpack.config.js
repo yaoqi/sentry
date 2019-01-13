@@ -9,6 +9,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+const PnpWebpackPlugin = require(`pnp-webpack-plugin`);
 
 const {env} = process;
 
@@ -284,6 +285,14 @@ const appConfig = {
     },
     modules: ['node_modules'],
     extensions: ['.jsx', '.js', '.json'],
+    plugins: [
+      PnpWebpackPlugin,
+    ],
+  },
+  resolveLoader: {
+    plugins: [
+      PnpWebpackPlugin.moduleLoader(module),
+    ],
   },
   output: {
     path: distPath,
