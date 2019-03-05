@@ -73,13 +73,20 @@ class Webhook(object):
                 external_id=six.text_type(event['repository']['id']),
             )
             for repo in repos:
-                # We need to track GitHub's "full_name" which is the repository slug.
-                # This is needed to access the API since `external_id` isn't sufficient.
-                if repo.config.get('name') != event['repository']['full_name']:
-                    repo.config['name'] = event['repository']['full_name']
-                    repo.save()
-
                 self._handle(integration, event, orgs[repo.organization_id], repo)
+
+    def update_repo_data(self, repo, event):
+        """
+        Given a webhook payload, update stored repo data.
+
+        Assumes a 'repository' key in event payload, with certain subkeys.
+        Rework this if that stops being a safe assumption.
+        """
+
+        repo.config['name'] = event['repository']['full_name']
+        repo.name = event['repository']['full_name']
+        repo.url = event['repository']['html_url']
+        repo.save()
 
 
 class InstallationEventWebhook(Webhook):
@@ -144,6 +151,9 @@ class PushEventWebhook(Webhook):
         return GitHubRepositoryProvider.should_ignore_commit(commit['message'])
 
     def _handle(self, integration, event, organization, repo, host=None):
+        # while we're here, make sure repo data is up to date
+        self.update_repo_data(repo, event)
+
         authors = {}
         client = integration.get_installation(organization_id=organization.id).get_client()
         gh_username_cache = {}
@@ -295,6 +305,9 @@ class PullRequestEventWebhook(Webhook):
         return options.get('github-app.id')
 
     def _handle(self, integration, event, organization, repo, host=None):
+        # while we're here, make sure repo data is up to date
+        self.update_repo_data(repo, event)
+
         pull_request = event['pull_request']
         number = pull_request['number']
         title = pull_request['title']

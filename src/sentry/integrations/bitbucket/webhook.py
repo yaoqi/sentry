@@ -42,6 +42,25 @@ class Webhook(object):
     def __call__(self, organization, event):
         raise NotImplementedError
 
+    def update_repo_data(self, repo, event):
+        """
+        Given a webhook payload, update stored repo data.
+
+        NB: Assumes event['repository']['full_name'] is defined. Rework this if
+        that stops being a safe assumption.
+        """
+
+        current_name = event['repository']['full_name']
+        repo.config['name'] = current_name
+        repo.name = current_name
+        # build the URL manually since it doesn't come back from the API (at
+        # least from the one webhook we currently collect)
+        # https://confluence.atlassian.com/bitbucket/event-payloads-740262817.html#EventPayloads-entity_repository
+        # (click on 'Repository property' underneath the table for example
+        # data; neither 'links' nor 'website' give us what we need)
+        repo.url = u'https://bitbucket.org/{}'.format(current_name)
+        repo.save()
+
 
 def parse_raw_user_email(raw):
     # captures content between angle brackets
@@ -70,9 +89,8 @@ class PushEventWebhook(Webhook):
         except Repository.DoesNotExist:
             raise Http404()
 
-        if repo.config.get('name') != event['repository']['full_name']:
-            repo.config['name'] = event['repository']['full_name']
-            repo.save()
+        # while we're here, make sure repo data is up to date
+        self.update_repo_data(repo, event)
 
         for change in event['push']['changes']:
             for commit in change.get('commits', []):
