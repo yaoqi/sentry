@@ -33,6 +33,11 @@ class Webhook(object):
         raise NotImplementedError
 
     def get_repo(self, integration, organization, event):
+        """
+        Given a webhook payload, get the associated Repository record.
+
+        Assumes a 'project' key in event payload.
+        """
         try:
             project_id = event['project']['id']
         except KeyError:
@@ -52,6 +57,20 @@ class Webhook(object):
             return None
         return repo
 
+    def update_repo_data(self, repo, event):
+        """
+        Given a webhook payload, update stored repo data.
+
+        Assumes a 'project' key in event payload, with certain subkeys. Rework
+        this if that stops being a safe assumption.
+        """
+
+        project = event['project']
+        repo.name = '{} / {}'.format(project['namespace'], project['name'])
+        repo.url = project['web_url']
+        repo.config['path'] = project['path_with_namespace']
+        repo.save()
+
 
 class MergeEventWebhook(Webhook):
     """
@@ -64,6 +83,10 @@ class MergeEventWebhook(Webhook):
         repo = self.get_repo(integration, organization, event)
         if repo is None:
             return
+
+        # while we're here, make sure repo data is up to date
+        self.update_repo_data(repo, event)
+
         try:
             number = event['object_attributes']['iid']
             title = event['object_attributes']['title']
@@ -118,6 +141,9 @@ class PushEventWebhook(Webhook):
         repo = self.get_repo(integration, organization, event)
         if repo is None:
             return
+
+        # while we're here, make sure repo data is up to date
+        self.update_repo_data(repo, event)
 
         authors = {}
 
