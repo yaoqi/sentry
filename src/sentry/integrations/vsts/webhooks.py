@@ -43,6 +43,7 @@ class WorkItemWebhook(Endpoint):
                 }
             )
 
+        # https://docs.microsoft.com/en-us/azure/devops/service-hooks/events?view=azure-devops#workitem.updated
         if event_type == 'workitem.updated':
             try:
                 integration = Integration.objects.get(
