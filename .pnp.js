@@ -3581,6 +3581,14 @@ let packageInformationStores = new Map([
       ]),
     }],
   ])],
+  ["app", new Map([
+    ["0.0.0", {
+      packageLocation: path.resolve(__dirname, "./src/sentry/static/sentry/app/"),
+      packageDependencies: new Map([
+        ["app", "0.0.0"],
+      ]),
+    }],
+  ])],
   ["babel-core", new Map([
     ["7.0.0-bridge.0", {
       packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-babel-core-7.0.0-bridge.0-95a492ddd90f9b4e9a4a1da14eb335b87b634ece/node_modules/babel-core/"),
@@ -20774,6 +20782,7 @@ let packageInformationStores = new Map([
         ["@emotion/is-prop-valid", "0.7.3"],
         ["@sentry/browser", "4.5.2"],
         ["algoliasearch", "3.32.0"],
+        ["app", "0.0.0"],
         ["babel-core", "7.0.0-bridge.0"],
         ["babel-loader", "8.0.5"],
         ["babel-plugin-emotion", "9.1.2"],
@@ -21507,6 +21516,7 @@ let locatorsByLocations = new Map([
   ["../../Library/Caches/Yarn/v4/npm-tunnel-agent-0.6.0-27a5dea06b36b04a0a9966774b290868f0fc40fd/node_modules/tunnel-agent/", {"name":"tunnel-agent","reference":"0.6.0"}],
   ["../../Library/Caches/Yarn/v4/npm-safe-buffer-5.1.1-893312af69b2123def71f57889001671eeb2c853/node_modules/safe-buffer/", {"name":"safe-buffer","reference":"5.1.1"}],
   ["../../Library/Caches/Yarn/v4/npm-safe-buffer-5.1.2-991ec69d296e0313747d59bdfd2b745c35f8828d/node_modules/safe-buffer/", {"name":"safe-buffer","reference":"5.1.2"}],
+  ["./src/sentry/static/sentry/app/", {"name":"app","reference":"0.0.0"}],
   ["../../Library/Caches/Yarn/v4/npm-babel-core-7.0.0-bridge.0-95a492ddd90f9b4e9a4a1da14eb335b87b634ece/node_modules/babel-core/", {"name":"babel-core","reference":"7.0.0-bridge.0"}],
   ["../../Library/Caches/Yarn/v4/npm-babel-core-6.21.0-75525480c21c803f826ef3867d22c19f080a3724/node_modules/babel-core/", {"name":"babel-core","reference":"6.21.0"}],
   ["../../Library/Caches/Yarn/v4/npm-babel-core-6.26.0-af32f78b31a6fcef119c87b0fd8d9753f03a0bb8/node_modules/babel-core/", {"name":"babel-core","reference":"6.26.0"}],
@@ -23625,6 +23635,10 @@ exports.findPackageLocator = function findPackageLocator(location) {
 
   if (relativeLocation.length >= 86 && relativeLocation[85] === '/')
     if (match = locatorsByLocations.get(relativeLocation.substr(0, 86)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 31 && relativeLocation[30] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 31)))
       return blacklistCheck(match);
 
   if (relativeLocation.length >= 2 && relativeLocation[1] === '/')

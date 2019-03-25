@@ -275,7 +275,6 @@ const appConfig = {
   ],
   resolve: {
     alias: {
-      app: path.join(staticPrefix, 'app'),
       'app-test': path.join(__dirname, 'tests', 'js'),
       'sentry-locale': path.join(__dirname, 'src', 'sentry', 'locale'),
       'integration-docs-platforms':
@@ -285,14 +284,10 @@ const appConfig = {
     },
     modules: ['node_modules'],
     extensions: ['.jsx', '.js', '.json'],
-    plugins: [
-      PnpWebpackPlugin,
-    ],
+    plugins: [PnpWebpackPlugin],
   },
   resolveLoader: {
-    plugins: [
-      PnpWebpackPlugin.moduleLoader(module),
-    ],
+    plugins: [PnpWebpackPlugin.moduleLoader(module)],
   },
   output: {
     path: distPath,
@@ -334,9 +329,7 @@ const legacyCssConfig = {
     modules: [staticPrefix, 'node_modules'],
   },
   resolveLoader: {
-    plugins: [
-      PnpWebpackPlugin.moduleLoader(module),
-    ],
+    plugins: [PnpWebpackPlugin.moduleLoader(module)],
   },
   module: {
     rules: [

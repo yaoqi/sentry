@@ -21,6 +21,7 @@
     "@emotion/is-prop-valid": "^0.7.3",
     "@sentry/browser": "5.0.0-rc.3",
     "algoliasearch": "^3.32.0",
+    "app": "link:./src/sentry/static/sentry/app",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.0",
     "babel-plugin-emotion": "9.1.2",
@@ -148,8 +149,10 @@
     "dev": "(yarn check --verify-tree || yarn) && sentry devserver --browser-reload",
     "dev-server": "webpack-dev-server",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .storybook-out && sed -i -e 's/\\/sb_dll/sb_dll/g' .storybook-out/index.html",
-    "snapshot": "build-storybook && PERCY_TOKEN=$STORYBOOK_PERCY_TOKEN PERCY_PROJECT=$STORYBOOK_PERCY_PROJECT percy-storybook --widths=1280",
+    "storybook-build":
+      "build-storybook -c .storybook -o .storybook-out && sed -i -e 's/\\/sb_dll/sb_dll/g' .storybook-out/index.html",
+    "snapshot":
+      "build-storybook && PERCY_TOKEN=$STORYBOOK_PERCY_TOKEN PERCY_PROJECT=$STORYBOOK_PERCY_PROJECT percy-storybook --widths=1280",
     "webpack-profile": "yarn -s webpack --profile --json > stats.json"
   },
   "toolchain": {
