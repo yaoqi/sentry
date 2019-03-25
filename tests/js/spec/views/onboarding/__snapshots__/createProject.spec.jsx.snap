@@ -72,7 +72,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
             withMargins={true}
           >
             <h1
-              className="css-13ev48w-Wrapper e1f8hk460"
+              className="css-13ev48w-Wrapper e3ifmx60"
             >
               Choose a language or framework:
             </h1>
@@ -786,7 +786,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Give your project a name:
                 </h1>
@@ -827,7 +827,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Team:
                 </h1>
@@ -889,7 +889,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                       value="test"
                     >
                       <SelectControl
-                        className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                        className="css-1yb4m7w-StyledSelectControl e17ygei0"
                         clearable={false}
                         disabled={false}
                         height={36}
@@ -911,7 +911,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                         <StyledSelect
                           arrowRenderer={[Function]}
                           backspaceRemoves={false}
-                          className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                          className="css-1yb4m7w-StyledSelectControl e17ygei0"
                           clearable={false}
                           deleteRemoves={false}
                           disabled={false}
@@ -934,7 +934,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                           <ForwardRef(SelectPicker)
                             arrowRenderer={[Function]}
                             backspaceRemoves={false}
-                            className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                            className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                             clearable={false}
                             deleteRemoves={false}
                             disabled={false}
@@ -957,7 +957,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                             <SelectPicker
                               arrowRenderer={[Function]}
                               backspaceRemoves={false}
-                              className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                              className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                               clearable={false}
                               deleteRemoves={false}
                               disabled={false}
@@ -983,7 +983,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                                 autosize={true}
                                 backspaceRemoves={false}
                                 backspaceToRemoveMessage="Press backspace to remove {label}"
-                                className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                                className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                                 clearAllText="Clear all"
                                 clearRenderer={[Function]}
                                 clearValueText="Clear value"
@@ -1039,7 +1039,7 @@ exports[`CreateProject should deal with incorrect platform name if its provided 
                                 valueKey="value"
                               >
                                 <div
-                                  className="Select e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20 has-value is-searchable Select--single"
+                                  className="Select e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0 has-value is-searchable Select--single"
                                 >
                                   <input
                                     disabled={false}
@@ -1229,7 +1229,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
             withMargins={true}
           >
             <h1
-              className="css-13ev48w-Wrapper e1f8hk460"
+              className="css-13ev48w-Wrapper e3ifmx60"
             >
               Choose a language or framework:
             </h1>
@@ -1553,7 +1553,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Give your project a name:
                 </h1>
@@ -1594,7 +1594,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Team:
                 </h1>
@@ -1656,7 +1656,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                       value="test"
                     >
                       <SelectControl
-                        className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                        className="css-1yb4m7w-StyledSelectControl e17ygei0"
                         clearable={false}
                         disabled={false}
                         height={36}
@@ -1678,7 +1678,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                         <StyledSelect
                           arrowRenderer={[Function]}
                           backspaceRemoves={false}
-                          className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                          className="css-1yb4m7w-StyledSelectControl e17ygei0"
                           clearable={false}
                           deleteRemoves={false}
                           disabled={false}
@@ -1701,7 +1701,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                           <ForwardRef(SelectPicker)
                             arrowRenderer={[Function]}
                             backspaceRemoves={false}
-                            className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                            className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                             clearable={false}
                             deleteRemoves={false}
                             disabled={false}
@@ -1724,7 +1724,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                             <SelectPicker
                               arrowRenderer={[Function]}
                               backspaceRemoves={false}
-                              className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                              className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                               clearable={false}
                               deleteRemoves={false}
                               disabled={false}
@@ -1750,7 +1750,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                                 autosize={true}
                                 backspaceRemoves={false}
                                 backspaceToRemoveMessage="Press backspace to remove {label}"
-                                className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                                className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                                 clearAllText="Clear all"
                                 clearRenderer={[Function]}
                                 clearValueText="Clear value"
@@ -1806,7 +1806,7 @@ exports[`CreateProject should fill in platform name if its provided by url 1`] =
                                 valueKey="value"
                               >
                                 <div
-                                  className="Select e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20 has-value is-searchable Select--single"
+                                  className="Select e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0 has-value is-searchable Select--single"
                                 >
                                   <input
                                     disabled={false}
@@ -1996,7 +1996,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
             withMargins={true}
           >
             <h1
-              className="css-13ev48w-Wrapper e1f8hk460"
+              className="css-13ev48w-Wrapper e3ifmx60"
             >
               Choose a language or framework:
             </h1>
@@ -2710,7 +2710,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Give your project a name:
                 </h1>
@@ -2751,7 +2751,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                 withMargins={true}
               >
                 <h1
-                  className="css-13ev48w-Wrapper e1f8hk460"
+                  className="css-13ev48w-Wrapper e3ifmx60"
                 >
                   Team:
                 </h1>
@@ -2813,7 +2813,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                       value="test"
                     >
                       <SelectControl
-                        className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                        className="css-1yb4m7w-StyledSelectControl e17ygei0"
                         clearable={false}
                         disabled={false}
                         height={36}
@@ -2835,7 +2835,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                         <StyledSelect
                           arrowRenderer={[Function]}
                           backspaceRemoves={false}
-                          className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                          className="css-1yb4m7w-StyledSelectControl e17ygei0"
                           clearable={false}
                           deleteRemoves={false}
                           disabled={false}
@@ -2858,7 +2858,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                           <ForwardRef(SelectPicker)
                             arrowRenderer={[Function]}
                             backspaceRemoves={false}
-                            className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                            className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                             clearable={false}
                             deleteRemoves={false}
                             disabled={false}
@@ -2881,7 +2881,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                             <SelectPicker
                               arrowRenderer={[Function]}
                               backspaceRemoves={false}
-                              className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                              className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                               clearable={false}
                               deleteRemoves={false}
                               disabled={false}
@@ -2907,7 +2907,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                                 autosize={true}
                                 backspaceRemoves={false}
                                 backspaceToRemoveMessage="Press backspace to remove {label}"
-                                className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                                className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                                 clearAllText="Clear all"
                                 clearRenderer={[Function]}
                                 clearValueText="Clear value"
@@ -2963,7 +2963,7 @@ exports[`CreateProject should fill in project name if its empty when platform is
                                 valueKey="value"
                               >
                                 <div
-                                  className="Select e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20 has-value is-searchable Select--single"
+                                  className="Select e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0 has-value is-searchable Select--single"
                                 >
                                   <input
                                     disabled={false}

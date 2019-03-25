@@ -145,7 +145,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
         withMargins={true}
       >
         <h1
-          className="css-wxef79-Wrapper e1f8hk460"
+          className="css-wxef79-Wrapper e3ifmx60"
         >
           Choose a language or framework:
         </h1>
@@ -873,7 +873,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
             withMargins={true}
           >
             <h1
-              className="css-wxef79-Wrapper e1f8hk460"
+              className="css-wxef79-Wrapper e3ifmx60"
             >
               Give your project a name:
             </h1>
@@ -914,7 +914,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
             withMargins={true}
           >
             <h1
-              className="css-wxef79-Wrapper e1f8hk460"
+              className="css-wxef79-Wrapper e3ifmx60"
             >
               Team:
             </h1>
@@ -962,7 +962,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                   value=""
                 >
                   <SelectControl
-                    className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                    className="css-1yb4m7w-StyledSelectControl e17ygei0"
                     clearable={false}
                     disabled={false}
                     height={36}
@@ -977,7 +977,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                     <StyledSelect
                       arrowRenderer={[Function]}
                       backspaceRemoves={false}
-                      className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                      className="css-1yb4m7w-StyledSelectControl e17ygei0"
                       clearable={false}
                       deleteRemoves={false}
                       disabled={false}
@@ -993,7 +993,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                       <ForwardRef(SelectPicker)
                         arrowRenderer={[Function]}
                         backspaceRemoves={false}
-                        className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                        className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                         clearable={false}
                         deleteRemoves={false}
                         disabled={false}
@@ -1009,7 +1009,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                         <SelectPicker
                           arrowRenderer={[Function]}
                           backspaceRemoves={false}
-                          className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                          className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                           clearable={false}
                           deleteRemoves={false}
                           disabled={false}
@@ -1028,7 +1028,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                             autosize={true}
                             backspaceRemoves={false}
                             backspaceToRemoveMessage="Press backspace to remove {label}"
-                            className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                            className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                             clearAllText="Clear all"
                             clearRenderer={[Function]}
                             clearValueText="Clear value"
@@ -1077,7 +1077,7 @@ exports[`Project render() should set required class on empty submit 1`] = `
                             valueKey="value"
                           >
                             <div
-                              className="Select e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20 is-searchable Select--single"
+                              className="Select e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0 is-searchable Select--single"
                             >
                               <div
                                 className="Select-control"

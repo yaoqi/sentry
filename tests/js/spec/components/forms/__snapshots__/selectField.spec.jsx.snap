@@ -116,7 +116,7 @@ exports[`SelectField renders without form context 1`] = `
         value="a"
       >
         <SelectControl
-          className="css-j6zs66-StyledSelectControl e1qrhqd00"
+          className="css-1yb4m7w-StyledSelectControl e17ygei0"
           clearable={true}
           disabled={false}
           height={36}
@@ -142,7 +142,7 @@ exports[`SelectField renders without form context 1`] = `
           <StyledSelect
             arrowRenderer={[Function]}
             backspaceRemoves={true}
-            className="css-j6zs66-StyledSelectControl e1qrhqd00"
+            className="css-1yb4m7w-StyledSelectControl e17ygei0"
             clearable={true}
             deleteRemoves={true}
             disabled={false}
@@ -169,7 +169,7 @@ exports[`SelectField renders without form context 1`] = `
             <ForwardRef(SelectPicker)
               arrowRenderer={[Function]}
               backspaceRemoves={true}
-              className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+              className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
               clearable={true}
               deleteRemoves={true}
               disabled={false}
@@ -196,7 +196,7 @@ exports[`SelectField renders without form context 1`] = `
               <SelectPicker
                 arrowRenderer={[Function]}
                 backspaceRemoves={true}
-                className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                 clearable={true}
                 deleteRemoves={true}
                 disabled={false}
@@ -226,7 +226,7 @@ exports[`SelectField renders without form context 1`] = `
                   autosize={true}
                   backspaceRemoves={true}
                   backspaceToRemoveMessage="Press backspace to remove {label}"
-                  className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                  className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                   clearAllText="Clear all"
                   clearRenderer={[Function]}
                   clearValueText="Clear value"
@@ -286,7 +286,7 @@ exports[`SelectField renders without form context 1`] = `
                   valueKey="value"
                 >
                   <div
-                    className="Select e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20 has-value is-clearable is-searchable Select--single"
+                    className="Select e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0 has-value is-clearable is-searchable Select--single"
                   >
                     <input
                       disabled={false}

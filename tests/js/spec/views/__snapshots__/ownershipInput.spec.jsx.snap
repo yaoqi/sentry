@@ -95,7 +95,7 @@ exports[`Project Ownership Input renders 1`] = `
   >
     <BuilderBar>
       <div
-        className="css-1kvuz3c-BuilderBar e1hyuoc75"
+        className="css-1kvuz3c-BuilderBar euqb7gv5"
       >
         <BuilderSelect
           clearable={false}
@@ -122,7 +122,7 @@ exports[`Project Ownership Input renders 1`] = `
           value="path"
         >
           <SelectField
-            className="css-1bclqmz-BuilderSelect e1hyuoc76"
+            className="css-1bclqmz-BuilderSelect euqb7gv6"
             clearable={false}
             disabled={false}
             hideErrorMessage={false}
@@ -151,7 +151,7 @@ exports[`Project Ownership Input renders 1`] = `
             value="path"
           >
             <div
-              className="css-1bclqmz-BuilderSelect e1hyuoc76"
+              className="css-1bclqmz-BuilderSelect euqb7gv6"
               style={
                 Object {
                   "width": 140,
@@ -184,7 +184,7 @@ exports[`Project Ownership Input renders 1`] = `
                   value="path"
                 >
                   <SelectControl
-                    className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                    className="css-1yb4m7w-StyledSelectControl e17ygei0"
                     clearable={false}
                     disabled={false}
                     height={36}
@@ -210,7 +210,7 @@ exports[`Project Ownership Input renders 1`] = `
                     <StyledSelect
                       arrowRenderer={[Function]}
                       backspaceRemoves={false}
-                      className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                      className="css-1yb4m7w-StyledSelectControl e17ygei0"
                       clearable={false}
                       deleteRemoves={false}
                       disabled={false}
@@ -237,7 +237,7 @@ exports[`Project Ownership Input renders 1`] = `
                       <ForwardRef(SelectPicker)
                         arrowRenderer={[Function]}
                         backspaceRemoves={false}
-                        className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                        className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                         clearable={false}
                         deleteRemoves={false}
                         disabled={false}
@@ -264,7 +264,7 @@ exports[`Project Ownership Input renders 1`] = `
                         <SelectPicker
                           arrowRenderer={[Function]}
                           backspaceRemoves={false}
-                          className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                          className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                           clearable={false}
                           deleteRemoves={false}
                           disabled={false}
@@ -294,7 +294,7 @@ exports[`Project Ownership Input renders 1`] = `
                             autosize={true}
                             backspaceRemoves={false}
                             backspaceToRemoveMessage="Press backspace to remove {label}"
-                            className="e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20"
+                            className="e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0"
                             clearAllText="Clear all"
                             clearRenderer={[Function]}
                             clearValueText="Clear value"
@@ -354,7 +354,7 @@ exports[`Project Ownership Input renders 1`] = `
                             valueKey="value"
                           >
                             <div
-                              className="Select e1qrhqd00 css-pr263a-StyledSelect-StyledSelectControl eho28m20 has-value is-searchable Select--single"
+                              className="Select e17ygei0 css-1p8p2hs-StyledSelect-StyledSelectControl e1rv3krr0 has-value is-searchable Select--single"
                             >
                               <input
                                 disabled={false}
@@ -487,7 +487,7 @@ exports[`Project Ownership Input renders 1`] = `
           value=""
         >
           <input
-            className="css-1enrgn8-Input-inputStyles-BuilderInput e1hyuoc77"
+            className="css-1enrgn8-Input-inputStyles-BuilderInput euqb7gv7"
             onChange={[Function]}
             placeholder="src/example/*"
             value=""
@@ -497,17 +497,17 @@ exports[`Project Ownership Input renders 1`] = `
           src="icon-chevron-right"
         >
           <InlineSvg
-            className="css-a4tn6s-Divider e1hyuoc78"
+            className="css-a4tn6s-Divider euqb7gv8"
             src="icon-chevron-right"
           >
             <StyledSvg
-              className="css-a4tn6s-Divider e1hyuoc78"
+              className="css-a4tn6s-Divider euqb7gv8"
               height="1em"
               viewBox={Object {}}
               width="1em"
             >
               <svg
-                className="e1hyuoc78 css-1uv43pt-StyledSvg-Divider e2idor0"
+                className="euqb7gv8 css-1uv43pt-StyledSvg-Divider ebb48o80"
                 height="1em"
                 viewBox={Object {}}
                 width="1em"
@@ -634,7 +634,7 @@ exports[`Project Ownership Input renders 1`] = `
                         async={true}
                         backspaceRemoves={true}
                         cache={false}
-                        className="css-11afz1b-StyledSelect eho28m20"
+                        className="css-11afz1b-StyledSelect e1rv3krr0"
                         clearable={true}
                         defaultOptions={true}
                         deleteRemoves={true}
@@ -654,7 +654,7 @@ exports[`Project Ownership Input renders 1`] = `
                           async={true}
                           backspaceRemoves={true}
                           cache={false}
-                          className="css-11afz1b-StyledSelect eho28m20"
+                          className="css-11afz1b-StyledSelect e1rv3krr0"
                           clearable={true}
                           defaultOptions={true}
                           deleteRemoves={true}
@@ -675,7 +675,7 @@ exports[`Project Ownership Input renders 1`] = `
                             autoload={true}
                             backspaceRemoves={true}
                             cache={false}
-                            className="css-11afz1b-StyledSelect eho28m20"
+                            className="css-11afz1b-StyledSelect e1rv3krr0"
                             clearable={true}
                             defaultOptions={true}
                             deleteRemoves={true}
@@ -702,7 +702,7 @@ exports[`Project Ownership Input renders 1`] = `
                               backspaceRemoves={true}
                               backspaceToRemoveMessage="Press backspace to remove {label}"
                               cache={false}
-                              className="css-11afz1b-StyledSelect eho28m20"
+                              className="css-11afz1b-StyledSelect e1rv3krr0"
                               clearAllText="Clear all"
                               clearRenderer={[Function]}
                               clearValueText="Clear value"
@@ -754,7 +754,7 @@ exports[`Project Ownership Input renders 1`] = `
                               valueKey="value"
                             >
                               <div
-                                className="Select css-11afz1b-StyledSelect eho28m20 is-clearable is-loading is-searchable Select--multi"
+                                className="Select css-11afz1b-StyledSelect e1rv3krr0 is-clearable is-loading is-searchable Select--multi"
                               >
                                 <div
                                   className="Select-control"
@@ -867,7 +867,7 @@ exports[`Project Ownership Input renders 1`] = `
           size="small"
         >
           <Button
-            className="css-po7kq7-AddButton e1hyuoc79"
+            className="css-po7kq7-AddButton euqb7gv9"
             disabled={true}
             icon="icon-circle-add"
             onClick={[Function]}
@@ -876,7 +876,7 @@ exports[`Project Ownership Input renders 1`] = `
           >
             <StyledButton
               aria-disabled={true}
-              className="css-po7kq7-AddButton e1hyuoc79"
+              className="css-po7kq7-AddButton euqb7gv9"
               disabled={true}
               href={null}
               onClick={[Function]}
@@ -887,7 +887,7 @@ exports[`Project Ownership Input renders 1`] = `
             >
               <Component
                 aria-disabled={true}
-                className="e1hyuoc79 css-ogw40-StyledButton-getColors-AddButton eqrebog0"
+                className="euqb7gv9 css-ogw40-StyledButton-getColors-AddButton e7bsqvz0"
                 href={null}
                 onClick={[Function]}
                 role="button"
@@ -896,7 +896,7 @@ exports[`Project Ownership Input renders 1`] = `
               >
                 <button
                   aria-disabled={true}
-                  className="e1hyuoc79 css-ogw40-StyledButton-getColors-AddButton eqrebog0"
+                  className="euqb7gv9 css-ogw40-StyledButton-getColors-AddButton e7bsqvz0"
                   href={null}
                   onClick={[Function]}
                   role="button"
@@ -908,24 +908,24 @@ exports[`Project Ownership Input renders 1`] = `
                     size="small"
                   >
                     <Component
-                      className="css-7ui8bl-ButtonLabel eqrebog1"
+                      className="css-7ui8bl-ButtonLabel e7bsqvz1"
                       priority="primary"
                       size="small"
                     >
                       <span
-                        className="css-7ui8bl-ButtonLabel eqrebog1"
+                        className="css-7ui8bl-ButtonLabel e7bsqvz1"
                       >
                         <Icon
                           hasChildren={false}
                           size="small"
                         >
                           <Component
-                            className="css-ljhpxy-Icon eqrebog2"
+                            className="css-ljhpxy-Icon e7bsqvz2"
                             hasChildren={false}
                             size="small"
                           >
                             <span
-                              className="css-ljhpxy-Icon eqrebog2"
+                              className="css-ljhpxy-Icon e7bsqvz2"
                               size="small"
                             >
                               <StyledInlineSvg
@@ -933,18 +933,18 @@ exports[`Project Ownership Input renders 1`] = `
                                 src="icon-circle-add"
                               >
                                 <InlineSvg
-                                  className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                  className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                   size="12px"
                                   src="icon-circle-add"
                                 >
                                   <StyledSvg
-                                    className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                    className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                     height="12px"
                                     viewBox={Object {}}
                                     width="12px"
                                   >
                                     <svg
-                                      className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                      className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                       height="12px"
                                       viewBox={Object {}}
                                       width="12px"
@@ -995,7 +995,7 @@ url:http://example.com/settings/* #product"
         autoCapitalize="off"
         autoComplete="off"
         autoCorrect="off"
-        className="css-cqfvlz-StyledTextArea-inputStyles en3n9di2"
+        className="css-cqfvlz-StyledTextArea-inputStyles e1rt3v792"
         onChange={[Function]}
         placeholder="#example usage
 path:src/example/pipeline/* person@sentry.io #infra
@@ -1009,7 +1009,7 @@ url:http://example.com/settings/* #product"
           autoCapitalize="off"
           autoComplete="off"
           autoCorrect="off"
-          className="css-cqfvlz-StyledTextArea-inputStyles en3n9di2"
+          className="css-cqfvlz-StyledTextArea-inputStyles e1rt3v792"
           onChange={[Function]}
           placeholder="#example usage
 path:src/example/pipeline/* person@sentry.io #infra
@@ -1036,7 +1036,7 @@ url:http://example.com/settings/* #product"
           <div />
           <SaveButton>
             <div
-              className="css-5zvod-SaveButton en3n9di1"
+              className="css-5zvod-SaveButton e1rt3v791"
             >
               <Button
                 disabled={false}
@@ -1056,7 +1056,7 @@ url:http://example.com/settings/* #product"
                   <Component
                     aria-disabled={false}
                     aria-label="Save Changes"
-                    className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                    className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                     onClick={[Function]}
                     role="button"
                     size="small"
@@ -1064,7 +1064,7 @@ url:http://example.com/settings/* #product"
                     <button
                       aria-disabled={false}
                       aria-label="Save Changes"
-                      className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                      className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                       onClick={[Function]}
                       role="button"
                       size="small"
@@ -1074,12 +1074,12 @@ url:http://example.com/settings/* #product"
                         size="small"
                       >
                         <Component
-                          className="css-7ui8bl-ButtonLabel eqrebog1"
+                          className="css-7ui8bl-ButtonLabel e7bsqvz1"
                           priority="primary"
                           size="small"
                         >
                           <span
-                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                           >
                             Save Changes
                           </span>

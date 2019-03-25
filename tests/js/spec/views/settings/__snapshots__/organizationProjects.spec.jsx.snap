@@ -32,7 +32,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
         >
           <Wrapper>
             <div
-              className="css-1r5ylk7-Wrapper e1kblvez2"
+              className="css-1r5ylk7-Wrapper e1ievzxl2"
             >
               <Flex
                 align="center"
@@ -49,15 +49,15 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                       styled={false}
                     >
                       <Base
-                        className="css-1ky52ze-Title e1kblvez0"
+                        className="css-1ky52ze-Title e1ievzxl0"
                       >
                         <div
-                          className="css-1ky52ze-Title e1kblvez0"
+                          className="css-1ky52ze-Title e1ievzxl0"
                           is={null}
                         >
                           <HeaderTitle>
                             <h4
-                              className="css-1w8ttcn-HeaderTitle e6lvex72"
+                              className="css-1w8ttcn-HeaderTitle elc10ae2"
                             >
                               Projects
                             </h4>
@@ -67,7 +67,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                     </Title>
                     <Action>
                       <div
-                        className="css-18luhfc-Action e1kblvez1"
+                        className="css-18luhfc-Action e1ievzxl1"
                       >
                         <Button
                           disabled={false}
@@ -89,7 +89,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                             <Component
                               aria-disabled={false}
                               aria-label="Create Project"
-                              className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                              className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                               onClick={[Function]}
                               role="button"
                               size="small"
@@ -98,7 +98,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                               <Link
                                 aria-disabled={false}
                                 aria-label="Create Project"
-                                className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                                className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                                 onClick={[Function]}
                                 onlyActiveOnIndex={false}
                                 role="button"
@@ -109,7 +109,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                 <a
                                   aria-disabled={false}
                                   aria-label="Create Project"
-                                  className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                                  className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                                   onClick={[Function]}
                                   role="button"
                                   size="small"
@@ -120,24 +120,24 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                     size="small"
                                   >
                                     <Component
-                                      className="css-7ui8bl-ButtonLabel eqrebog1"
+                                      className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                       priority="primary"
                                       size="small"
                                     >
                                       <span
-                                        className="css-7ui8bl-ButtonLabel eqrebog1"
+                                        className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                       >
                                         <Icon
                                           hasChildren={true}
                                           size="small"
                                         >
                                           <Component
-                                            className="css-1vdnsie-Icon eqrebog2"
+                                            className="css-1vdnsie-Icon e7bsqvz2"
                                             hasChildren={true}
                                             size="small"
                                           >
                                             <span
-                                              className="css-1vdnsie-Icon eqrebog2"
+                                              className="css-1vdnsie-Icon e7bsqvz2"
                                               size="small"
                                             >
                                               <StyledInlineSvg
@@ -145,18 +145,18 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                                 src="icon-circle-add"
                                               >
                                                 <InlineSvg
-                                                  className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                  className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                   size="12px"
                                                   src="icon-circle-add"
                                                 >
                                                   <StyledSvg
-                                                    className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                    className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                     height="12px"
                                                     viewBox={Object {}}
                                                     width="12px"
                                                   >
                                                     <svg
-                                                      className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                      className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                       height="12px"
                                                       viewBox={Object {}}
                                                       width="12px"
@@ -191,30 +191,30 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
         </SettingsPageHeading>
         <Panel>
           <Component
-            className="css-yahxlu-Panel e1laxa7d0"
+            className="css-yahxlu-Panel e16u4s2c0"
           >
             <div
-              className="css-yahxlu-Panel e1laxa7d0"
+              className="css-yahxlu-Panel e16u4s2c0"
             >
               <PanelHeader
                 hasButtons={true}
               >
                 <Component
-                  className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+                  className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
                   hasButtons={true}
                 >
                   <Flex
                     align="center"
-                    className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+                    className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
                     justify="space-between"
                   >
                     <Base
                       align="center"
-                      className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                      className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                       justify="space-between"
                     >
                       <div
-                        className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                        className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                         is={null}
                       >
                         Projects
@@ -290,7 +290,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                               onSubmit={[Function]}
                             >
                               <form
-                                className="css-vfrmj7-Form et3a3ng1"
+                                className="css-vfrmj7-Form eohhsvj1"
                                 onSubmit={[Function]}
                               >
                                 <Input
@@ -300,7 +300,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                   value=""
                                 >
                                   <input
-                                    className="search css-pzg7em-Input-inputStyles e1xej46s0"
+                                    className="search css-pzg7em-Input-inputStyles e1ebb8kf0"
                                     onChange={[Function]}
                                     placeholder="Search Projects"
                                     value=""
@@ -331,11 +331,11 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                   >
                     <Base
                       align="center"
-                      className="css-1jykl04-PanelItem eo8n7lk0"
+                      className="css-1jykl04-PanelItem egwqg5y0"
                       p={0}
                     >
                       <div
-                        className="css-1jykl04-PanelItem eo8n7lk0"
+                        className="css-1jykl04-PanelItem egwqg5y0"
                         is={null}
                       >
                         <Box
@@ -397,7 +397,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                   key="2"
                                 >
                                   <div
-                                    className="css-9ku3o0-Container enngb6z0"
+                                    className="css-9ku3o0-Container e11dd86m0"
                                   >
                                     <BookmarkLink
                                       isBookmarked={false}
@@ -444,7 +444,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                       }
                                     >
                                       <withApi(BookmarkStar)
-                                        className="css-10z01iz-BookmarkLink enngb6z1"
+                                        className="css-10z01iz-BookmarkLink e11dd86m1"
                                         isBookmarked={false}
                                         onToggle={[Function]}
                                         organization={
@@ -490,7 +490,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                       >
                                         <BookmarkStar
                                           api={Client {}}
-                                          className="css-10z01iz-BookmarkLink enngb6z1"
+                                          className="css-10z01iz-BookmarkLink e11dd86m1"
                                           isBookmarked={false}
                                           onToggle={[Function]}
                                           organization={
@@ -535,19 +535,19 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                           }
                                         >
                                           <Star
-                                            className="css-10z01iz-BookmarkLink enngb6z1"
+                                            className="css-10z01iz-BookmarkLink e11dd86m1"
                                             isBookmarked={false}
                                             onClick={[Function]}
                                             src="icon-star-small-filled"
                                           >
                                             <InlineSvg
-                                              className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                              className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                               isBookmarked={false}
                                               onClick={[Function]}
                                               src="icon-star-small-filled"
                                             >
                                               <StyledSvg
-                                                className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                                className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                                 height="1em"
                                                 isBookmarked={false}
                                                 onClick={[Function]}
@@ -555,7 +555,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                                 width="1em"
                                               >
                                                 <svg
-                                                  className="enngb6z1 e1urz3930 css-85qks9-StyledSvg-Star-BookmarkLink e2idor0"
+                                                  className="e11dd86m1 e3oiqkq0 css-85qks9-StyledSvg-Star-BookmarkLink ebb48o80"
                                                   height="1em"
                                                   onClick={[Function]}
                                                   viewBox={Object {}}
@@ -693,7 +693,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                   <Component
                                     aria-disabled={false}
                                     aria-label="Settings"
-                                    className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                    className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                     onClick={[Function]}
                                     role="button"
                                     size="small"
@@ -702,7 +702,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                     <Link
                                       aria-disabled={false}
                                       aria-label="Settings"
-                                      className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                      className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                       onClick={[Function]}
                                       onlyActiveOnIndex={false}
                                       role="button"
@@ -713,7 +713,7 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                       <a
                                         aria-disabled={false}
                                         aria-label="Settings"
-                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="small"
@@ -723,23 +723,23 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                           size="small"
                                         >
                                           <Component
-                                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             size="small"
                                           >
                                             <span
-                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             >
                                               <Icon
                                                 hasChildren={true}
                                                 size="small"
                                               >
                                                 <Component
-                                                  className="css-1vdnsie-Icon eqrebog2"
+                                                  className="css-1vdnsie-Icon e7bsqvz2"
                                                   hasChildren={true}
                                                   size="small"
                                                 >
                                                   <span
-                                                    className="css-1vdnsie-Icon eqrebog2"
+                                                    className="css-1vdnsie-Icon e7bsqvz2"
                                                     size="small"
                                                   >
                                                     <StyledInlineSvg
@@ -747,18 +747,18 @@ exports[`OrganizationProjects Should render the projects in the store 1`] = `
                                                       src="icon-settings"
                                                     >
                                                       <InlineSvg
-                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                         size="12px"
                                                         src="icon-settings"
                                                       >
                                                         <StyledSvg
-                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                           height="12px"
                                                           viewBox={Object {}}
                                                           width="12px"
                                                         >
                                                           <svg
-                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                             height="12px"
                                                             viewBox={Object {}}
                                                             width="12px"

@@ -67,7 +67,7 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
         }
       >
         <div
-          className="css-1r5ylk7-Wrapper e1kblvez2"
+          className="css-1r5ylk7-Wrapper e1ievzxl2"
         >
           <Flex
             align="center"
@@ -106,7 +106,7 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
                   }
                 >
                   <Base
-                    className="css-zs9eah-Title e1kblvez0"
+                    className="css-zs9eah-Title e1ievzxl0"
                     tabs={
                       <NavTabs
                         underlined={true}
@@ -131,7 +131,7 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
                     }
                   >
                     <div
-                      className="css-zs9eah-Title e1kblvez0"
+                      className="css-zs9eah-Title e1ievzxl0"
                       is={null}
                       tabs={
                         <NavTabs
@@ -158,7 +158,7 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
                     >
                       <HeaderTitle>
                         <h4
-                          className="css-1w8ttcn-HeaderTitle e6lvex72"
+                          className="css-1w8ttcn-HeaderTitle elc10ae2"
                         >
                           Manage Environments
                         </h4>
@@ -350,27 +350,27 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
     </PermissionAlert>
     <Panel>
       <Component
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <div
-          className="css-yahxlu-Panel e1laxa7d0"
+          className="css-yahxlu-Panel e16u4s2c0"
         >
           <PanelHeader>
             <Component
-              className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+              className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
             >
               <Flex
                 align="center"
-                className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+                className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
                 justify="space-between"
               >
                 <Base
                   align="center"
-                  className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                  className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                   justify="space-between"
                 >
                   <div
-                    className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                    className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                     is={null}
                   >
                     Active Environments
@@ -390,17 +390,17 @@ exports[`ProjectEnvironments render active renders empty message 1`] = `
               <EmptyMessage>
                 <Wrapper>
                   <div
-                    className="css-ev9qm0-Wrapper eh488yo0"
+                    className="css-ev9qm0-Wrapper e3bh5aq0"
                   >
                     <Description
                       noMargin={true}
                     >
                       <Component
-                        className="css-pwn5v-TextBlock-Description-MarginStyles eh488yo1"
+                        className="css-pwn5v-TextBlock-Description-MarginStyles e3bh5aq1"
                         noMargin={true}
                       >
                         <div
-                          className="css-pwn5v-TextBlock-Description-MarginStyles eh488yo1"
+                          className="css-pwn5v-TextBlock-Description-MarginStyles e3bh5aq1"
                         >
                           You don't have any environments yet.
                         </div>
@@ -485,7 +485,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
         }
       >
         <div
-          className="css-1r5ylk7-Wrapper e1kblvez2"
+          className="css-1r5ylk7-Wrapper e1ievzxl2"
         >
           <Flex
             align="center"
@@ -524,7 +524,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                   }
                 >
                   <Base
-                    className="css-zs9eah-Title e1kblvez0"
+                    className="css-zs9eah-Title e1ievzxl0"
                     tabs={
                       <NavTabs
                         underlined={true}
@@ -549,7 +549,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                     }
                   >
                     <div
-                      className="css-zs9eah-Title e1kblvez0"
+                      className="css-zs9eah-Title e1ievzxl0"
                       is={null}
                       tabs={
                         <NavTabs
@@ -576,7 +576,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                     >
                       <HeaderTitle>
                         <h4
-                          className="css-1w8ttcn-HeaderTitle e6lvex72"
+                          className="css-1w8ttcn-HeaderTitle elc10ae2"
                         >
                           Manage Environments
                         </h4>
@@ -768,27 +768,27 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
     </PermissionAlert>
     <Panel>
       <Component
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <div
-          className="css-yahxlu-Panel e1laxa7d0"
+          className="css-yahxlu-Panel e16u4s2c0"
         >
           <PanelHeader>
             <Component
-              className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+              className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
             >
               <Flex
                 align="center"
-                className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+                className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
                 justify="space-between"
               >
                 <Base
                   align="center"
-                  className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                  className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                   justify="space-between"
                 >
                   <div
-                    className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                    className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                     is={null}
                   >
                     Active Environments
@@ -826,12 +826,12 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                 >
                   <Base
                     align="center"
-                    className="css-1uaastv-PanelItem eo8n7lk0"
+                    className="css-1uaastv-PanelItem egwqg5y0"
                     justify="space-between"
                     p={2}
                   >
                     <div
-                      className="css-1uaastv-PanelItem eo8n7lk0"
+                      className="css-1uaastv-PanelItem egwqg5y0"
                       is={null}
                     >
                       <Flex
@@ -966,7 +966,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                 size="xsmall"
                               >
                                 <Button
-                                  className="css-10adnmx-EnvironmentButton ezuela50"
+                                  className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                   disabled={false}
                                   onClick={[Function]}
                                   size="xsmall"
@@ -974,7 +974,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                   <StyledButton
                                     aria-disabled={false}
                                     aria-label="Set as default"
-                                    className="css-10adnmx-EnvironmentButton ezuela50"
+                                    className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                     disabled={false}
                                     onClick={[Function]}
                                     role="button"
@@ -983,7 +983,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Set as default"
-                                      className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                      className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="xsmall"
@@ -991,7 +991,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                       <button
                                         aria-disabled={false}
                                         aria-label="Set as default"
-                                        className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                        className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="xsmall"
@@ -1000,11 +1000,11 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             size="xsmall"
                                           >
                                             <span
-                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             >
                                               Set as default
                                             </span>
@@ -1049,12 +1049,12 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                 >
                   <Base
                     align="center"
-                    className="css-1uaastv-PanelItem eo8n7lk0"
+                    className="css-1uaastv-PanelItem egwqg5y0"
                     justify="space-between"
                     p={2}
                   >
                     <div
-                      className="css-1uaastv-PanelItem eo8n7lk0"
+                      className="css-1uaastv-PanelItem egwqg5y0"
                       is={null}
                     >
                       <Flex
@@ -1189,7 +1189,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                 size="xsmall"
                               >
                                 <Button
-                                  className="css-10adnmx-EnvironmentButton ezuela50"
+                                  className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                   disabled={false}
                                   onClick={[Function]}
                                   size="xsmall"
@@ -1197,7 +1197,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                   <StyledButton
                                     aria-disabled={false}
                                     aria-label="Set as default"
-                                    className="css-10adnmx-EnvironmentButton ezuela50"
+                                    className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                     disabled={false}
                                     onClick={[Function]}
                                     role="button"
@@ -1206,7 +1206,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Set as default"
-                                      className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                      className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="xsmall"
@@ -1214,7 +1214,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                       <button
                                         aria-disabled={false}
                                         aria-label="Set as default"
-                                        className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                        className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="xsmall"
@@ -1223,11 +1223,11 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             size="xsmall"
                                           >
                                             <span
-                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             >
                                               Set as default
                                             </span>
@@ -1244,7 +1244,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                 size="xsmall"
                               >
                                 <Button
-                                  className="css-10adnmx-EnvironmentButton ezuela50"
+                                  className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                   disabled={false}
                                   onClick={[Function]}
                                   size="xsmall"
@@ -1252,7 +1252,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                   <StyledButton
                                     aria-disabled={false}
                                     aria-label="Hide"
-                                    className="css-10adnmx-EnvironmentButton ezuela50"
+                                    className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                     disabled={false}
                                     onClick={[Function]}
                                     role="button"
@@ -1261,7 +1261,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Hide"
-                                      className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                      className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="xsmall"
@@ -1269,7 +1269,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                       <button
                                         aria-disabled={false}
                                         aria-label="Hide"
-                                        className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                        className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="xsmall"
@@ -1278,11 +1278,11 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             size="xsmall"
                                           >
                                             <span
-                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             >
                                               Hide
                                             </span>
@@ -1327,12 +1327,12 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                 >
                   <Base
                     align="center"
-                    className="css-1uaastv-PanelItem eo8n7lk0"
+                    className="css-1uaastv-PanelItem egwqg5y0"
                     justify="space-between"
                     p={2}
                   >
                     <div
-                      className="css-1uaastv-PanelItem eo8n7lk0"
+                      className="css-1uaastv-PanelItem egwqg5y0"
                       is={null}
                     >
                       <Flex
@@ -1356,20 +1356,20 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                 priority="success"
                               >
                                 <Component
-                                  className="css-d9oizi-TagTextStyled e6q9yfr0"
+                                  className="css-d9oizi-TagTextStyled ed3kiza0"
                                   ml={1}
                                   priority="success"
                                 >
                                   <Box
-                                    className="css-d9oizi-TagTextStyled e6q9yfr0"
+                                    className="css-d9oizi-TagTextStyled ed3kiza0"
                                     ml={1}
                                   >
                                     <Base
-                                      className="e6q9yfr0 css-3cvk4g-TagTextStyled"
+                                      className="ed3kiza0 css-3cvk4g-TagTextStyled"
                                       ml={1}
                                     >
                                       <div
-                                        className="e6q9yfr0 css-3cvk4g-TagTextStyled"
+                                        className="ed3kiza0 css-3cvk4g-TagTextStyled"
                                         is={null}
                                       >
                                         Default
@@ -1499,7 +1499,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                 size="xsmall"
                               >
                                 <Button
-                                  className="css-10adnmx-EnvironmentButton ezuela50"
+                                  className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                   disabled={false}
                                   onClick={[Function]}
                                   size="xsmall"
@@ -1507,7 +1507,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                   <StyledButton
                                     aria-disabled={false}
                                     aria-label="Hide"
-                                    className="css-10adnmx-EnvironmentButton ezuela50"
+                                    className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                     disabled={false}
                                     onClick={[Function]}
                                     role="button"
@@ -1516,7 +1516,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Hide"
-                                      className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                      className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="xsmall"
@@ -1524,7 +1524,7 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                       <button
                                         aria-disabled={false}
                                         aria-label="Hide"
-                                        className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                        className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="xsmall"
@@ -1533,11 +1533,11 @@ exports[`ProjectEnvironments render active renders environment list and sets sta
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             size="xsmall"
                                           >
                                             <span
-                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             >
                                               Hide
                                             </span>
@@ -1632,7 +1632,7 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
         }
       >
         <div
-          className="css-1r5ylk7-Wrapper e1kblvez2"
+          className="css-1r5ylk7-Wrapper e1ievzxl2"
         >
           <Flex
             align="center"
@@ -1671,7 +1671,7 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
                   }
                 >
                   <Base
-                    className="css-zs9eah-Title e1kblvez0"
+                    className="css-zs9eah-Title e1ievzxl0"
                     tabs={
                       <NavTabs
                         underlined={true}
@@ -1696,7 +1696,7 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
                     }
                   >
                     <div
-                      className="css-zs9eah-Title e1kblvez0"
+                      className="css-zs9eah-Title e1ievzxl0"
                       is={null}
                       tabs={
                         <NavTabs
@@ -1723,7 +1723,7 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
                     >
                       <HeaderTitle>
                         <h4
-                          className="css-1w8ttcn-HeaderTitle e6lvex72"
+                          className="css-1w8ttcn-HeaderTitle elc10ae2"
                         >
                           Manage Environments
                         </h4>
@@ -1915,27 +1915,27 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
     </PermissionAlert>
     <Panel>
       <Component
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <div
-          className="css-yahxlu-Panel e1laxa7d0"
+          className="css-yahxlu-Panel e16u4s2c0"
         >
           <PanelHeader>
             <Component
-              className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+              className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
             >
               <Flex
                 align="center"
-                className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+                className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
                 justify="space-between"
               >
                 <Base
                   align="center"
-                  className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                  className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                   justify="space-between"
                 >
                   <div
-                    className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                    className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                     is={null}
                   >
                     Hidden
@@ -1955,17 +1955,17 @@ exports[`ProjectEnvironments render hidden renders empty message 1`] = `
               <EmptyMessage>
                 <Wrapper>
                   <div
-                    className="css-ev9qm0-Wrapper eh488yo0"
+                    className="css-ev9qm0-Wrapper e3bh5aq0"
                   >
                     <Description
                       noMargin={true}
                     >
                       <Component
-                        className="css-pwn5v-TextBlock-Description-MarginStyles eh488yo1"
+                        className="css-pwn5v-TextBlock-Description-MarginStyles e3bh5aq1"
                         noMargin={true}
                       >
                         <div
-                          className="css-pwn5v-TextBlock-Description-MarginStyles eh488yo1"
+                          className="css-pwn5v-TextBlock-Description-MarginStyles e3bh5aq1"
                         >
                           You don't have any hidden environments.
                         </div>
@@ -2050,7 +2050,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
         }
       >
         <div
-          className="css-1r5ylk7-Wrapper e1kblvez2"
+          className="css-1r5ylk7-Wrapper e1ievzxl2"
         >
           <Flex
             align="center"
@@ -2089,7 +2089,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                   }
                 >
                   <Base
-                    className="css-zs9eah-Title e1kblvez0"
+                    className="css-zs9eah-Title e1ievzxl0"
                     tabs={
                       <NavTabs
                         underlined={true}
@@ -2114,7 +2114,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                     }
                   >
                     <div
-                      className="css-zs9eah-Title e1kblvez0"
+                      className="css-zs9eah-Title e1ievzxl0"
                       is={null}
                       tabs={
                         <NavTabs
@@ -2141,7 +2141,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                     >
                       <HeaderTitle>
                         <h4
-                          className="css-1w8ttcn-HeaderTitle e6lvex72"
+                          className="css-1w8ttcn-HeaderTitle elc10ae2"
                         >
                           Manage Environments
                         </h4>
@@ -2333,27 +2333,27 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
     </PermissionAlert>
     <Panel>
       <Component
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <div
-          className="css-yahxlu-Panel e1laxa7d0"
+          className="css-yahxlu-Panel e16u4s2c0"
         >
           <PanelHeader>
             <Component
-              className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+              className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
             >
               <Flex
                 align="center"
-                className="css-xhx6pj-PanelHeader-getPadding e1p8v8nv0"
+                className="css-xhx6pj-PanelHeader-getPadding e1o9kety0"
                 justify="space-between"
               >
                 <Base
                   align="center"
-                  className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                  className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                   justify="space-between"
                 >
                   <div
-                    className="e1p8v8nv0 css-b7ices-PanelHeader-getPadding"
+                    className="e1o9kety0 css-b7ices-PanelHeader-getPadding"
                     is={null}
                   >
                     Hidden
@@ -2396,12 +2396,12 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                 >
                   <Base
                     align="center"
-                    className="css-1uaastv-PanelItem eo8n7lk0"
+                    className="css-1uaastv-PanelItem egwqg5y0"
                     justify="space-between"
                     p={2}
                   >
                     <div
-                      className="css-1uaastv-PanelItem eo8n7lk0"
+                      className="css-1uaastv-PanelItem egwqg5y0"
                       is={null}
                     >
                       <Flex
@@ -2536,7 +2536,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                                 size="xsmall"
                               >
                                 <Button
-                                  className="css-10adnmx-EnvironmentButton ezuela50"
+                                  className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                   disabled={false}
                                   onClick={[Function]}
                                   size="xsmall"
@@ -2544,7 +2544,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                                   <StyledButton
                                     aria-disabled={false}
                                     aria-label="Show"
-                                    className="css-10adnmx-EnvironmentButton ezuela50"
+                                    className="css-10adnmx-EnvironmentButton e3qq2sv0"
                                     disabled={false}
                                     onClick={[Function]}
                                     role="button"
@@ -2553,7 +2553,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Show"
-                                      className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                      className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="xsmall"
@@ -2561,7 +2561,7 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                                       <button
                                         aria-disabled={false}
                                         aria-label="Show"
-                                        className="ezuela50 css-fp1reu-StyledButton-getColors-EnvironmentButton eqrebog0"
+                                        className="e3qq2sv0 css-fp1reu-StyledButton-getColors-EnvironmentButton e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="xsmall"
@@ -2570,11 +2570,11 @@ exports[`ProjectEnvironments render hidden renders environment list 1`] = `
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             size="xsmall"
                                           >
                                             <span
-                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                             >
                                               Show
                                             </span>

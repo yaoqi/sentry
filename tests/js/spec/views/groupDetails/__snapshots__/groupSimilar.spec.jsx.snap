@@ -341,10 +341,10 @@ exports[`Issues Similar View renders with mocked data 1`] = `
             </h2>
             <StyledSimilarSpectrum>
               <SimilarSpectrum
-                className="css-j2x47e-StyledSimilarSpectrum e1hn3xkk0"
+                className="css-j2x47e-StyledSimilarSpectrum epwe1a30"
               >
                 <div
-                  className="css-j2x47e-StyledSimilarSpectrum e1hn3xkk0"
+                  className="css-j2x47e-StyledSimilarSpectrum epwe1a30"
                 >
                   <span>
                     Similar
@@ -353,35 +353,35 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                     colorIndex={4}
                   >
                     <span
-                      className="css-1m9e7bp-SpectrumItem e1hn3xkk1"
+                      className="css-1m9e7bp-SpectrumItem epwe1a31"
                     />
                   </SpectrumItem>
                   <SpectrumItem
                     colorIndex={3}
                   >
                     <span
-                      className="css-1tn9u0a-SpectrumItem e1hn3xkk1"
+                      className="css-1tn9u0a-SpectrumItem epwe1a31"
                     />
                   </SpectrumItem>
                   <SpectrumItem
                     colorIndex={2}
                   >
                     <span
-                      className="css-zgizhk-SpectrumItem e1hn3xkk1"
+                      className="css-zgizhk-SpectrumItem epwe1a31"
                     />
                   </SpectrumItem>
                   <SpectrumItem
                     colorIndex={1}
                   >
                     <span
-                      className="css-1p9s53a-SpectrumItem e1hn3xkk1"
+                      className="css-1p9s53a-SpectrumItem epwe1a31"
                     />
                   </SpectrumItem>
                   <SpectrumItem
                     colorIndex={0}
                   >
                     <span
-                      className="css-pvajr0-SpectrumItem e1hn3xkk1"
+                      className="css-pvajr0-SpectrumItem epwe1a31"
                     />
                   </SpectrumItem>
                   <span>
@@ -399,7 +399,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
             className="similar-toolbar"
           >
             <div
-              className="similar-toolbar css-o93ry2-Toolbar ehkx0bi0"
+              className="similar-toolbar css-o93ry2-Toolbar e1rxv1nx0"
             >
               <SpreadLayout
                 center={true}
@@ -417,7 +417,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                     truncate={true}
                   >
                     <div
-                      className="css-gmt0em-FlowLayout envzszi0"
+                      className="css-gmt0em-FlowLayout e51efj80"
                       style={
                         Object {
                           "flex": 1,
@@ -428,7 +428,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                         truncate={true}
                       >
                         <div
-                          className="css-gmt0em-FlowLayout envzszi0"
+                          className="css-gmt0em-FlowLayout e51efj80"
                         >
                           <div
                             className="similar-toolbar-actions"
@@ -528,7 +528,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                       className="similar-score-column event-count-header"
                     >
                       <div
-                        className="similar-score-column event-count-header css-j72n3c-ToolbarHeader eiwl27k0"
+                        className="similar-score-column event-count-header css-j72n3c-ToolbarHeader e1vdhtq50"
                       >
                         Events
                       </div>
@@ -537,7 +537,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                       className="similar-score-column event-similar-header"
                     >
                       <div
-                        className="similar-score-column event-similar-header css-j72n3c-ToolbarHeader eiwl27k0"
+                        className="similar-score-column event-similar-header css-j72n3c-ToolbarHeader e1vdhtq50"
                       >
                         Exception
                       </div>
@@ -546,7 +546,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                       className="similar-score-column event-similar-header"
                     >
                       <div
-                        className="similar-score-column event-similar-header css-j72n3c-ToolbarHeader eiwl27k0"
+                        className="similar-score-column event-similar-header css-j72n3c-ToolbarHeader e1vdhtq50"
                       >
                         Message
                       </div>
@@ -637,13 +637,13 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                   truncate={true}
                 >
                   <div
-                    className="css-gmt0em-FlowLayout envzszi0"
+                    className="css-gmt0em-FlowLayout e51efj80"
                   >
                     <FlowLayout
                       truncate={true}
                     >
                       <div
-                        className="css-gmt0em-FlowLayout envzszi0"
+                        className="css-gmt0em-FlowLayout e51efj80"
                       >
                         <div
                           className="action-column"
@@ -836,7 +836,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                               >
                                 <Title>
                                   <div
-                                    className="css-leroxf-Title-truncateStyles eex8od0"
+                                    className="css-leroxf-Title-truncateStyles e1xts8yq0"
                                   >
                                     <ProjectLink
                                       style={
@@ -882,7 +882,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                               title="Error level: Error"
                                             >
                                               <div
-                                                className="tip css-hpn2f3-GroupLevel eex8od5"
+                                                className="tip css-hpn2f3-GroupLevel e1xts8yq5"
                                                 title="Error level: Error"
                                               />
                                             </GroupLevel>
@@ -1044,7 +1044,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                 </Title>
                                 <Message>
                                   <div
-                                    className="css-y5cfdn-Message-truncateStyles eex8od2"
+                                    className="css-y5cfdn-Message-truncateStyles e1xts8yq2"
                                   >
                                     Cannot read property 'length' of undefined
                                   </div>
@@ -1217,10 +1217,10 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                               >
                                 <Base
                                   align="center"
-                                  className="css-1iq5qji-GroupExtra eec9orn0"
+                                  className="css-1iq5qji-GroupExtra eww5160"
                                 >
                                   <div
-                                    className="css-1iq5qji-GroupExtra eec9orn0"
+                                    className="css-1iq5qji-GroupExtra eww5160"
                                     is={null}
                                   >
                                     <GroupShortId
@@ -1257,7 +1257,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                             }
                                           />
                                         }
-                                        className="css-yd3bt1-GroupShortId eec9orn4"
+                                        className="css-yd3bt1-GroupShortId eww5164"
                                         shortId="INTERNAL-4G"
                                       >
                                         <StyledShortId
@@ -1276,12 +1276,12 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                               }
                                             />
                                           }
-                                          className="css-yd3bt1-GroupShortId eec9orn4"
+                                          className="css-yd3bt1-GroupShortId eww5164"
                                           onClick={[Function]}
                                           shortId="INTERNAL-4G"
                                         >
                                           <div
-                                            className="eec9orn4 css-zds1k7-StyledShortId-GroupShortId ebuncw00"
+                                            className="eww5164 css-zds1k7-StyledShortId-GroupShortId e1i3oqd0"
                                             onClick={[Function]}
                                           >
                                             <ProjectBadge
@@ -1341,7 +1341,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                         size={14}
                                                       >
                                                         <Avatar
-                                                          className="css-f5iyic-StyledAvatar e165dl3i0"
+                                                          className="css-f5iyic-StyledAvatar e1hs5ryj0"
                                                           hasTooltip={false}
                                                           hideName={true}
                                                           project={
@@ -1354,7 +1354,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                           size={14}
                                                         >
                                                           <ProjectAvatar
-                                                            className="css-f5iyic-StyledAvatar e165dl3i0"
+                                                            className="css-f5iyic-StyledAvatar e1hs5ryj0"
                                                             hasTooltip={false}
                                                             hideName={true}
                                                             project={
@@ -1367,7 +1367,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                             size={14}
                                                           >
                                                             <PlatformList
-                                                              className="css-f5iyic-StyledAvatar e165dl3i0"
+                                                              className="css-f5iyic-StyledAvatar e1hs5ryj0"
                                                               consistentWidth={false}
                                                               direction="right"
                                                               hasTooltip={false}
@@ -1377,14 +1377,14 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                               size={14}
                                                             >
                                                               <PlatformIcons
-                                                                className="css-f5iyic-StyledAvatar e165dl3i0"
+                                                                className="css-f5iyic-StyledAvatar e1hs5ryj0"
                                                                 consistentWidth={false}
                                                                 direction="right"
                                                                 max={1}
                                                                 size={14}
                                                               >
                                                                 <div
-                                                                  className="e165dl3i0 css-7hp7lr-PlatformIcons-StyledAvatar ezvce7z0"
+                                                                  className="e1hs5ryj0 css-7hp7lr-PlatformIcons-StyledAvatar e1vcjkqa0"
                                                                   direction="right"
                                                                   max={1}
                                                                   size={14}
@@ -1394,17 +1394,17 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                                     size={14}
                                                                   >
                                                                     <Component
-                                                                      className="css-15yyc0n-StyledPlatformIcon ezvce7z1"
+                                                                      className="css-15yyc0n-StyledPlatformIcon e1vcjkqa1"
                                                                       platform="default"
                                                                       size={14}
                                                                     >
                                                                       <Platformicon
-                                                                        className="css-15yyc0n-StyledPlatformIcon ezvce7z1"
+                                                                        className="css-15yyc0n-StyledPlatformIcon e1vcjkqa1"
                                                                         platform="default"
                                                                         size="14px"
                                                                       >
                                                                         <img
-                                                                          className="css-15yyc0n-StyledPlatformIcon ezvce7z1"
+                                                                          className="css-15yyc0n-StyledPlatformIcon e1vcjkqa1"
                                                                           height="14px"
                                                                           src={
                                                                             Object {
@@ -1427,10 +1427,10 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                                       </StyledAvatar>
                                                       <DisplayNameAndDescription>
                                                         <Base
-                                                          className="css-1h9j57p-DisplayNameAndDescription e165dl3i1"
+                                                          className="css-1h9j57p-DisplayNameAndDescription e1hs5ryj1"
                                                         >
                                                           <div
-                                                            className="css-1h9j57p-DisplayNameAndDescription e165dl3i1"
+                                                            className="css-1h9j57p-DisplayNameAndDescription e1hs5ryj1"
                                                             is={null}
                                                           />
                                                         </Base>
@@ -1444,10 +1444,10 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                               avatar={true}
                                             >
                                               <AutoSelectText
-                                                className="css-1iocdui-StyledAutoSelectText ebuncw01"
+                                                className="css-1iocdui-StyledAutoSelectText e1i3oqd1"
                                               >
                                                 <div
-                                                  className="auto-select-text css-1iocdui-StyledAutoSelectText ebuncw01"
+                                                  className="auto-select-text css-1iocdui-StyledAutoSelectText e1i3oqd1"
                                                   onClick={[Function]}
                                                 >
                                                   <span>
@@ -1462,7 +1462,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                     </GroupShortId>
                                     <Times>
                                       <div
-                                        className="css-139skj2-Times eec9orn3"
+                                        className="css-139skj2-Times eww5163"
                                       >
                                         <div
                                           className="css-77t6iv"
@@ -1485,10 +1485,10 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                     </Times>
                                     <GroupExtraCommentsAndLogger>
                                       <Base
-                                        className="css-1ycmuq8-GroupExtraCommentsAndLogger eec9orn1"
+                                        className="css-1ycmuq8-GroupExtraCommentsAndLogger eww5161"
                                       >
                                         <div
-                                          className="css-1ycmuq8-GroupExtraCommentsAndLogger eec9orn1"
+                                          className="css-1ycmuq8-GroupExtraCommentsAndLogger eww5161"
                                           is={null}
                                         >
                                           <Box
@@ -1585,33 +1585,33 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                         innerRef={
                           Object {
                             "current": <span
-                              class="css-s35yzd-Container e38w1je1"
+                              class="css-s35yzd-Container eexws2n1"
                             >
                               <div
-                                class="css-omtyju-StyledScoreBar eecxaw40"
+                                class="css-omtyju-StyledScoreBar e194yo6z0"
                               >
                                 <div
-                                  class="css-1jrlewc-Bar eecxaw41"
+                                  class="css-1jrlewc-Bar e194yo6z1"
                                   color="#98b480"
                                   size="40"
                                 />
                                 <div
-                                  class="css-1jrlewc-Bar eecxaw41"
+                                  class="css-1jrlewc-Bar e194yo6z1"
                                   color="#98b480"
                                   size="40"
                                 />
                                 <div
-                                  class="css-1jrlewc-Bar eecxaw41"
+                                  class="css-1jrlewc-Bar e194yo6z1"
                                   color="#98b480"
                                   size="40"
                                 />
                                 <div
-                                  class="css-1jrlewc-Bar eecxaw41"
+                                  class="css-1jrlewc-Bar e194yo6z1"
                                   color="#98b480"
                                   size="40"
                                 />
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                               </div>
@@ -1622,7 +1622,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                         onMouseLeave={[Function]}
                       >
                         <span
-                          className="css-s35yzd-Container e38w1je1"
+                          className="css-s35yzd-Container eexws2n1"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -1631,7 +1631,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                             vertical={true}
                           >
                             <ScoreBar
-                              className="css-omtyju-StyledScoreBar eecxaw40"
+                              className="css-omtyju-StyledScoreBar e194yo6z0"
                               palette={
                                 Array [
                                   "#ec5e44",
@@ -1647,7 +1647,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                               vertical={true}
                             >
                               <div
-                                className="css-omtyju-StyledScoreBar eecxaw40"
+                                className="css-omtyju-StyledScoreBar e194yo6z0"
                               >
                                 <Bar
                                   color="#98b480"
@@ -1657,7 +1657,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-1jrlewc-Bar eecxaw41"
+                                    className="css-1jrlewc-Bar e194yo6z1"
                                     color="#98b480"
                                     size={40}
                                   />
@@ -1670,7 +1670,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-1jrlewc-Bar eecxaw41"
+                                    className="css-1jrlewc-Bar e194yo6z1"
                                     color="#98b480"
                                     size={40}
                                   />
@@ -1683,7 +1683,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-1jrlewc-Bar eecxaw41"
+                                    className="css-1jrlewc-Bar e194yo6z1"
                                     color="#98b480"
                                     size={40}
                                   />
@@ -1696,7 +1696,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-1jrlewc-Bar eecxaw41"
+                                    className="css-1jrlewc-Bar e194yo6z1"
                                     color="#98b480"
                                     size={40}
                                   />
@@ -1709,7 +1709,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>
@@ -1732,29 +1732,29 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                         innerRef={
                           Object {
                             "current": <span
-                              class="css-s35yzd-Container e38w1je1"
+                              class="css-s35yzd-Container eexws2n1"
                             >
                               <div
-                                class="css-omtyju-StyledScoreBar eecxaw40"
+                                class="css-omtyju-StyledScoreBar e194yo6z0"
                               >
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                                 <div
-                                  class="css-15vxee-Bar eecxaw41"
+                                  class="css-15vxee-Bar e194yo6z1"
                                   size="40"
                                 />
                               </div>
@@ -1765,7 +1765,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                         onMouseLeave={[Function]}
                       >
                         <span
-                          className="css-s35yzd-Container e38w1je1"
+                          className="css-s35yzd-Container eexws2n1"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
@@ -1774,7 +1774,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                             vertical={true}
                           >
                             <ScoreBar
-                              className="css-omtyju-StyledScoreBar eecxaw40"
+                              className="css-omtyju-StyledScoreBar e194yo6z0"
                               palette={
                                 Array [
                                   "#ec5e44",
@@ -1790,7 +1790,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                               vertical={true}
                             >
                               <div
-                                className="css-omtyju-StyledScoreBar eecxaw40"
+                                className="css-omtyju-StyledScoreBar e194yo6z0"
                               >
                                 <Bar
                                   empty={true}
@@ -1800,7 +1800,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>
@@ -1812,7 +1812,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>
@@ -1824,7 +1824,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>
@@ -1836,7 +1836,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>
@@ -1848,7 +1848,7 @@ exports[`Issues Similar View renders with mocked data 1`] = `
                                   vertical={true}
                                 >
                                   <div
-                                    className="css-15vxee-Bar eecxaw41"
+                                    className="css-15vxee-Bar e194yo6z1"
                                     size={40}
                                   />
                                 </Bar>

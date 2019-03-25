@@ -90,7 +90,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
             size={50}
           >
             <div
-              className="css-duaev8-IntegrationIcon e1bhjds90"
+              className="css-duaev8-IntegrationIcon e1ehkbfw0"
               size={50}
             />
           </IntegrationIcon>
@@ -114,16 +114,16 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
             >
               <ProviderName>
                 <Component
-                  className="css-1pygq0m-ProviderName e1rf4mlr1"
+                  className="css-1pygq0m-ProviderName e1p1obno1"
                 >
                   <Box
-                    className="css-1pygq0m-ProviderName e1rf4mlr1"
+                    className="css-1pygq0m-ProviderName e1p1obno1"
                   >
                     <Base
-                      className="e1rf4mlr1 css-cswdqk-ProviderName"
+                      className="e1p1obno1 css-cswdqk-ProviderName"
                     >
                       <div
-                        className="e1rf4mlr1 css-cswdqk-ProviderName"
+                        className="e1p1obno1 css-cswdqk-ProviderName"
                         is={null}
                       >
                         GitHub Integration
@@ -159,7 +159,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
     }
   >
     <div
-      className="css-zqji3g-Description e1rf4mlr2"
+      className="css-zqji3g-Description e1p1obno2"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<p><em>markdown</em> formatted <em>description</em></p>
@@ -263,21 +263,21 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
   </FeatureList>
   <Metadata>
     <Base
-      className="css-xm93tv-Metadata e1rf4mlr3"
+      className="css-xm93tv-Metadata e1p1obno3"
     >
       <div
-        className="css-xm93tv-Metadata e1rf4mlr3"
+        className="css-xm93tv-Metadata e1p1obno3"
         is={null}
       >
         <AuthorName
           flex={1}
         >
           <Base
-            className="css-1uwqb6n-AuthorName e1rf4mlr4"
+            className="css-1uwqb6n-AuthorName e1p1obno4"
             flex={1}
           >
             <div
-              className="css-1uwqb6n-AuthorName e1rf4mlr4"
+              className="css-1uwqb6n-AuthorName e1p1obno4"
               is={null}
             >
               By Morty
@@ -334,15 +334,15 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
       type="warning"
     >
       <div
-        className="ref-warning css-fcu40c-AlertWrapper e1xb5l7j1"
+        className="ref-warning css-fcu40c-AlertWrapper ec2ue531"
         type="warning"
       >
         <StyledTextBlock>
           <Component
-            className="css-1h3n7tg-TextBlock-StyledTextBlock e1xb5l7j2"
+            className="css-1h3n7tg-TextBlock-StyledTextBlock ec2ue532"
           >
             <div
-              className="css-1h3n7tg-TextBlock-StyledTextBlock e1xb5l7j2"
+              className="css-1h3n7tg-TextBlock-StyledTextBlock ec2ue532"
             >
               <span
                 dangerouslySetInnerHTML={
@@ -420,7 +420,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
           <Component
             aria-disabled={false}
             aria-label="Cancel"
-            className="css-dkprmi-StyledButton-getColors eqrebog0"
+            className="css-dkprmi-StyledButton-getColors e7bsqvz0"
             onClick={[Function]}
             role="button"
             size="small"
@@ -428,7 +428,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
             <button
               aria-disabled={false}
               aria-label="Cancel"
-              className="css-dkprmi-StyledButton-getColors eqrebog0"
+              className="css-dkprmi-StyledButton-getColors e7bsqvz0"
               onClick={[Function]}
               role="button"
               size="small"
@@ -437,11 +437,11 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
                 size="small"
               >
                 <Component
-                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                   size="small"
                 >
                   <span
-                    className="css-7ui8bl-ButtonLabel eqrebog1"
+                    className="css-7ui8bl-ButtonLabel e7bsqvz1"
                   >
                     Cancel
                   </span>
@@ -740,7 +740,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
                           <Component
                             aria-disabled={false}
                             aria-label="Add Installation"
-                            className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                            className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                             onClick={[Function]}
                             role="button"
                             size="small"
@@ -753,7 +753,7 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
                             <button
                               aria-disabled={false}
                               aria-label="Add Installation"
-                              className="css-zvpqlo-StyledButton-getColors eqrebog0"
+                              className="css-zvpqlo-StyledButton-getColors e7bsqvz0"
                               onClick={[Function]}
                               role="button"
                               size="small"
@@ -768,12 +768,12 @@ exports[`IntegrationDetailsModal renders simple integration 1`] = `
                                 size="small"
                               >
                                 <Component
-                                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                   priority="primary"
                                   size="small"
                                 >
                                   <span
-                                    className="css-7ui8bl-ButtonLabel eqrebog1"
+                                    className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                   >
                                     Add Installation
                                   </span>

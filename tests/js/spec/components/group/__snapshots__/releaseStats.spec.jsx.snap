@@ -225,7 +225,7 @@ exports[`GroupReleaseStats renders 1`] = `
                 }
               >
                 <figure
-                  className="sparkline barchart css-lg2nde-StyledFigure e5t71581"
+                  className="sparkline barchart css-lg2nde-StyledFigure een85ac1"
                   style={
                     Object {
                       "height": 40,
@@ -251,7 +251,7 @@ exports[`GroupReleaseStats renders 1`] = `
                   </span>
                   <SvgContainer>
                     <div
-                      className="css-1jg1opr-SvgContainer e5t71582"
+                      className="css-1jg1opr-SvgContainer een85ac2"
                     >
                       <StyledSvg
                         overflow="visible"
@@ -259,7 +259,7 @@ exports[`GroupReleaseStats renders 1`] = `
                         viewBox="0 0 100 400"
                       >
                         <svg
-                          className="css-1vaz76z-StyledSvg e5t71580"
+                          className="css-1vaz76z-StyledSvg een85ac0"
                           overflow="visible"
                           preserveAspectRatio="none"
                           viewBox="0 0 100 400"
@@ -512,7 +512,7 @@ exports[`GroupReleaseStats renders 1`] = `
                 }
               >
                 <figure
-                  className="sparkline barchart css-lg2nde-StyledFigure e5t71581"
+                  className="sparkline barchart css-lg2nde-StyledFigure een85ac1"
                   style={
                     Object {
                       "height": 40,
@@ -538,7 +538,7 @@ exports[`GroupReleaseStats renders 1`] = `
                   </span>
                   <SvgContainer>
                     <div
-                      className="css-1jg1opr-SvgContainer e5t71582"
+                      className="css-1jg1opr-SvgContainer een85ac2"
                     >
                       <StyledSvg
                         overflow="visible"
@@ -546,7 +546,7 @@ exports[`GroupReleaseStats renders 1`] = `
                         viewBox="0 0 100 400"
                       >
                         <svg
-                          className="css-1vaz76z-StyledSvg e5t71580"
+                          className="css-1vaz76z-StyledSvg een85ac0"
                           overflow="visible"
                           preserveAspectRatio="none"
                           viewBox="0 0 100 400"

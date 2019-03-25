@@ -16,30 +16,30 @@ exports[`OrganizationTeamProjects Should render 1`] = `
 >
   <Panel>
     <Component
-      className="css-yahxlu-Panel e1laxa7d0"
+      className="css-yahxlu-Panel e16u4s2c0"
     >
       <div
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <PanelHeader
           hasButtons={true}
         >
           <Component
-            className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+            className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
             hasButtons={true}
           >
             <Flex
               align="center"
-              className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+              className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
               justify="space-between"
             >
               <Base
                 align="center"
-                className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                 justify="space-between"
               >
                 <div
-                  className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                  className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                   is={null}
                 >
                   <div>
@@ -121,10 +121,10 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           >
                             <AutoCompleteRoot>
                               <Component
-                                className="css-6v04yn-AutoCompleteRoot ejumqxq0"
+                                className="css-6v04yn-AutoCompleteRoot egdot0r0"
                               >
                                 <div
-                                  className="css-6v04yn-AutoCompleteRoot ejumqxq0"
+                                  className="css-6v04yn-AutoCompleteRoot egdot0r0"
                                 >
                                   <Actor
                                     innerRef={[Function]}
@@ -142,7 +142,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                     tabIndex={-1}
                                   >
                                     <div
-                                      className="css-17fe80j-Actor e53us8t0"
+                                      className="css-17fe80j-Actor evu979k0"
                                       onClick={[Function]}
                                       onKeyDown={[Function]}
                                       onMouseEnter={[Function]}
@@ -164,18 +164,18 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                           size="xsmall"
                                         >
                                           <Component
-                                            className="css-o27a2e-StyledButton e1yghndz1"
+                                            className="css-o27a2e-StyledButton e1a9ys5x1"
                                             isOpen={false}
                                             size="xsmall"
                                           >
                                             <Button
-                                              className="css-o27a2e-StyledButton e1yghndz1"
+                                              className="css-o27a2e-StyledButton e1a9ys5x1"
                                               disabled={false}
                                               size="xsmall"
                                             >
                                               <StyledButton
                                                 aria-disabled={false}
-                                                className="css-o27a2e-StyledButton e1yghndz1"
+                                                className="css-o27a2e-StyledButton e1a9ys5x1"
                                                 disabled={false}
                                                 onClick={[Function]}
                                                 role="button"
@@ -183,14 +183,14 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                               >
                                                 <Component
                                                   aria-disabled={false}
-                                                  className="e1yghndz1 css-108zzii-StyledButton-getColors-StyledButton eqrebog0"
+                                                  className="e1a9ys5x1 css-108zzii-StyledButton-getColors-StyledButton e7bsqvz0"
                                                   onClick={[Function]}
                                                   role="button"
                                                   size="xsmall"
                                                 >
                                                   <button
                                                     aria-disabled={false}
-                                                    className="e1yghndz1 css-108zzii-StyledButton-getColors-StyledButton eqrebog0"
+                                                    className="e1a9ys5x1 css-108zzii-StyledButton-getColors-StyledButton e7bsqvz0"
                                                     onClick={[Function]}
                                                     role="button"
                                                     size="xsmall"
@@ -199,29 +199,29 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                                       size="xsmall"
                                                     >
                                                       <Component
-                                                        className="css-uthd1f-ButtonLabel eqrebog1"
+                                                        className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                         size="xsmall"
                                                       >
                                                         <span
-                                                          className="css-uthd1f-ButtonLabel eqrebog1"
+                                                          className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                         >
                                                           Add Project
                                                           <StyledChevronDown>
                                                             <Component
-                                                              className="css-17v3tc-StyledChevronDown e1yghndz0"
+                                                              className="css-17v3tc-StyledChevronDown e1a9ys5x0"
                                                             >
                                                               <InlineSvg
-                                                                className="css-17v3tc-StyledChevronDown e1yghndz0"
+                                                                className="css-17v3tc-StyledChevronDown e1a9ys5x0"
                                                                 src="icon-chevron-down"
                                                               >
                                                                 <StyledSvg
-                                                                  className="css-17v3tc-StyledChevronDown e1yghndz0"
+                                                                  className="css-17v3tc-StyledChevronDown e1a9ys5x0"
                                                                   height="1em"
                                                                   viewBox={Object {}}
                                                                   width="1em"
                                                                 >
                                                                   <svg
-                                                                    className="e1yghndz0 css-1gdv3x4-StyledSvg-StyledChevronDown e2idor0"
+                                                                    className="e1a9ys5x0 css-1gdv3x4-StyledSvg-StyledChevronDown ebb48o80"
                                                                     height="1em"
                                                                     viewBox={Object {}}
                                                                     width="1em"
@@ -272,10 +272,10 @@ exports[`OrganizationTeamProjects Should render 1`] = `
               key="2"
             >
               <Base
-                className="css-15fe8h6-PanelItem-StyledPanelItem eqsa6vb1"
+                className="css-15fe8h6-PanelItem-StyledPanelItem e1ir3m6z1"
               >
                 <div
-                  className="css-15fe8h6-PanelItem-StyledPanelItem eqsa6vb1"
+                  className="css-15fe8h6-PanelItem-StyledPanelItem e1ir3m6z1"
                   is={null}
                 >
                   <ProjectItem
@@ -332,7 +332,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                       key="2"
                     >
                       <div
-                        className="css-9ku3o0-Container enngb6z0"
+                        className="css-9ku3o0-Container e11dd86m0"
                       >
                         <BookmarkLink
                           isBookmarked={false}
@@ -387,7 +387,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           }
                         >
                           <withApi(BookmarkStar)
-                            className="css-10z01iz-BookmarkLink enngb6z1"
+                            className="css-10z01iz-BookmarkLink e11dd86m1"
                             isBookmarked={false}
                             onToggle={[Function]}
                             organization={
@@ -441,7 +441,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           >
                             <BookmarkStar
                               api={Client {}}
-                              className="css-10z01iz-BookmarkLink enngb6z1"
+                              className="css-10z01iz-BookmarkLink e11dd86m1"
                               isBookmarked={false}
                               onToggle={[Function]}
                               organization={
@@ -494,19 +494,19 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                               }
                             >
                               <Star
-                                className="css-10z01iz-BookmarkLink enngb6z1"
+                                className="css-10z01iz-BookmarkLink e11dd86m1"
                                 isBookmarked={false}
                                 onClick={[Function]}
                                 src="icon-star-small-filled"
                               >
                                 <InlineSvg
-                                  className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                  className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                   isBookmarked={false}
                                   onClick={[Function]}
                                   src="icon-star-small-filled"
                                 >
                                   <StyledSvg
-                                    className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                    className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                     height="1em"
                                     isBookmarked={false}
                                     onClick={[Function]}
@@ -514,7 +514,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                     width="1em"
                                   >
                                     <svg
-                                      className="enngb6z1 e1urz3930 css-85qks9-StyledSvg-Star-BookmarkLink e2idor0"
+                                      className="e11dd86m1 e3oiqkq0 css-85qks9-StyledSvg-Star-BookmarkLink ebb48o80"
                                       height="1em"
                                       onClick={[Function]}
                                       viewBox={Object {}}
@@ -619,14 +619,14 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                       >
                         <Component
                           aria-disabled={false}
-                          className="css-dkprmi-StyledButton-getColors eqrebog0"
+                          className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                           onClick={[Function]}
                           role="button"
                           size="small"
                         >
                           <button
                             aria-disabled={false}
-                            className="css-dkprmi-StyledButton-getColors eqrebog0"
+                            className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                             onClick={[Function]}
                             role="button"
                             size="small"
@@ -635,28 +635,28 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                               size="small"
                             >
                               <Component
-                                className="css-7ui8bl-ButtonLabel eqrebog1"
+                                className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                 size="small"
                               >
                                 <span
-                                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                 >
                                   <RemoveIcon>
                                     <Component
-                                      className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                      className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                     >
                                       <InlineSvg
-                                        className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                        className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                         src="icon-circle-subtract"
                                       >
                                         <StyledSvg
-                                          className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                          className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                           height="1em"
                                           viewBox={Object {}}
                                           width="1em"
                                         >
                                           <svg
-                                            className="eqsa6vb0 css-10g0ex9-StyledSvg-RemoveIcon e2idor0"
+                                            className="e1ir3m6z0 css-10g0ex9-StyledSvg-RemoveIcon ebb48o80"
                                             height="1em"
                                             viewBox={Object {}}
                                             width="1em"
@@ -687,10 +687,10 @@ exports[`OrganizationTeamProjects Should render 1`] = `
               key="3"
             >
               <Base
-                className="css-15fe8h6-PanelItem-StyledPanelItem eqsa6vb1"
+                className="css-15fe8h6-PanelItem-StyledPanelItem e1ir3m6z1"
               >
                 <div
-                  className="css-15fe8h6-PanelItem-StyledPanelItem eqsa6vb1"
+                  className="css-15fe8h6-PanelItem-StyledPanelItem e1ir3m6z1"
                   is={null}
                 >
                   <ProjectItem
@@ -739,7 +739,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                       key="3"
                     >
                       <div
-                        className="css-9ku3o0-Container enngb6z0"
+                        className="css-9ku3o0-Container e11dd86m0"
                       >
                         <BookmarkLink
                           isBookmarked={false}
@@ -786,7 +786,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           }
                         >
                           <withApi(BookmarkStar)
-                            className="css-10z01iz-BookmarkLink enngb6z1"
+                            className="css-10z01iz-BookmarkLink e11dd86m1"
                             isBookmarked={false}
                             onToggle={[Function]}
                             organization={
@@ -832,7 +832,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           >
                             <BookmarkStar
                               api={Client {}}
-                              className="css-10z01iz-BookmarkLink enngb6z1"
+                              className="css-10z01iz-BookmarkLink e11dd86m1"
                               isBookmarked={false}
                               onToggle={[Function]}
                               organization={
@@ -877,19 +877,19 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                               }
                             >
                               <Star
-                                className="css-10z01iz-BookmarkLink enngb6z1"
+                                className="css-10z01iz-BookmarkLink e11dd86m1"
                                 isBookmarked={false}
                                 onClick={[Function]}
                                 src="icon-star-small-filled"
                               >
                                 <InlineSvg
-                                  className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                  className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                   isBookmarked={false}
                                   onClick={[Function]}
                                   src="icon-star-small-filled"
                                 >
                                   <StyledSvg
-                                    className="enngb6z1 css-1j5sthu-Star-BookmarkLink e1urz3930"
+                                    className="e11dd86m1 css-1j5sthu-Star-BookmarkLink e3oiqkq0"
                                     height="1em"
                                     isBookmarked={false}
                                     onClick={[Function]}
@@ -897,7 +897,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                     width="1em"
                                   >
                                     <svg
-                                      className="enngb6z1 e1urz3930 css-85qks9-StyledSvg-Star-BookmarkLink e2idor0"
+                                      className="e11dd86m1 e3oiqkq0 css-85qks9-StyledSvg-Star-BookmarkLink ebb48o80"
                                       height="1em"
                                       onClick={[Function]}
                                       viewBox={Object {}}
@@ -986,14 +986,14 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                       >
                         <Component
                           aria-disabled={false}
-                          className="css-dkprmi-StyledButton-getColors eqrebog0"
+                          className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                           onClick={[Function]}
                           role="button"
                           size="small"
                         >
                           <button
                             aria-disabled={false}
-                            className="css-dkprmi-StyledButton-getColors eqrebog0"
+                            className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                             onClick={[Function]}
                             role="button"
                             size="small"
@@ -1002,28 +1002,28 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                               size="small"
                             >
                               <Component
-                                className="css-7ui8bl-ButtonLabel eqrebog1"
+                                className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                 size="small"
                               >
                                 <span
-                                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                 >
                                   <RemoveIcon>
                                     <Component
-                                      className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                      className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                     >
                                       <InlineSvg
-                                        className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                        className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                         src="icon-circle-subtract"
                                       >
                                         <StyledSvg
-                                          className="css-1e2j5j0-RemoveIcon eqsa6vb0"
+                                          className="css-1e2j5j0-RemoveIcon e1ir3m6z0"
                                           height="1em"
                                           viewBox={Object {}}
                                           width="1em"
                                         >
                                           <svg
-                                            className="eqsa6vb0 css-10g0ex9-StyledSvg-RemoveIcon e2idor0"
+                                            className="e1ir3m6z0 css-10g0ex9-StyledSvg-RemoveIcon ebb48o80"
                                             height="1em"
                                             viewBox={Object {}}
                                             width="1em"

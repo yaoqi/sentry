@@ -42,7 +42,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
   >
     <Wrapper>
       <div
-        className="css-1r5ylk7-Wrapper e1kblvez2"
+        className="css-1r5ylk7-Wrapper e1ievzxl2"
       >
         <Flex
           align="center"
@@ -59,15 +59,15 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                 styled={false}
               >
                 <Base
-                  className="css-1ky52ze-Title e1kblvez0"
+                  className="css-1ky52ze-Title e1ievzxl0"
                 >
                   <div
-                    className="css-1ky52ze-Title e1kblvez0"
+                    className="css-1ky52ze-Title e1ievzxl0"
                     is={null}
                   >
                     <HeaderTitle>
                       <h4
-                        className="css-1w8ttcn-HeaderTitle e6lvex72"
+                        className="css-1w8ttcn-HeaderTitle elc10ae2"
                       >
                         Integrations
                       </h4>
@@ -306,30 +306,30 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
   />
   <Panel>
     <Component
-      className="css-yahxlu-Panel e1laxa7d0"
+      className="css-yahxlu-Panel e16u4s2c0"
     >
       <div
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <PanelHeader
           disablePadding={true}
         >
           <Component
-            className="css-18sl05e-PanelHeader-getPadding e1p8v8nv0"
+            className="css-18sl05e-PanelHeader-getPadding e1o9kety0"
             disablePadding={true}
           >
             <Flex
               align="center"
-              className="css-18sl05e-PanelHeader-getPadding e1p8v8nv0"
+              className="css-18sl05e-PanelHeader-getPadding e1o9kety0"
               justify="space-between"
             >
               <Base
                 align="center"
-                className="e1p8v8nv0 css-1egsr5k-PanelHeader-getPadding"
+                className="e1o9kety0 css-1egsr5k-PanelHeader-getPadding"
                 justify="space-between"
               >
                 <div
-                  className="e1p8v8nv0 css-1egsr5k-PanelHeader-getPadding"
+                  className="e1o9kety0 css-1egsr5k-PanelHeader-getPadding"
                   is={null}
                 >
                   <Box
@@ -448,12 +448,12 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                 p={0}
               >
                 <Base
-                  className="css-1dqh7vv-PanelItem eo8n7lk0"
+                  className="css-1dqh7vv-PanelItem egwqg5y0"
                   direction="column"
                   p={0}
                 >
                   <div
-                    className="css-1dqh7vv-PanelItem eo8n7lk0"
+                    className="css-1dqh7vv-PanelItem egwqg5y0"
                     is={null}
                   >
                     <Flex
@@ -478,7 +478,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               size={36}
                             >
                               <div
-                                className="css-5iptpn-IntegrationIcon e1bhjds90"
+                                className="css-5iptpn-IntegrationIcon e1ehkbfw0"
                                 size={36}
                               />
                             </IntegrationIcon>
@@ -498,28 +498,28 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               >
                                 <ProviderName>
                                   <div
-                                    className="css-1nak1rg-ProviderName e1egfpwi0"
+                                    className="css-1nak1rg-ProviderName em9ivmg0"
                                   >
                                     GitHub
                                   </div>
                                 </ProviderName>
                                 <ProviderDetails>
                                   <Base
-                                    className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                    className="css-1q4otvp-ProviderDetails em9ivmg1"
                                   >
                                     <div
-                                      className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                      className="css-1q4otvp-ProviderDetails em9ivmg1"
                                       is={null}
                                     >
                                       <Status
                                         enabled={true}
                                       >
                                         <WithTheme(Component)
-                                          className="css-1rvre0-Status e1egfpwi2"
+                                          className="css-1rvre0-Status em9ivmg2"
                                           enabled={true}
                                         >
                                           <Component
-                                            className="css-1rvre0-Status e1egfpwi2"
+                                            className="css-1rvre0-Status em9ivmg2"
                                             enabled={true}
                                             theme={
                                               Object {
@@ -781,14 +781,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       size={6}
                                                     >
                                                       <div
-                                                        className="css-18at6gu-Circle eljqieg0"
+                                                        className="css-18at6gu-Circle e1p0fadm0"
                                                         color="#57be8c"
                                                         size={6}
                                                       />
                                                     </Circle>
                                                   </CircleIndicator>
                                                   <div
-                                                    className="css-1rvre0-Status e1egfpwi2"
+                                                    className="css-1rvre0-Status em9ivmg2"
                                                     theme={
                                                       Object {
                                                         "alert": Object {
@@ -1039,11 +1039,11 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                         onClick={[Function]}
                                       >
                                         <Link
-                                          className="css-u3fgwp-StyledLink e1egfpwi5"
+                                          className="css-u3fgwp-StyledLink em9ivmg5"
                                           onClick={[Function]}
                                         >
                                           <a
-                                            className="css-u3fgwp-StyledLink e1egfpwi5"
+                                            className="css-u3fgwp-StyledLink em9ivmg5"
                                             onClick={[Function]}
                                           >
                                             Learn More
@@ -1081,7 +1081,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Add Another"
-                                      className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                      className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="small"
@@ -1089,7 +1089,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                       <button
                                         aria-disabled={false}
                                         aria-label="Add Another"
-                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="small"
@@ -1098,23 +1098,23 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                           size="small"
                                         >
                                           <Component
-                                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             size="small"
                                           >
                                             <span
-                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             >
                                               <Icon
                                                 hasChildren={true}
                                                 size="small"
                                               >
                                                 <Component
-                                                  className="css-1vdnsie-Icon eqrebog2"
+                                                  className="css-1vdnsie-Icon e7bsqvz2"
                                                   hasChildren={true}
                                                   size="small"
                                                 >
                                                   <span
-                                                    className="css-1vdnsie-Icon eqrebog2"
+                                                    className="css-1vdnsie-Icon e7bsqvz2"
                                                     size="small"
                                                   >
                                                     <StyledInlineSvg
@@ -1122,18 +1122,18 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       src="icon-circle-add"
                                                     >
                                                       <InlineSvg
-                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                         size="12px"
                                                         src="icon-circle-add"
                                                       >
                                                         <StyledSvg
-                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                           height="12px"
                                                           viewBox={Object {}}
                                                           width="12px"
                                                         >
                                                           <svg
-                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                             height="12px"
                                                             viewBox={Object {}}
                                                             width="12px"
@@ -1241,7 +1241,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                       }
                     >
                       <Component
-                        className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                        className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                         integration={
                           Object {
                             "configData": Object {},
@@ -1318,7 +1318,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                         }
                       >
                         <InstalledIntegration
-                          className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                          className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                           integration={
                             Object {
                               "configData": Object {},
@@ -1506,15 +1506,15 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               >
                                 <Flex
                                   align="center"
-                                  className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                                  className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                                   key="1"
                                 >
                                   <Base
                                     align="center"
-                                    className="e1egfpwi4 css-1r8fo78-StyledInstalledIntegration"
+                                    className="em9ivmg4 css-1r8fo78-StyledInstalledIntegration"
                                   >
                                     <div
-                                      className="e1egfpwi4 css-1r8fo78-StyledInstalledIntegration"
+                                      className="em9ivmg4 css-1r8fo78-StyledInstalledIntegration"
                                       is={null}
                                     >
                                       <Box
@@ -1589,7 +1589,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                               src="http://example.com/integration_icon.png"
                                                             >
                                                               <img
-                                                                className="css-f8xrkt-Icon e17bf5d30"
+                                                                className="css-f8xrkt-Icon e14xkn570"
                                                                 size={22}
                                                                 src="http://example.com/integration_icon.png"
                                                               />
@@ -1602,11 +1602,11 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       compact={true}
                                                     >
                                                       <div
-                                                        className="css-j2micm-Labels ettpo130"
+                                                        className="css-j2micm-Labels eb5z3cy0"
                                                       >
                                                         <IntegrationName>
                                                           <div
-                                                            className="css-ksmg3c-IntegrationName ettpo131"
+                                                            className="css-ksmg3c-IntegrationName eb5z3cy1"
                                                           >
                                                             Test Integration
                                                           </div>
@@ -1615,7 +1615,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                           compact={true}
                                                         >
                                                           <div
-                                                            className="css-equk2k-DomainName ettpo132"
+                                                            className="css-equk2k-DomainName eb5z3cy2"
                                                           >
                                                             github.com/test-integration
                                                           </div>
@@ -1675,7 +1675,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                               >
                                                 <Button
                                                   borderless={true}
-                                                  className="css-1j0nrmm-StyledButton ejqw4f70"
+                                                  className="css-1j0nrmm-StyledButton e1xml9jh0"
                                                   disabled={false}
                                                   icon="icon-trash"
                                                   onClick={[Function]}
@@ -1684,7 +1684,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                     aria-disabled={false}
                                                     aria-label="Remove"
                                                     borderless={true}
-                                                    className="css-1j0nrmm-StyledButton ejqw4f70"
+                                                    className="css-1j0nrmm-StyledButton e1xml9jh0"
                                                     disabled={false}
                                                     onClick={[Function]}
                                                     role="button"
@@ -1692,14 +1692,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                     <Component
                                                       aria-disabled={false}
                                                       aria-label="Remove"
-                                                      className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
+                                                      className="e1xml9jh0 css-1rs3lxn-StyledButton-getColors-StyledButton e7bsqvz0"
                                                       onClick={[Function]}
                                                       role="button"
                                                     >
                                                       <button
                                                         aria-disabled={false}
                                                         aria-label="Remove"
-                                                        className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
+                                                        className="e1xml9jh0 css-1rs3lxn-StyledButton-getColors-StyledButton e7bsqvz0"
                                                         onClick={[Function]}
                                                         role="button"
                                                       >
@@ -1708,38 +1708,38 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                         >
                                                           <Component
                                                             borderless={true}
-                                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                           >
                                                             <span
-                                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                             >
                                                               <Icon
                                                                 hasChildren={true}
                                                               >
                                                                 <Component
-                                                                  className="css-1jxtush-Icon eqrebog2"
+                                                                  className="css-1jxtush-Icon e7bsqvz2"
                                                                   hasChildren={true}
                                                                 >
                                                                   <span
-                                                                    className="css-1jxtush-Icon eqrebog2"
+                                                                    className="css-1jxtush-Icon e7bsqvz2"
                                                                   >
                                                                     <StyledInlineSvg
                                                                       size="16px"
                                                                       src="icon-trash"
                                                                     >
                                                                       <InlineSvg
-                                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                                         size="16px"
                                                                         src="icon-trash"
                                                                       >
                                                                         <StyledSvg
-                                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                                           height="16px"
                                                                           viewBox={Object {}}
                                                                           width="16px"
                                                                         >
                                                                           <svg
-                                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                                             height="16px"
                                                                             viewBox={Object {}}
                                                                             width="16px"
@@ -1912,12 +1912,12 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                 p={0}
               >
                 <Base
-                  className="css-1dqh7vv-PanelItem eo8n7lk0"
+                  className="css-1dqh7vv-PanelItem egwqg5y0"
                   direction="column"
                   p={0}
                 >
                   <div
-                    className="css-1dqh7vv-PanelItem eo8n7lk0"
+                    className="css-1dqh7vv-PanelItem egwqg5y0"
                     is={null}
                   >
                     <Flex
@@ -1942,7 +1942,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               size={36}
                             >
                               <div
-                                className="css-5iptpn-IntegrationIcon e1bhjds90"
+                                className="css-5iptpn-IntegrationIcon e1ehkbfw0"
                                 size={36}
                               />
                             </IntegrationIcon>
@@ -1962,28 +1962,28 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               >
                                 <ProviderName>
                                   <div
-                                    className="css-1nak1rg-ProviderName e1egfpwi0"
+                                    className="css-1nak1rg-ProviderName em9ivmg0"
                                   >
                                     Jira
                                   </div>
                                 </ProviderName>
                                 <ProviderDetails>
                                   <Base
-                                    className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                    className="css-1q4otvp-ProviderDetails em9ivmg1"
                                   >
                                     <div
-                                      className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                      className="css-1q4otvp-ProviderDetails em9ivmg1"
                                       is={null}
                                     >
                                       <Status
                                         enabled={true}
                                       >
                                         <WithTheme(Component)
-                                          className="css-1rvre0-Status e1egfpwi2"
+                                          className="css-1rvre0-Status em9ivmg2"
                                           enabled={true}
                                         >
                                           <Component
-                                            className="css-1rvre0-Status e1egfpwi2"
+                                            className="css-1rvre0-Status em9ivmg2"
                                             enabled={true}
                                             theme={
                                               Object {
@@ -2245,14 +2245,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       size={6}
                                                     >
                                                       <div
-                                                        className="css-18at6gu-Circle eljqieg0"
+                                                        className="css-18at6gu-Circle e1p0fadm0"
                                                         color="#57be8c"
                                                         size={6}
                                                       />
                                                     </Circle>
                                                   </CircleIndicator>
                                                   <div
-                                                    className="css-1rvre0-Status e1egfpwi2"
+                                                    className="css-1rvre0-Status em9ivmg2"
                                                     theme={
                                                       Object {
                                                         "alert": Object {
@@ -2503,11 +2503,11 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                         onClick={[Function]}
                                       >
                                         <Link
-                                          className="css-u3fgwp-StyledLink e1egfpwi5"
+                                          className="css-u3fgwp-StyledLink em9ivmg5"
                                           onClick={[Function]}
                                         >
                                           <a
-                                            className="css-u3fgwp-StyledLink e1egfpwi5"
+                                            className="css-u3fgwp-StyledLink em9ivmg5"
                                             onClick={[Function]}
                                           >
                                             Learn More
@@ -2545,7 +2545,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Add Another"
-                                      className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                      className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="small"
@@ -2553,7 +2553,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                       <button
                                         aria-disabled={false}
                                         aria-label="Add Another"
-                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="small"
@@ -2562,23 +2562,23 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                           size="small"
                                         >
                                           <Component
-                                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             size="small"
                                           >
                                             <span
-                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             >
                                               <Icon
                                                 hasChildren={true}
                                                 size="small"
                                               >
                                                 <Component
-                                                  className="css-1vdnsie-Icon eqrebog2"
+                                                  className="css-1vdnsie-Icon e7bsqvz2"
                                                   hasChildren={true}
                                                   size="small"
                                                 >
                                                   <span
-                                                    className="css-1vdnsie-Icon eqrebog2"
+                                                    className="css-1vdnsie-Icon e7bsqvz2"
                                                     size="small"
                                                   >
                                                     <StyledInlineSvg
@@ -2586,18 +2586,18 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       src="icon-circle-add"
                                                     >
                                                       <InlineSvg
-                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                         size="12px"
                                                         src="icon-circle-add"
                                                       >
                                                         <StyledSvg
-                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                           height="12px"
                                                           viewBox={Object {}}
                                                           width="12px"
                                                         >
                                                           <svg
-                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                             height="12px"
                                                             viewBox={Object {}}
                                                             width="12px"
@@ -2698,7 +2698,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                       }
                     >
                       <Component
-                        className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                        className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                         integration={
                           Object {
                             "configData": Object {},
@@ -2768,7 +2768,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                         }
                       >
                         <InstalledIntegration
-                          className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                          className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                           integration={
                             Object {
                               "configData": Object {},
@@ -2949,15 +2949,15 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                               >
                                 <Flex
                                   align="center"
-                                  className="css-1gojchp-StyledInstalledIntegration e1egfpwi4"
+                                  className="css-1gojchp-StyledInstalledIntegration em9ivmg4"
                                   key="2"
                                 >
                                   <Base
                                     align="center"
-                                    className="e1egfpwi4 css-1r8fo78-StyledInstalledIntegration"
+                                    className="em9ivmg4 css-1r8fo78-StyledInstalledIntegration"
                                   >
                                     <div
-                                      className="e1egfpwi4 css-1r8fo78-StyledInstalledIntegration"
+                                      className="em9ivmg4 css-1r8fo78-StyledInstalledIntegration"
                                       is={null}
                                     >
                                       <Box
@@ -3032,7 +3032,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                               src="http://jira.example.com/integration_icon.png"
                                                             >
                                                               <img
-                                                                className="css-f8xrkt-Icon e17bf5d30"
+                                                                className="css-f8xrkt-Icon e14xkn570"
                                                                 size={22}
                                                                 src="http://jira.example.com/integration_icon.png"
                                                               />
@@ -3045,11 +3045,11 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                       compact={true}
                                                     >
                                                       <div
-                                                        className="css-j2micm-Labels ettpo130"
+                                                        className="css-j2micm-Labels eb5z3cy0"
                                                       >
                                                         <IntegrationName>
                                                           <div
-                                                            className="css-ksmg3c-IntegrationName ettpo131"
+                                                            className="css-ksmg3c-IntegrationName eb5z3cy1"
                                                           >
                                                             Jira Test Integration
                                                           </div>
@@ -3058,7 +3058,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                           compact={true}
                                                         >
                                                           <div
-                                                            className="css-equk2k-DomainName ettpo132"
+                                                            className="css-equk2k-DomainName eb5z3cy2"
                                                           >
                                                             jira.com/test-integration
                                                           </div>
@@ -3118,7 +3118,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                               >
                                                 <Button
                                                   borderless={true}
-                                                  className="css-1j0nrmm-StyledButton ejqw4f70"
+                                                  className="css-1j0nrmm-StyledButton e1xml9jh0"
                                                   disabled={false}
                                                   icon="icon-trash"
                                                   onClick={[Function]}
@@ -3127,7 +3127,7 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                     aria-disabled={false}
                                                     aria-label="Remove"
                                                     borderless={true}
-                                                    className="css-1j0nrmm-StyledButton ejqw4f70"
+                                                    className="css-1j0nrmm-StyledButton e1xml9jh0"
                                                     disabled={false}
                                                     onClick={[Function]}
                                                     role="button"
@@ -3135,14 +3135,14 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                     <Component
                                                       aria-disabled={false}
                                                       aria-label="Remove"
-                                                      className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
+                                                      className="e1xml9jh0 css-1rs3lxn-StyledButton-getColors-StyledButton e7bsqvz0"
                                                       onClick={[Function]}
                                                       role="button"
                                                     >
                                                       <button
                                                         aria-disabled={false}
                                                         aria-label="Remove"
-                                                        className="ejqw4f70 css-1rs3lxn-StyledButton-getColors-StyledButton eqrebog0"
+                                                        className="e1xml9jh0 css-1rs3lxn-StyledButton-getColors-StyledButton e7bsqvz0"
                                                         onClick={[Function]}
                                                         role="button"
                                                       >
@@ -3151,38 +3151,38 @@ exports[`OrganizationIntegrations render() with installed integrations Displays 
                                                         >
                                                           <Component
                                                             borderless={true}
-                                                            className="css-uthd1f-ButtonLabel eqrebog1"
+                                                            className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                           >
                                                             <span
-                                                              className="css-uthd1f-ButtonLabel eqrebog1"
+                                                              className="css-uthd1f-ButtonLabel e7bsqvz1"
                                                             >
                                                               <Icon
                                                                 hasChildren={true}
                                                               >
                                                                 <Component
-                                                                  className="css-1jxtush-Icon eqrebog2"
+                                                                  className="css-1jxtush-Icon e7bsqvz2"
                                                                   hasChildren={true}
                                                                 >
                                                                   <span
-                                                                    className="css-1jxtush-Icon eqrebog2"
+                                                                    className="css-1jxtush-Icon e7bsqvz2"
                                                                   >
                                                                     <StyledInlineSvg
                                                                       size="16px"
                                                                       src="icon-trash"
                                                                     >
                                                                       <InlineSvg
-                                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                                         size="16px"
                                                                         src="icon-trash"
                                                                       >
                                                                         <StyledSvg
-                                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                                           height="16px"
                                                                           viewBox={Object {}}
                                                                           width="16px"
                                                                         >
                                                                           <svg
-                                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                                             height="16px"
                                                                             viewBox={Object {}}
                                                                             width="16px"
@@ -3326,7 +3326,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
   >
     <Wrapper>
       <div
-        className="css-1r5ylk7-Wrapper e1kblvez2"
+        className="css-1r5ylk7-Wrapper e1ievzxl2"
       >
         <Flex
           align="center"
@@ -3343,15 +3343,15 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                 styled={false}
               >
                 <Base
-                  className="css-1ky52ze-Title e1kblvez0"
+                  className="css-1ky52ze-Title e1ievzxl0"
                 >
                   <div
-                    className="css-1ky52ze-Title e1kblvez0"
+                    className="css-1ky52ze-Title e1ievzxl0"
                     is={null}
                   >
                     <HeaderTitle>
                       <h4
-                        className="css-1w8ttcn-HeaderTitle e6lvex72"
+                        className="css-1w8ttcn-HeaderTitle elc10ae2"
                       >
                         Integrations
                       </h4>
@@ -3558,30 +3558,30 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
   />
   <Panel>
     <Component
-      className="css-yahxlu-Panel e1laxa7d0"
+      className="css-yahxlu-Panel e16u4s2c0"
     >
       <div
-        className="css-yahxlu-Panel e1laxa7d0"
+        className="css-yahxlu-Panel e16u4s2c0"
       >
         <PanelHeader
           disablePadding={true}
         >
           <Component
-            className="css-18sl05e-PanelHeader-getPadding e1p8v8nv0"
+            className="css-18sl05e-PanelHeader-getPadding e1o9kety0"
             disablePadding={true}
           >
             <Flex
               align="center"
-              className="css-18sl05e-PanelHeader-getPadding e1p8v8nv0"
+              className="css-18sl05e-PanelHeader-getPadding e1o9kety0"
               justify="space-between"
             >
               <Base
                 align="center"
-                className="e1p8v8nv0 css-1egsr5k-PanelHeader-getPadding"
+                className="e1o9kety0 css-1egsr5k-PanelHeader-getPadding"
                 justify="space-between"
               >
                 <div
-                  className="e1p8v8nv0 css-1egsr5k-PanelHeader-getPadding"
+                  className="e1o9kety0 css-1egsr5k-PanelHeader-getPadding"
                   is={null}
                 >
                   <Box
@@ -3666,12 +3666,12 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                 p={0}
               >
                 <Base
-                  className="css-1dqh7vv-PanelItem eo8n7lk0"
+                  className="css-1dqh7vv-PanelItem egwqg5y0"
                   direction="column"
                   p={0}
                 >
                   <div
-                    className="css-1dqh7vv-PanelItem eo8n7lk0"
+                    className="css-1dqh7vv-PanelItem egwqg5y0"
                     is={null}
                   >
                     <Flex
@@ -3696,7 +3696,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                               size={36}
                             >
                               <div
-                                className="css-5iptpn-IntegrationIcon e1bhjds90"
+                                className="css-5iptpn-IntegrationIcon e1ehkbfw0"
                                 size={36}
                               />
                             </IntegrationIcon>
@@ -3716,28 +3716,28 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                               >
                                 <ProviderName>
                                   <div
-                                    className="css-1nak1rg-ProviderName e1egfpwi0"
+                                    className="css-1nak1rg-ProviderName em9ivmg0"
                                   >
                                     GitHub
                                   </div>
                                 </ProviderName>
                                 <ProviderDetails>
                                   <Base
-                                    className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                    className="css-1q4otvp-ProviderDetails em9ivmg1"
                                   >
                                     <div
-                                      className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                      className="css-1q4otvp-ProviderDetails em9ivmg1"
                                       is={null}
                                     >
                                       <Status
                                         enabled={false}
                                       >
                                         <WithTheme(Component)
-                                          className="css-1xs0jyz-Status e1egfpwi2"
+                                          className="css-1xs0jyz-Status em9ivmg2"
                                           enabled={false}
                                         >
                                           <Component
-                                            className="css-1xs0jyz-Status e1egfpwi2"
+                                            className="css-1xs0jyz-Status em9ivmg2"
                                             enabled={false}
                                             theme={
                                               Object {
@@ -3999,14 +3999,14 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                                       size={6}
                                                     >
                                                       <div
-                                                        className="css-xhz9xw-Circle eljqieg0"
+                                                        className="css-xhz9xw-Circle e1p0fadm0"
                                                         color="#9585A3"
                                                         size={6}
                                                       />
                                                     </Circle>
                                                   </CircleIndicator>
                                                   <div
-                                                    className="css-1xs0jyz-Status e1egfpwi2"
+                                                    className="css-1xs0jyz-Status em9ivmg2"
                                                     theme={
                                                       Object {
                                                         "alert": Object {
@@ -4257,11 +4257,11 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                         onClick={[Function]}
                                       >
                                         <Link
-                                          className="css-u3fgwp-StyledLink e1egfpwi5"
+                                          className="css-u3fgwp-StyledLink em9ivmg5"
                                           onClick={[Function]}
                                         >
                                           <a
-                                            className="css-u3fgwp-StyledLink e1egfpwi5"
+                                            className="css-u3fgwp-StyledLink em9ivmg5"
                                             onClick={[Function]}
                                           >
                                             Learn More
@@ -4299,7 +4299,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Install"
-                                      className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                      className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="small"
@@ -4307,7 +4307,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                       <button
                                         aria-disabled={false}
                                         aria-label="Install"
-                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="small"
@@ -4316,23 +4316,23 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                           size="small"
                                         >
                                           <Component
-                                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             size="small"
                                           >
                                             <span
-                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             >
                                               <Icon
                                                 hasChildren={true}
                                                 size="small"
                                               >
                                                 <Component
-                                                  className="css-1vdnsie-Icon eqrebog2"
+                                                  className="css-1vdnsie-Icon e7bsqvz2"
                                                   hasChildren={true}
                                                   size="small"
                                                 >
                                                   <span
-                                                    className="css-1vdnsie-Icon eqrebog2"
+                                                    className="css-1vdnsie-Icon e7bsqvz2"
                                                     size="small"
                                                   >
                                                     <StyledInlineSvg
@@ -4340,18 +4340,18 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                                       src="icon-circle-add"
                                                     >
                                                       <InlineSvg
-                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                         size="12px"
                                                         src="icon-circle-add"
                                                       >
                                                         <StyledSvg
-                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                           height="12px"
                                                           viewBox={Object {}}
                                                           width="12px"
                                                         >
                                                           <svg
-                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                             height="12px"
                                                             viewBox={Object {}}
                                                             width="12px"
@@ -4430,12 +4430,12 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                 p={0}
               >
                 <Base
-                  className="css-1dqh7vv-PanelItem eo8n7lk0"
+                  className="css-1dqh7vv-PanelItem egwqg5y0"
                   direction="column"
                   p={0}
                 >
                   <div
-                    className="css-1dqh7vv-PanelItem eo8n7lk0"
+                    className="css-1dqh7vv-PanelItem egwqg5y0"
                     is={null}
                   >
                     <Flex
@@ -4460,7 +4460,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                               size={36}
                             >
                               <div
-                                className="css-5iptpn-IntegrationIcon e1bhjds90"
+                                className="css-5iptpn-IntegrationIcon e1ehkbfw0"
                                 size={36}
                               />
                             </IntegrationIcon>
@@ -4480,28 +4480,28 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                               >
                                 <ProviderName>
                                   <div
-                                    className="css-1nak1rg-ProviderName e1egfpwi0"
+                                    className="css-1nak1rg-ProviderName em9ivmg0"
                                   >
                                     Jira
                                   </div>
                                 </ProviderName>
                                 <ProviderDetails>
                                   <Base
-                                    className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                    className="css-1q4otvp-ProviderDetails em9ivmg1"
                                   >
                                     <div
-                                      className="css-1q4otvp-ProviderDetails e1egfpwi1"
+                                      className="css-1q4otvp-ProviderDetails em9ivmg1"
                                       is={null}
                                     >
                                       <Status
                                         enabled={false}
                                       >
                                         <WithTheme(Component)
-                                          className="css-1xs0jyz-Status e1egfpwi2"
+                                          className="css-1xs0jyz-Status em9ivmg2"
                                           enabled={false}
                                         >
                                           <Component
-                                            className="css-1xs0jyz-Status e1egfpwi2"
+                                            className="css-1xs0jyz-Status em9ivmg2"
                                             enabled={false}
                                             theme={
                                               Object {
@@ -4763,14 +4763,14 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                                       size={6}
                                                     >
                                                       <div
-                                                        className="css-xhz9xw-Circle eljqieg0"
+                                                        className="css-xhz9xw-Circle e1p0fadm0"
                                                         color="#9585A3"
                                                         size={6}
                                                       />
                                                     </Circle>
                                                   </CircleIndicator>
                                                   <div
-                                                    className="css-1xs0jyz-Status e1egfpwi2"
+                                                    className="css-1xs0jyz-Status em9ivmg2"
                                                     theme={
                                                       Object {
                                                         "alert": Object {
@@ -5021,11 +5021,11 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                         onClick={[Function]}
                                       >
                                         <Link
-                                          className="css-u3fgwp-StyledLink e1egfpwi5"
+                                          className="css-u3fgwp-StyledLink em9ivmg5"
                                           onClick={[Function]}
                                         >
                                           <a
-                                            className="css-u3fgwp-StyledLink e1egfpwi5"
+                                            className="css-u3fgwp-StyledLink em9ivmg5"
                                             onClick={[Function]}
                                           >
                                             Learn More
@@ -5063,7 +5063,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                     <Component
                                       aria-disabled={false}
                                       aria-label="Install"
-                                      className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                      className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                       onClick={[Function]}
                                       role="button"
                                       size="small"
@@ -5071,7 +5071,7 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                       <button
                                         aria-disabled={false}
                                         aria-label="Install"
-                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                         onClick={[Function]}
                                         role="button"
                                         size="small"
@@ -5080,23 +5080,23 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                           size="small"
                                         >
                                           <Component
-                                            className="css-7ui8bl-ButtonLabel eqrebog1"
+                                            className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             size="small"
                                           >
                                             <span
-                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                             >
                                               <Icon
                                                 hasChildren={true}
                                                 size="small"
                                               >
                                                 <Component
-                                                  className="css-1vdnsie-Icon eqrebog2"
+                                                  className="css-1vdnsie-Icon e7bsqvz2"
                                                   hasChildren={true}
                                                   size="small"
                                                 >
                                                   <span
-                                                    className="css-1vdnsie-Icon eqrebog2"
+                                                    className="css-1vdnsie-Icon e7bsqvz2"
                                                     size="small"
                                                   >
                                                     <StyledInlineSvg
@@ -5104,18 +5104,18 @@ exports[`OrganizationIntegrations render() without integrations Displays integra
                                                       src="icon-circle-add"
                                                     >
                                                       <InlineSvg
-                                                        className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                        className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                         size="12px"
                                                         src="icon-circle-add"
                                                       >
                                                         <StyledSvg
-                                                          className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                          className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                           height="12px"
                                                           viewBox={Object {}}
                                                           width="12px"
                                                         >
                                                           <svg
-                                                            className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                            className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                             height="12px"
                                                             viewBox={Object {}}
                                                             width="12px"

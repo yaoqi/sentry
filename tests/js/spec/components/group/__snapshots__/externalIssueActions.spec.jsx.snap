@@ -91,7 +91,7 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
   >
     <IssueSyncListElementContainer>
       <div
-        className="css-lh3vnw-IssueSyncListElementContainer e1vaar1z0"
+        className="css-lh3vnw-IssueSyncListElementContainer e58g29m0"
       >
         <Hovercard
           body={
@@ -125,10 +125,10 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
             innerRef={
               Object {
                 "current": <span
-                  class="css-86d5c-Container-hoverCardContainer e38w1je1"
+                  class="css-86d5c-Container-hoverCardContainer eexws2n1"
                 >
                   <svg
-                    class="e1vaar1z1 css-ihls3x-StyledSvg-IntegrationIcon e2idor0"
+                    class="e58g29m1 css-ihls3x-StyledSvg-IntegrationIcon ebb48o80"
                     height="1em"
                     viewBox="[object Object]"
                     width="1em"
@@ -139,7 +139,7 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
                     />
                   </svg>
                   <a
-                    class="css-1g8yzea-IntegrationLink e1vaar1z2"
+                    class="css-1g8yzea-IntegrationLink e58g29m2"
                   >
                     Link GitHub Issue
                   </a>
@@ -150,7 +150,7 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
             onMouseLeave={[Function]}
           >
             <span
-              className="css-86d5c-Container-hoverCardContainer e38w1je1"
+              className="css-86d5c-Container-hoverCardContainer eexws2n1"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
@@ -158,17 +158,17 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
                 src="icon-github"
               >
                 <InlineSvg
-                  className="css-jn9d7y-IntegrationIcon e1vaar1z1"
+                  className="css-jn9d7y-IntegrationIcon e58g29m1"
                   src="icon-github"
                 >
                   <StyledSvg
-                    className="css-jn9d7y-IntegrationIcon e1vaar1z1"
+                    className="css-jn9d7y-IntegrationIcon e58g29m1"
                     height="1em"
                     viewBox={Object {}}
                     width="1em"
                   >
                     <svg
-                      className="e1vaar1z1 css-ihls3x-StyledSvg-IntegrationIcon e2idor0"
+                      className="e58g29m1 css-ihls3x-StyledSvg-IntegrationIcon ebb48o80"
                       height="1em"
                       viewBox={Object {}}
                       width="1em"
@@ -186,7 +186,7 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
                 onClick={[Function]}
               >
                 <a
-                  className="css-1g8yzea-IntegrationLink e1vaar1z2"
+                  className="css-1g8yzea-IntegrationLink e58g29m2"
                   href={null}
                   onClick={[Function]}
                 >
@@ -202,13 +202,13 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
           src="icon-close"
         >
           <InlineSvg
-            className="css-100fxiy-OpenCloseIcon e1vaar1z3"
+            className="css-100fxiy-OpenCloseIcon e58g29m3"
             isLinked={null}
             onClick={[Function]}
             src="icon-close"
           >
             <StyledSvg
-              className="css-100fxiy-OpenCloseIcon e1vaar1z3"
+              className="css-100fxiy-OpenCloseIcon e58g29m3"
               height="1em"
               isLinked={null}
               onClick={[Function]}
@@ -216,7 +216,7 @@ exports[`ExternalIssueActions with no external issues linked renders 1`] = `
               width="1em"
             >
               <svg
-                className="e1vaar1z3 css-3kdvxo-StyledSvg-OpenCloseIcon e2idor0"
+                className="e58g29m3 css-3kdvxo-StyledSvg-OpenCloseIcon ebb48o80"
                 height="1em"
                 onClick={[Function]}
                 viewBox={Object {}}

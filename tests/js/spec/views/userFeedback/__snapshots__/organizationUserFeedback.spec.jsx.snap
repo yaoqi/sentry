@@ -623,15 +623,15 @@ exports[`OrganizationUserFeedback renders 1`] = `
                 >
                   <Header>
                     <Base
-                      className="css-14hw0r3-Header e10yv9i90"
+                      className="css-14hw0r3-Header e1ywyptk0"
                     >
                       <div
-                        className="css-14hw0r3-Header e10yv9i90"
+                        className="css-14hw0r3-Header e1ywyptk0"
                         is={null}
                       >
                         <HeaderItemPosition>
                           <div
-                            className="css-5udiwc-HeaderItemPosition e165b9e40"
+                            className="css-1gstklo-HeaderItemPosition exycqky0"
                           >
                             <MultipleProjectSelector
                               multi={false}
@@ -761,7 +761,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                 value={Array []}
                               >
                                 <withProjects(ProjectSelector)
-                                  className="css-iw79rr-StyledProjectSelector ewlipse0"
+                                  className="css-iw79rr-StyledProjectSelector e3ya0dj0"
                                   multi={false}
                                   onChange={[Function]}
                                   onClose={[Function]}
@@ -828,7 +828,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                   value={Array []}
                                 >
                                   <ProjectSelector
-                                    className="css-iw79rr-StyledProjectSelector ewlipse0"
+                                    className="css-iw79rr-StyledProjectSelector e3ya0dj0"
                                     multi={false}
                                     onChange={[Function]}
                                     onClose={[Function]}
@@ -886,7 +886,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                       alignMenu="left"
                                       allowActorToggle={true}
                                       blendCorner={false}
-                                      className="ewlipse0 css-11ijjr3-StyledProjectSelector"
+                                      className="e3ya0dj0 css-11ijjr3-StyledProjectSelector"
                                       closeOnSelect={true}
                                       emptyHidesInput={true}
                                       emptyMessage="You have no projects"
@@ -913,7 +913,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                       <DropdownAutoCompleteMenu
                                         alignMenu="left"
                                         blendCorner={false}
-                                        className="ewlipse0 css-11ijjr3-StyledProjectSelector"
+                                        className="e3ya0dj0 css-11ijjr3-StyledProjectSelector"
                                         closeOnSelect={true}
                                         emptyHidesInput={true}
                                         emptyMessage="You have no projects"
@@ -960,10 +960,10 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                               className="css-h5t9nh-rootContainerStyles"
                                             >
                                               <Component
-                                                className="css-1ppsre-AutoCompleteRoot-rootContainerStyles ejumqxq0"
+                                                className="css-1ppsre-AutoCompleteRoot-rootContainerStyles egdot0r0"
                                               >
                                                 <div
-                                                  className="css-1ppsre-AutoCompleteRoot-rootContainerStyles ejumqxq0"
+                                                  className="css-1ppsre-AutoCompleteRoot-rootContainerStyles egdot0r0"
                                                 >
                                                   <Actor
                                                     innerRef={[Function]}
@@ -981,7 +981,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                     tabIndex={-1}
                                                   >
                                                     <div
-                                                      className="css-17fe80j-Actor e53us8t0"
+                                                      className="css-17fe80j-Actor evu979k0"
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       onMouseEnter={[Function]}
@@ -1021,7 +1021,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                         <ForwardRef
                                                           active={false}
                                                           allowClear={false}
-                                                          className="css-12jjx2u-StyledHeaderItem ewlipse1"
+                                                          className="css-12jjx2u-StyledHeaderItem e3ya0dj1"
                                                           hasChanges={false}
                                                           hasSelected={false}
                                                           icon={
@@ -1046,7 +1046,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                           <HeaderItem
                                                             active={false}
                                                             allowClear={false}
-                                                            className="css-12jjx2u-StyledHeaderItem ewlipse1"
+                                                            className="css-12jjx2u-StyledHeaderItem e3ya0dj1"
                                                             hasChanges={false}
                                                             hasSelected={false}
                                                             icon={
@@ -1071,7 +1071,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                           >
                                                             <StyledHeaderItem
                                                               active={false}
-                                                              className="css-12jjx2u-StyledHeaderItem ewlipse1"
+                                                              className="css-12jjx2u-StyledHeaderItem e3ya0dj1"
                                                               hasSelected={false}
                                                               innerRef={null}
                                                               isOpen={false}
@@ -1087,7 +1087,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                               tabIndex={-1}
                                                             >
                                                               <div
-                                                                className="ewlipse1 css-11wumjj-StyledHeaderItem-StyledHeaderItem enk2k7v0"
+                                                                className="e3ya0dj1 css-11wumjj-StyledHeaderItem-StyledHeaderItem ezc9w6v0"
                                                                 onClick={[Function]}
                                                                 onKeyDown={[Function]}
                                                                 onMouseEnter={[Function]}
@@ -1103,23 +1103,23 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                   hasSelected={false}
                                                                 >
                                                                   <span
-                                                                    className="css-1g4tz50-IconContainer enk2k7v2"
+                                                                    className="css-1g4tz50-IconContainer ezc9w6v2"
                                                                   >
                                                                     <StyledInlineSvg
                                                                       src="icon-project"
                                                                     >
                                                                       <InlineSvg
-                                                                        className="css-1ibtmti-StyledInlineSvg ewlipse2"
+                                                                        className="css-1ibtmti-StyledInlineSvg e3ya0dj2"
                                                                         src="icon-project"
                                                                       >
                                                                         <StyledSvg
-                                                                          className="css-1ibtmti-StyledInlineSvg ewlipse2"
+                                                                          className="css-1ibtmti-StyledInlineSvg e3ya0dj2"
                                                                           height="1em"
                                                                           viewBox={Object {}}
                                                                           width="1em"
                                                                         >
                                                                           <svg
-                                                                            className="ewlipse2 css-1ux8cow-StyledSvg-StyledInlineSvg e2idor0"
+                                                                            className="e3ya0dj2 css-1ux8cow-StyledSvg-StyledInlineSvg ebb48o80"
                                                                             height="1em"
                                                                             viewBox={Object {}}
                                                                             width="1em"
@@ -1136,7 +1136,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                 </IconContainer>
                                                                 <Content>
                                                                   <div
-                                                                    className="css-1yquznf-Content enk2k7v1"
+                                                                    className="css-1yquznf-Content ezc9w6v1"
                                                                   >
                                                                     All Projects
                                                                   </div>
@@ -1147,7 +1147,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                   onClick={[Function]}
                                                                 >
                                                                   <div
-                                                                    className="css-ft4nwy-StyledChevron enk2k7v4"
+                                                                    className="css-ft4nwy-StyledChevron ezc9w6v4"
                                                                     onClick={[Function]}
                                                                   >
                                                                     <InlineSvg
@@ -1159,7 +1159,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                         width="1em"
                                                                       >
                                                                         <svg
-                                                                          className="css-ryh69w-StyledSvg e2idor0"
+                                                                          className="css-ryh69w-StyledSvg ebb48o80"
                                                                           height="1em"
                                                                           viewBox={Object {}}
                                                                           width="1em"
@@ -1195,17 +1195,17 @@ exports[`OrganizationUserFeedback renders 1`] = `
                         </HeaderItemPosition>
                         <HeaderSeparator>
                           <Base
-                            className="css-zkrb0n-HeaderSeparator elp5f3l0"
+                            className="css-zkrb0n-HeaderSeparator es0xdz60"
                           >
                             <div
-                              className="css-zkrb0n-HeaderSeparator elp5f3l0"
+                              className="css-zkrb0n-HeaderSeparator es0xdz60"
                               is={null}
                             />
                           </Base>
                         </HeaderSeparator>
                         <HeaderItemPosition>
                           <div
-                            className="css-5udiwc-HeaderItemPosition e165b9e40"
+                            className="css-1gstklo-HeaderItemPosition exycqky0"
                           >
                             <withApi(MultipleEnvironmentSelector)
                               onChange={[Function]}
@@ -1338,7 +1338,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                     alignMenu="left"
                                     allowActorToggle={true}
                                     blendCorner={false}
-                                    className="css-qn89t6-StyledDropdownAutoComplete e1gsuvme2"
+                                    className="css-qn89t6-StyledDropdownAutoComplete eo915o32"
                                     closeOnSelect={true}
                                     emptyHidesInput={true}
                                     emptyMessage="You have no environments"
@@ -1370,7 +1370,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                     <DropdownAutoCompleteMenu
                                       alignMenu="left"
                                       blendCorner={false}
-                                      className="css-qn89t6-StyledDropdownAutoComplete e1gsuvme2"
+                                      className="css-qn89t6-StyledDropdownAutoComplete eo915o32"
                                       closeOnSelect={true}
                                       emptyHidesInput={true}
                                       emptyMessage="You have no environments"
@@ -1422,10 +1422,10 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                             className="css-1utm1zz-rootClassName"
                                           >
                                             <Component
-                                              className="css-qocd3e-AutoCompleteRoot-rootClassName ejumqxq0"
+                                              className="css-qocd3e-AutoCompleteRoot-rootClassName egdot0r0"
                                             >
                                               <div
-                                                className="css-qocd3e-AutoCompleteRoot-rootClassName ejumqxq0"
+                                                className="css-qocd3e-AutoCompleteRoot-rootClassName egdot0r0"
                                               >
                                                 <Actor
                                                   innerRef={[Function]}
@@ -1443,7 +1443,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                   tabIndex={-1}
                                                 >
                                                   <div
-                                                    className="css-17fe80j-Actor e53us8t0"
+                                                    className="css-17fe80j-Actor evu979k0"
                                                     onClick={[Function]}
                                                     onKeyDown={[Function]}
                                                     onMouseEnter={[Function]}
@@ -1480,7 +1480,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                       tabIndex={-1}
                                                     >
                                                       <ForwardRef
-                                                        className="css-22y332-StyledHeaderItem e1gsuvme0"
+                                                        className="css-22y332-StyledHeaderItem eo915o30"
                                                         hasChanges={false}
                                                         hasSelected={false}
                                                         icon={
@@ -1504,7 +1504,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                       >
                                                         <HeaderItem
                                                           allowClear={true}
-                                                          className="css-22y332-StyledHeaderItem e1gsuvme0"
+                                                          className="css-22y332-StyledHeaderItem eo915o30"
                                                           hasChanges={false}
                                                           hasSelected={false}
                                                           icon={
@@ -1528,7 +1528,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                           tabIndex={-1}
                                                         >
                                                           <StyledHeaderItem
-                                                            className="css-22y332-StyledHeaderItem e1gsuvme0"
+                                                            className="css-22y332-StyledHeaderItem eo915o30"
                                                             hasSelected={false}
                                                             innerRef={[Function]}
                                                             isOpen={false}
@@ -1544,7 +1544,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                             tabIndex={-1}
                                                           >
                                                             <div
-                                                              className="e1gsuvme0 css-1v6igws-StyledHeaderItem-StyledHeaderItem enk2k7v0"
+                                                              className="eo915o30 css-1v6igws-StyledHeaderItem-StyledHeaderItem ezc9w6v0"
                                                               onClick={[Function]}
                                                               onKeyDown={[Function]}
                                                               onMouseEnter={[Function]}
@@ -1560,23 +1560,23 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                 hasSelected={false}
                                                               >
                                                                 <span
-                                                                  className="css-1g4tz50-IconContainer enk2k7v2"
+                                                                  className="css-1g4tz50-IconContainer ezc9w6v2"
                                                                 >
                                                                   <StyledInlineSvg
                                                                     src="icon-window"
                                                                   >
                                                                     <InlineSvg
-                                                                      className="css-1ctth4-StyledInlineSvg e1gsuvme1"
+                                                                      className="css-1ctth4-StyledInlineSvg eo915o31"
                                                                       src="icon-window"
                                                                     >
                                                                       <StyledSvg
-                                                                        className="css-1ctth4-StyledInlineSvg e1gsuvme1"
+                                                                        className="css-1ctth4-StyledInlineSvg eo915o31"
                                                                         height="1em"
                                                                         viewBox={Object {}}
                                                                         width="1em"
                                                                       >
                                                                         <svg
-                                                                          className="e1gsuvme1 css-1vh2z4q-StyledSvg-StyledInlineSvg e2idor0"
+                                                                          className="eo915o31 css-1vh2z4q-StyledSvg-StyledInlineSvg ebb48o80"
                                                                           height="1em"
                                                                           viewBox={Object {}}
                                                                           width="1em"
@@ -1593,7 +1593,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                               </IconContainer>
                                                               <Content>
                                                                 <div
-                                                                  className="css-1yquznf-Content enk2k7v1"
+                                                                  className="css-1yquznf-Content ezc9w6v1"
                                                                 >
                                                                   All Environments
                                                                 </div>
@@ -1604,7 +1604,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                 onClick={[Function]}
                                                               >
                                                                 <div
-                                                                  className="css-ft4nwy-StyledChevron enk2k7v4"
+                                                                  className="css-ft4nwy-StyledChevron ezc9w6v4"
                                                                   onClick={[Function]}
                                                                 >
                                                                   <InlineSvg
@@ -1616,7 +1616,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                       width="1em"
                                                                     >
                                                                       <svg
-                                                                        className="css-ryh69w-StyledSvg e2idor0"
+                                                                        className="css-ryh69w-StyledSvg ebb48o80"
                                                                         height="1em"
                                                                         viewBox={Object {}}
                                                                         width="1em"
@@ -1651,17 +1651,17 @@ exports[`OrganizationUserFeedback renders 1`] = `
                         </HeaderItemPosition>
                         <HeaderSeparator>
                           <Base
-                            className="css-zkrb0n-HeaderSeparator elp5f3l0"
+                            className="css-zkrb0n-HeaderSeparator es0xdz60"
                           >
                             <div
-                              className="css-zkrb0n-HeaderSeparator elp5f3l0"
+                              className="css-zkrb0n-HeaderSeparator es0xdz60"
                               is={null}
                             />
                           </Base>
                         </HeaderSeparator>
                         <HeaderItemPosition>
                           <div
-                            className="css-5udiwc-HeaderItemPosition e165b9e40"
+                            className="css-1gstklo-HeaderItemPosition exycqky0"
                           >
                             <TimeRangeSelector
                               end={null}
@@ -1724,7 +1724,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                               >
                                 <TimeRangeRoot>
                                   <div
-                                    className="css-1lz3nth-TimeRangeRoot e1u8612l0"
+                                    className="css-1lz3nth-TimeRangeRoot ech9dlc0"
                                   >
                                     <StyledHeaderItem
                                       allowClear={true}
@@ -1752,7 +1752,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                     >
                                       <ForwardRef
                                         allowClear={true}
-                                        className="css-22y332-StyledHeaderItem e1u8612l1"
+                                        className="css-22y332-StyledHeaderItem ech9dlc1"
                                         hasChanges={false}
                                         hasSelected={false}
                                         icon={
@@ -1776,7 +1776,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                       >
                                         <HeaderItem
                                           allowClear={true}
-                                          className="css-22y332-StyledHeaderItem e1u8612l1"
+                                          className="css-22y332-StyledHeaderItem ech9dlc1"
                                           hasChanges={false}
                                           hasSelected={false}
                                           icon={
@@ -1800,7 +1800,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                           tabIndex={-1}
                                         >
                                           <StyledHeaderItem
-                                            className="css-22y332-StyledHeaderItem e1u8612l1"
+                                            className="css-22y332-StyledHeaderItem ech9dlc1"
                                             hasSelected={false}
                                             innerRef={[Function]}
                                             isOpen={false}
@@ -1816,7 +1816,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                             tabIndex={-1}
                                           >
                                             <div
-                                              className="e1u8612l1 css-1v6igws-StyledHeaderItem-StyledHeaderItem enk2k7v0"
+                                              className="ech9dlc1 css-1v6igws-StyledHeaderItem-StyledHeaderItem ezc9w6v0"
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               onMouseEnter={[Function]}
@@ -1832,23 +1832,23 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                 hasSelected={false}
                                               >
                                                 <span
-                                                  className="css-1g4tz50-IconContainer enk2k7v2"
+                                                  className="css-1g4tz50-IconContainer ezc9w6v2"
                                                 >
                                                   <StyledInlineSvg
                                                     src="icon-calendar"
                                                   >
                                                     <InlineSvg
-                                                      className="css-1ctth4-StyledInlineSvg e1u8612l2"
+                                                      className="css-1ctth4-StyledInlineSvg ech9dlc2"
                                                       src="icon-calendar"
                                                     >
                                                       <StyledSvg
-                                                        className="css-1ctth4-StyledInlineSvg e1u8612l2"
+                                                        className="css-1ctth4-StyledInlineSvg ech9dlc2"
                                                         height="1em"
                                                         viewBox={Object {}}
                                                         width="1em"
                                                       >
                                                         <svg
-                                                          className="e1u8612l2 css-1vh2z4q-StyledSvg-StyledInlineSvg e2idor0"
+                                                          className="ech9dlc2 css-1vh2z4q-StyledSvg-StyledInlineSvg ebb48o80"
                                                           height="1em"
                                                           viewBox={Object {}}
                                                           width="1em"
@@ -1865,7 +1865,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                               </IconContainer>
                                               <Content>
                                                 <div
-                                                  className="css-1yquznf-Content enk2k7v1"
+                                                  className="css-1yquznf-Content ezc9w6v1"
                                                 >
                                                   Last 14 days
                                                 </div>
@@ -1876,7 +1876,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                 onClick={[Function]}
                                               >
                                                 <div
-                                                  className="css-ft4nwy-StyledChevron enk2k7v4"
+                                                  className="css-ft4nwy-StyledChevron ezc9w6v4"
                                                   onClick={[Function]}
                                                 >
                                                   <InlineSvg
@@ -1888,7 +1888,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                       width="1em"
                                                     >
                                                       <svg
-                                                        className="css-ryh69w-StyledSvg e2idor0"
+                                                        className="css-ryh69w-StyledSvg ebb48o80"
                                                         height="1em"
                                                         viewBox={Object {}}
                                                         width="1em"
@@ -1921,7 +1921,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
             </withRouter(withGlobalSelection(GlobalSelectionHeader))>
             <PageContent>
               <div
-                className="css-16fe6ul-PageContent e6lvex70"
+                className="css-16fe6ul-PageContent elc10ae0"
               >
                 <NoProjectMessage
                   organization={
@@ -1995,7 +1995,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                               withMargins={true}
                             >
                               <h1
-                                className="css-13ev48w-Wrapper e1f8hk460"
+                                className="css-13ev48w-Wrapper e3ifmx60"
                               >
                                 User Feedback
                               </h1>
@@ -2059,10 +2059,10 @@ exports[`OrganizationUserFeedback renders 1`] = `
                       </div>
                       <Panel>
                         <Component
-                          className="css-yahxlu-Panel e1laxa7d0"
+                          className="css-yahxlu-Panel e16u4s2c0"
                         >
                           <div
-                            className="css-yahxlu-Panel e1laxa7d0"
+                            className="css-yahxlu-Panel e16u4s2c0"
                           >
                             <PanelBody
                               className="issue-list"
@@ -2188,7 +2188,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                       }
                                     >
                                       <Base
-                                        className="issue level-undefined css-1cf8lr1-PanelItem eo8n7lk0"
+                                        className="issue level-undefined css-1cf8lr1-PanelItem egwqg5y0"
                                         direction="column"
                                         p={2}
                                         style={
@@ -2199,7 +2199,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                         }
                                       >
                                         <div
-                                          className="issue level-undefined css-1cf8lr1-PanelItem eo8n7lk0"
+                                          className="issue level-undefined css-1cf8lr1-PanelItem egwqg5y0"
                                           is={null}
                                           style={
                                             Object {
@@ -2579,7 +2579,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                               }
                                                             >
                                                               <span
-                                                                className="avatar avatar css-3f9bmx-StyledBaseAvatar e1z0ohzl0"
+                                                                className="avatar avatar css-3f9bmx-StyledBaseAvatar e1b7pbn80"
                                                                 style={
                                                                   Object {
                                                                     "height": "38px",
@@ -2597,7 +2597,7 @@ exports[`OrganizationUserFeedback renders 1`] = `
                                                                     viewBox="0 0 120 120"
                                                                   >
                                                                     <svg
-                                                                      className="css-1r4mnb9-Svg e1knxa8x0"
+                                                                      className="css-1r4mnb9-Svg e1lngh5w0"
                                                                       viewBox="0 0 120 120"
                                                                     >
                                                                       <rect

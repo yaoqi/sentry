@@ -111,7 +111,7 @@ exports[`Configure should render correctly render() should render platform docs 
                 priority="primary"
               >
                 <Button
-                  className="css-1lewl16-StyledButton eadl9o50"
+                  className="css-1lewl16-StyledButton ej6s05y0"
                   disabled={false}
                   onClick={[Function]}
                   priority="primary"
@@ -119,7 +119,7 @@ exports[`Configure should render correctly render() should render platform docs 
                   <StyledButton
                     aria-disabled={false}
                     aria-label="Or See Sample Event"
-                    className="css-1lewl16-StyledButton eadl9o50"
+                    className="css-1lewl16-StyledButton ej6s05y0"
                     disabled={false}
                     onClick={[Function]}
                     priority="primary"
@@ -128,14 +128,14 @@ exports[`Configure should render correctly render() should render platform docs 
                     <Component
                       aria-disabled={false}
                       aria-label="Or See Sample Event"
-                      className="eadl9o50 css-w2sk1s-StyledButton-getColors-StyledButton eqrebog0"
+                      className="ej6s05y0 css-w2sk1s-StyledButton-getColors-StyledButton e7bsqvz0"
                       onClick={[Function]}
                       role="button"
                     >
                       <button
                         aria-disabled={false}
                         aria-label="Or See Sample Event"
-                        className="eadl9o50 css-w2sk1s-StyledButton-getColors-StyledButton eqrebog0"
+                        className="ej6s05y0 css-w2sk1s-StyledButton-getColors-StyledButton e7bsqvz0"
                         onClick={[Function]}
                         role="button"
                       >
@@ -143,11 +143,11 @@ exports[`Configure should render correctly render() should render platform docs 
                           priority="primary"
                         >
                           <Component
-                            className="css-ga4b18-ButtonLabel eqrebog1"
+                            className="css-ga4b18-ButtonLabel e7bsqvz1"
                             priority="primary"
                           >
                             <span
-                              className="css-ga4b18-ButtonLabel eqrebog1"
+                              className="css-ga4b18-ButtonLabel e7bsqvz1"
                             >
                               Or See Sample Event
                             </span>
@@ -378,30 +378,30 @@ exports[`Configure should render correctly render() should render platform docs 
                     >
                       <Panel>
                         <Component
-                          className="css-yahxlu-Panel e1laxa7d0"
+                          className="css-yahxlu-Panel e16u4s2c0"
                         >
                           <div
-                            className="css-yahxlu-Panel e1laxa7d0"
+                            className="css-yahxlu-Panel e16u4s2c0"
                           >
                             <PanelHeader
                               hasButtons={true}
                             >
                               <Component
-                                className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+                                className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
                                 hasButtons={true}
                               >
                                 <Flex
                                   align="center"
-                                  className="css-jmvceg-PanelHeader-getPadding e1p8v8nv0"
+                                  className="css-jmvceg-PanelHeader-getPadding e1o9kety0"
                                   justify="space-between"
                                 >
                                   <Base
                                     align="center"
-                                    className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                                    className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                                     justify="space-between"
                                   >
                                     <div
-                                      className="e1p8v8nv0 css-19i62qd-PanelHeader-getPadding"
+                                      className="e1o9kety0 css-19i62qd-PanelHeader-getPadding"
                                       is={null}
                                     >
                                       Configure node
@@ -441,7 +441,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                                       <Component
                                                         aria-disabled={false}
                                                         aria-label="< Back"
-                                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                                         href="/testOrg/project-slug/getting-started/"
                                                         onClick={[Function]}
                                                         role="button"
@@ -450,7 +450,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                                         <a
                                                           aria-disabled={false}
                                                           aria-label="< Back"
-                                                          className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                                          className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                                           href="/testOrg/project-slug/getting-started/"
                                                           onClick={[Function]}
                                                           role="button"
@@ -460,11 +460,11 @@ exports[`Configure should render correctly render() should render platform docs 
                                                             size="small"
                                                           >
                                                             <Component
-                                                              className="css-7ui8bl-ButtonLabel eqrebog1"
+                                                              className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                                               size="small"
                                                             >
                                                               <span
-                                                                className="css-7ui8bl-ButtonLabel eqrebog1"
+                                                                className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                                               >
                                                                 &lt; Back
                                                               </span>
@@ -507,7 +507,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                                       <Component
                                                         aria-disabled={false}
                                                         aria-label="Full Documentation"
-                                                        className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                                        className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                                         external={true}
                                                         href="https://docs.getsentry.com/hosted/clients/csharp/"
                                                         onClick={[Function]}
@@ -517,7 +517,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                                         <ExternalLink
                                                           aria-disabled={false}
                                                           aria-label="Full Documentation"
-                                                          className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                                          className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                                           href="https://docs.getsentry.com/hosted/clients/csharp/"
                                                           onClick={[Function]}
                                                           rel="noreferrer noopener"
@@ -528,7 +528,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                                           <a
                                                             aria-disabled={false}
                                                             aria-label="Full Documentation"
-                                                            className="css-dkprmi-StyledButton-getColors eqrebog0"
+                                                            className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                                                             href="https://docs.getsentry.com/hosted/clients/csharp/"
                                                             onClick={[Function]}
                                                             rel="noreferrer noopener"
@@ -540,11 +540,11 @@ exports[`Configure should render correctly render() should render platform docs 
                                                               size="small"
                                                             >
                                                               <Component
-                                                                className="css-7ui8bl-ButtonLabel eqrebog1"
+                                                                className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                                                 size="small"
                                                               >
                                                                 <span
-                                                                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                                                                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                                                 >
                                                                   Full Documentation
                                                                 </span>
@@ -576,10 +576,10 @@ exports[`Configure should render correctly render() should render platform docs 
                               >
                                 <TextBlock>
                                   <Component
-                                    className="css-1geyb25-TextBlock ec8ep340"
+                                    className="css-1geyb25-TextBlock e12j2fov0"
                                   >
                                     <div
-                                      className="css-1geyb25-TextBlock ec8ep340"
+                                      className="css-1geyb25-TextBlock e12j2fov0"
                                     >
                                       <span
                                         key="8"
@@ -630,7 +630,7 @@ exports[`Configure should render correctly render() should render platform docs 
                                   }
                                 >
                                   <div
-                                    className="css-1y7l4t-DocumentationWrapper e1w9lqpk0"
+                                    className="css-1y7l4t-DocumentationWrapper eblr9nj0"
                                     dangerouslySetInnerHTML={
                                       Object {
                                         "__html": undefined,
@@ -685,7 +685,7 @@ exports[`Configure should render correctly render() should render platform docs 
               className="col-sm-2"
             >
               <div
-                className="col-sm-2 css-mm32tp-CenteredButtons e1p80ulz0"
+                className="col-sm-2 css-mm32tp-CenteredButtons e1o7l58f0"
               >
                 <div
                   className="pull-right"
@@ -708,7 +708,7 @@ exports[`Configure should render correctly render() should render platform docs 
                       <Component
                         aria-disabled={false}
                         aria-label="All done!"
-                        className="css-1msljz8-StyledButton-getColors eqrebog0"
+                        className="css-1msljz8-StyledButton-getColors e7bsqvz0"
                         data-test-id="configure-done"
                         onClick={[Function]}
                         role="button"
@@ -716,7 +716,7 @@ exports[`Configure should render correctly render() should render platform docs 
                         <button
                           aria-disabled={false}
                           aria-label="All done!"
-                          className="css-1msljz8-StyledButton-getColors eqrebog0"
+                          className="css-1msljz8-StyledButton-getColors e7bsqvz0"
                           data-test-id="configure-done"
                           onClick={[Function]}
                           role="button"
@@ -725,11 +725,11 @@ exports[`Configure should render correctly render() should render platform docs 
                             priority="primary"
                           >
                             <Component
-                              className="css-ga4b18-ButtonLabel eqrebog1"
+                              className="css-ga4b18-ButtonLabel e7bsqvz1"
                               priority="primary"
                             >
                               <span
-                                className="css-ga4b18-ButtonLabel eqrebog1"
+                                className="css-ga4b18-ButtonLabel e7bsqvz1"
                               >
                                 All done!
                               </span>

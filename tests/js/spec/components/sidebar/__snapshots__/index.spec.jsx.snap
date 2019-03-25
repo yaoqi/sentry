@@ -9,7 +9,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
   onMouseLeave={[Function]}
 >
   <div
-    className="css-1t0ls5k-SwitchOrganizationMenu-SidebarDropdownMenu ejspo4a4"
+    className="css-1t0ls5k-SwitchOrganizationMenu-SidebarDropdownMenu e1b84gh94"
     data-test-id="sidebar-switch-org-menu"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -17,7 +17,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
   >
     <OrganizationList>
       <div
-        className="css-1qovpib-OrganizationList ejspo4a5"
+        className="css-1qovpib-OrganizationList e1b84gh95"
       />
     </OrganizationList>
     <SidebarMenuItem
@@ -39,7 +39,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
         to="/organizations/new/"
       >
         <Component
-          className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+          className="css-kge7p2-MenuItemLink e1hfjrkw1"
           data-test-id="sidebar-create-org"
           style={
             Object {
@@ -49,7 +49,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
           to="/organizations/new/"
         >
           <Link
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             data-test-id="sidebar-create-org"
             style={
               Object {
@@ -59,7 +59,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
             to="/organizations/new/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               data-test-id="sidebar-create-org"
               onlyActiveOnIndex={false}
               style={
@@ -70,7 +70,7 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
               to="/organizations/new/"
             >
               <a
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 data-test-id="sidebar-create-org"
                 onClick={[Function]}
                 style={
@@ -83,27 +83,27 @@ exports[`Sidebar SidebarDropdown can open "Switch Organization" sub-menu 1`] = `
                   hasMenu={false}
                 >
                   <span
-                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                   >
                     <MenuItemLabelWithIcon>
                       <span
-                        className="css-186585d-MenuItemLabelWithIcon ejspo4a1"
+                        className="css-186585d-MenuItemLabelWithIcon e1b84gh91"
                       >
                         <AddIcon
                           src="icon-circle-add"
                         >
                           <InlineSvg
-                            className="css-1at8pqz-AddIcon ejspo4a0"
+                            className="css-1at8pqz-AddIcon e1b84gh90"
                             src="icon-circle-add"
                           >
                             <StyledSvg
-                              className="css-1at8pqz-AddIcon ejspo4a0"
+                              className="css-1at8pqz-AddIcon e1b84gh90"
                               height="1em"
                               viewBox={Object {}}
                               width="1em"
                             >
                               <svg
-                                className="ejspo4a0 css-pcaft6-StyledSvg-AddIcon e2idor0"
+                                className="e1b84gh90 css-pcaft6-StyledSvg-AddIcon ebb48o80"
                                 height="1em"
                                 viewBox={Object {}}
                                 width="1em"
@@ -169,7 +169,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
   }
 >
   <div
-    className="css-1ldvedv-OrgAndUserMenu-SidebarDropdownMenu e1fowdfw9"
+    className="css-1ldvedv-OrgAndUserMenu-SidebarDropdownMenu er9r72h9"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -206,7 +206,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
     >
       <OrgSummary>
         <div
-          className="css-1d1he2f-OrgSummary e1dvf3yd0"
+          className="css-1d1he2f-OrgSummary e11huq500"
         >
           <Avatar
             className="css-6su6fj"
@@ -300,7 +300,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                     }
                   >
                     <span
-                      className="avatar css-1ezk8y8-StyledBaseAvatar e1z0ohzl0"
+                      className="avatar css-1ezk8y8-StyledBaseAvatar e1b7pbn80"
                       style={
                         Object {
                           "height": "36px",
@@ -316,7 +316,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                           viewBox="0 0 120 120"
                         >
                           <svg
-                            className="css-123ijso-Svg e1knxa8x0"
+                            className="css-123ijso-Svg e1lngh5w0"
                             viewBox="0 0 120 120"
                           >
                             <rect
@@ -353,11 +353,11 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
           </Avatar>
           <Details>
             <div
-              className="css-r07pll-Details e1dvf3yd3"
+              className="css-r07pll-Details e11huq503"
             >
               <SummaryOrgName>
                 <div
-                  className="css-18gl0tz-SummaryOrgName e1dvf3yd1"
+                  className="css-18gl0tz-SummaryOrgName e11huq501"
                 >
                   Organization Name
                 </div>
@@ -374,21 +374,21 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
         to="/settings/org-slug/"
       >
         <Component
-          className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+          className="css-kge7p2-MenuItemLink e1hfjrkw1"
           to="/settings/org-slug/"
         >
           <Link
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/org-slug/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               onlyActiveOnIndex={false}
               style={Object {}}
               to="/settings/org-slug/"
             >
               <a
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onClick={[Function]}
                 style={Object {}}
               >
@@ -396,7 +396,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                   hasMenu={false}
                 >
                   <span
-                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                   >
                     Organization settings
                   </span>
@@ -414,21 +414,21 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
         to="/settings/org-slug/teams/"
       >
         <Component
-          className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+          className="css-kge7p2-MenuItemLink e1hfjrkw1"
           to="/settings/org-slug/teams/"
         >
           <Link
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/org-slug/teams/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               onlyActiveOnIndex={false}
               style={Object {}}
               to="/settings/org-slug/teams/"
             >
               <a
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onClick={[Function]}
                 style={Object {}}
               >
@@ -436,7 +436,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                   hasMenu={false}
                 >
                   <span
-                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                    className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                   >
                     Teams
                   </span>
@@ -481,16 +481,16 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
     <SidebarMenuItem>
       <MenuItemLink>
         <Component
-          className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+          className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
         >
           <div
-            className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+            className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
           >
             <MenuItemLabel
               hasMenu={true}
             >
               <span
-                className="css-rkoh57-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                className="css-rkoh57-MenuItemLabel-MenuItemLabel e1hfjrkw0"
               >
                 <withOrganizations(SwitchOrganization)
                   canCreateOrganization={false}
@@ -520,7 +520,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="css-1lqnj07-SwitchOrganizationMenuActor ejspo4a3"
+                          className="css-1lqnj07-SwitchOrganizationMenuActor e1b84gh93"
                           data-test-id="sidebar-switch-org"
                           onClick={[Function]}
                           onKeyDown={[Function]}
@@ -536,7 +536,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                           Switch organization
                           <SubMenuCaret>
                             <span
-                              className="css-turth4-SubMenuCaret ejspo4a2"
+                              className="css-turth4-SubMenuCaret e1b84gh92"
                             >
                               <i
                                 className="icon-arrow-right"
@@ -556,24 +556,24 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
     </SidebarMenuItem>
     <Divider>
       <div
-        className="css-19r16al-Divider ek5mfa70"
+        className="css-19r16al-Divider elkk2540"
       />
     </Divider>
     <UserSummary
       to="/settings/account/details/"
     >
       <Link
-        className="css-1fpw0f9-UserSummary e1fowdfw1"
+        className="css-1fpw0f9-UserSummary er9r72h1"
         to="/settings/account/details/"
       >
         <Link
-          className="css-1fpw0f9-UserSummary e1fowdfw1"
+          className="css-1fpw0f9-UserSummary er9r72h1"
           onlyActiveOnIndex={false}
           style={Object {}}
           to="/settings/account/details/"
         >
           <a
-            className="css-1fpw0f9-UserSummary e1fowdfw1"
+            className="css-1fpw0f9-UserSummary er9r72h1"
             onClick={[Function]}
             style={Object {}}
           >
@@ -599,7 +599,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
             >
               <IdBadge
                 avatarSize={32}
-                className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                 user={
                   Object {
                     "email": "foo@example.com",
@@ -622,12 +622,12 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                   mini={true}
                 >
                   <ErrorBoundary
-                    className="css-otlbo1-InlineErrorBoundary e83vi020"
+                    className="css-otlbo1-InlineErrorBoundary el9753t0"
                     mini={true}
                   >
                     <UserBadge
                       avatarSize={32}
-                      className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                      className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                       hideEmail={false}
                       useLink={true}
                       user={
@@ -649,10 +649,10 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                       }
                     >
                       <StyledUserBadge
-                        className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                        className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                       >
                         <div
-                          className="e1fowdfw2 css-1dpgz1o-StyledUserBadge-UserBadgeNoOverflow ev46mzr0"
+                          className="er9r72h2 css-1dpgz1o-StyledUserBadge-UserBadgeNoOverflow ezr1lsz0"
                         >
                           <StyledAvatar
                             size={32}
@@ -675,7 +675,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                             }
                           >
                             <Component
-                              className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                              className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                               size={32}
                               user={
                                 Object {
@@ -696,7 +696,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                               }
                             >
                               <Avatar
-                                className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                 hasTooltip={false}
                                 size={32}
                                 user={
@@ -718,7 +718,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                                 }
                               >
                                 <UserAvatar
-                                  className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                  className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                   gravatar={false}
                                   hasTooltip={false}
                                   size={32}
@@ -741,7 +741,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                                   }
                                 >
                                   <BaseAvatar
-                                    className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                    className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                     gravatarId="foo@example.com"
                                     hasTooltip={false}
                                     letterId="foo@example.com"
@@ -758,7 +758,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                                       title="Foo Bar (foo@example.com)"
                                     >
                                       <StyledBaseAvatar
-                                        className="avatar css-1u6j7yz-StyledAvatar ev46mzr4"
+                                        className="avatar css-1u6j7yz-StyledAvatar ezr1lsz4"
                                         loaded={true}
                                         round={true}
                                         style={
@@ -769,7 +769,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                                         }
                                       >
                                         <span
-                                          className="avatar ev46mzr4 css-wxw9er-StyledBaseAvatar-StyledAvatar e1z0ohzl0"
+                                          className="avatar ezr1lsz4 css-wxw9er-StyledBaseAvatar-StyledAvatar e1b7pbn80"
                                           style={
                                             Object {
                                               "height": "32px",
@@ -787,7 +787,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                                               viewBox="0 0 120 120"
                                             >
                                               <svg
-                                                className="css-1r4mnb9-Svg e1knxa8x0"
+                                                className="css-1r4mnb9-Svg e1lngh5w0"
                                                 viewBox="0 0 120 120"
                                               >
                                                 <rect
@@ -826,17 +826,17 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                           </StyledAvatar>
                           <StyledNameAndEmail>
                             <div
-                              className="css-9l6b2w-StyledNameAndEmail ev46mzr1"
+                              className="css-9l6b2w-StyledNameAndEmail ezr1lsz1"
                             >
                               <StyledName
                                 hideEmail={false}
                               >
                                 <Component
-                                  className="css-12fcmnb-StyledName ev46mzr3"
+                                  className="css-12fcmnb-StyledName ezr1lsz3"
                                   hideEmail={false}
                                 >
                                   <span
-                                    className="css-12fcmnb-StyledName ev46mzr3"
+                                    className="css-12fcmnb-StyledName ezr1lsz3"
                                   >
                                     Foo Bar
                                   </span>
@@ -844,7 +844,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                               </StyledName>
                               <StyledEmail>
                                 <div
-                                  className="css-3w2sfq-StyledEmail ev46mzr2"
+                                  className="css-3w2sfq-StyledEmail ezr1lsz2"
                                 >
                                   foo@example.com
                                 </div>
@@ -870,21 +870,21 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
           to="/settings/account/"
         >
           <Component
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/account/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               to="/settings/account/"
             >
               <Link
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onlyActiveOnIndex={false}
                 style={Object {}}
                 to="/settings/account/"
               >
                 <a
-                  className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                  className="css-kge7p2-MenuItemLink e1hfjrkw1"
                   onClick={[Function]}
                   style={Object {}}
                 >
@@ -892,7 +892,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                     hasMenu={false}
                   >
                     <span
-                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                     >
                       User settings
                     </span>
@@ -910,21 +910,21 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
           to="/settings/account/api/"
         >
           <Component
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/account/api/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               to="/settings/account/api/"
             >
               <Link
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onlyActiveOnIndex={false}
                 style={Object {}}
                 to="/settings/account/api/"
               >
                 <a
-                  className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                  className="css-kge7p2-MenuItemLink e1hfjrkw1"
                   onClick={[Function]}
                   style={Object {}}
                 >
@@ -932,7 +932,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                     hasMenu={false}
                   >
                     <span
-                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                     >
                       API keys
                     </span>
@@ -952,12 +952,12 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
           onClick={[Function]}
         >
           <Component
-            className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+            className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
             data-test-id="sidebarSignout"
             onClick={[Function]}
           >
             <div
-              className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+              className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
               data-test-id="sidebarSignout"
               onClick={[Function]}
             >
@@ -965,7 +965,7 @@ exports[`Sidebar SidebarDropdown can open Sidebar org/name dropdown menu 1`] = `
                 hasMenu={true}
               >
                 <span
-                  className="css-rkoh57-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                  className="css-rkoh57-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                 >
                   Sign out
                 </span>
@@ -987,7 +987,7 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
   onMouseLeave={[Function]}
 >
   <div
-    className="css-10k5q9j-HelpMenu-SidebarDropdownMenu e1q2bb9t2"
+    className="css-10k5q9j-HelpMenu-SidebarDropdownMenu ed0hd2f2"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -1030,18 +1030,18 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
         onClick={[Function]}
       >
         <Component
-          className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+          className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
           onClick={[Function]}
         >
           <div
-            className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+            className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
             onClick={[Function]}
           >
             <MenuItemLabel
               hasMenu={true}
             >
               <span
-                className="css-rkoh57-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                className="css-rkoh57-MenuItemLabel-MenuItemLabel e1hfjrkw0"
               >
                 Search Docs and FAQs
               </span>
@@ -1059,17 +1059,17 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
         target="_blank"
       >
         <Component
-          className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+          className="css-kge7p2-MenuItemLink e1hfjrkw1"
           href="https://forum.sentry.io/"
           target="_blank"
         >
           <Link
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             href="https://forum.sentry.io/"
             target="_blank"
           >
             <a
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               href="https://forum.sentry.io/"
               target="_blank"
             >
@@ -1077,7 +1077,7 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
                 hasMenu={false}
               >
                 <span
-                  className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                  className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                 >
                   Community Discussions
                 </span>
@@ -1096,17 +1096,17 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
         target="_blank"
       >
         <Component
-          className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+          className="css-kge7p2-MenuItemLink e1hfjrkw1"
           href="https://status.sentry.io/"
           target="_blank"
         >
           <Link
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             href="https://status.sentry.io/"
             target="_blank"
           >
             <a
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               href="https://status.sentry.io/"
               target="_blank"
             >
@@ -1114,7 +1114,7 @@ exports[`Sidebar SidebarHelp can toggle help menu 1`] = `
                 hasMenu={false}
               >
                 <span
-                  className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                  className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                 >
                   Service Status
                 </span>
@@ -1138,17 +1138,17 @@ exports[`Sidebar SidebarPanel can display Broadcasts panel and mark as seen 1`] 
 >
   <SidebarPanelItemRoot>
     <div
-      className="css-11zw7jo-SidebarPanelItemRoot er110870"
+      className="css-11zw7jo-SidebarPanelItemRoot e51pkgy0"
     >
       <Title
         hasSeen={false}
       >
         <Component
-          className="css-hs42c5-Title er110871"
+          className="css-hs42c5-Title e51pkgy1"
           hasSeen={false}
         >
           <div
-            className="css-hs42c5-Title er110871"
+            className="css-hs42c5-Title e51pkgy1"
           >
             Learn about Source Maps
           </div>
@@ -1156,14 +1156,14 @@ exports[`Sidebar SidebarPanel can display Broadcasts panel and mark as seen 1`] 
       </Title>
       <Message>
         <div
-          className="css-1rszf37-Text-Message er110873"
+          className="css-1rszf37-Text-Message e51pkgy3"
         >
           Source maps are JSON files that contain information on how to map your transpiled source code back to their original source.
         </div>
       </Message>
       <Text>
         <div
-          className="css-7bhqyd-Text er110872"
+          className="css-7bhqyd-Text e51pkgy2"
         >
           <ExternalLink
             href="https://docs.sentry.io/hosted/clients/javascript/sourcemaps/#uploading-source-maps-to-sentry"
@@ -1190,17 +1190,17 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
   className="incident-list"
 >
   <ul
-    className="incident-list css-9jctl-IncidentList e1teacth0"
+    className="incident-list css-9jctl-IncidentList ehe5xdd0"
   >
     <IncidentItem
       key="1"
     >
       <li
-        className="css-14n5z5w-IncidentItem e1teacth1"
+        className="css-14n5z5w-IncidentItem ehe5xdd1"
       >
         <IncidentTitle>
           <div
-            className="css-5djkqu-IncidentTitle e1teacth2"
+            className="css-5djkqu-IncidentTitle ehe5xdd2"
           >
             Test Incident
           </div>
@@ -1208,20 +1208,20 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
         <div>
           <StatusHeader>
             <div
-              className="css-1x43ghi-StatusHeader e1teacth3"
+              className="css-1x43ghi-StatusHeader ehe5xdd3"
             >
               Latest updates:
             </div>
           </StatusHeader>
           <StatusList>
             <ul
-              className="css-144h8i2-StatusList e1teacth4"
+              className="css-144h8i2-StatusList ehe5xdd4"
             >
               <StatusItem
                 key="0"
               >
                 <li
-                  className="css-ykoqmj-StatusItem e1teacth5"
+                  className="css-ykoqmj-StatusItem ehe5xdd5"
                 >
                   First Update
                 </li>
@@ -1230,7 +1230,7 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
                 key="1"
               >
                 <li
-                  className="css-ykoqmj-StatusItem e1teacth5"
+                  className="css-ykoqmj-StatusItem ehe5xdd5"
                 >
                   Second Update
                 </li>
@@ -1258,7 +1258,7 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
               <Component
                 aria-disabled={false}
                 aria-label="Learn more"
-                className="css-dkprmi-StyledButton-getColors eqrebog0"
+                className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                 external={true}
                 href="https://status.sentry.io"
                 onClick={[Function]}
@@ -1268,7 +1268,7 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
                 <ExternalLink
                   aria-disabled={false}
                   aria-label="Learn more"
-                  className="css-dkprmi-StyledButton-getColors eqrebog0"
+                  className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                   href="https://status.sentry.io"
                   onClick={[Function]}
                   rel="noreferrer noopener"
@@ -1279,7 +1279,7 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
                   <a
                     aria-disabled={false}
                     aria-label="Learn more"
-                    className="css-dkprmi-StyledButton-getColors eqrebog0"
+                    className="css-dkprmi-StyledButton-getColors e7bsqvz0"
                     href="https://status.sentry.io"
                     onClick={[Function]}
                     rel="noreferrer noopener"
@@ -1291,11 +1291,11 @@ exports[`Sidebar SidebarPanel can show Incidents in Sidebar Panel 1`] = `
                       size="small"
                     >
                       <Component
-                        className="css-7ui8bl-ButtonLabel eqrebog1"
+                        className="css-7ui8bl-ButtonLabel e7bsqvz1"
                         size="small"
                       >
                         <span
-                          className="css-7ui8bl-ButtonLabel eqrebog1"
+                          className="css-7ui8bl-ButtonLabel e7bsqvz1"
                         >
                           Learn more
                         </span>
@@ -1323,21 +1323,21 @@ exports[`Sidebar can have onboarding feature 1`] = `
     collapsed={false}
   >
     <Component
-      className="css-1qwi75e-StyledSidebarPanel-getPositionForOrientation e1cvaskl0"
+      className="css-1qwi75e-StyledSidebarPanel-getPositionForOrientation e484ueq0"
       collapsed={false}
     >
       <div
-        className="css-1qwi75e-StyledSidebarPanel-getPositionForOrientation e1cvaskl0"
+        className="css-1qwi75e-StyledSidebarPanel-getPositionForOrientation e484ueq0"
       >
         <SidebarPanelHeader>
           <div
-            className="css-13cwjk8-SidebarPanelHeader e1cvaskl1"
+            className="css-13cwjk8-SidebarPanelHeader e484ueq1"
           >
             <PanelClose
               onClick={[Function]}
             >
               <a
-                className="css-3guzl0-PanelClose e1cvaskl3"
+                className="css-3guzl0-PanelClose e484ueq3"
                 onClick={[Function]}
               >
                 <span
@@ -1347,7 +1347,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
             </PanelClose>
             <Title>
               <div
-                className="css-87m5mp-Title e1cvaskl4"
+                className="css-87m5mp-Title e484ueq4"
               >
                 Getting Started with Sentry
               </div>
@@ -1356,7 +1356,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
         </SidebarPanelHeader>
         <SidebarPanelBody>
           <div
-            className="css-1pl3kd6-SidebarPanelBody e1cvaskl2"
+            className="css-1pl3kd6-SidebarPanelBody e484ueq2"
           >
             <TodoList>
               <div>
@@ -1750,7 +1750,7 @@ exports[`Sidebar renders without org and router 1`] = `
   org={null}
 >
   <div
-    className="css-1ldvedv-OrgAndUserMenu-SidebarDropdownMenu e1fowdfw9"
+    className="css-1ldvedv-OrgAndUserMenu-SidebarDropdownMenu er9r72h9"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -1759,17 +1759,17 @@ exports[`Sidebar renders without org and router 1`] = `
       to="/settings/account/details/"
     >
       <Link
-        className="css-1fpw0f9-UserSummary e1fowdfw1"
+        className="css-1fpw0f9-UserSummary er9r72h1"
         to="/settings/account/details/"
       >
         <Link
-          className="css-1fpw0f9-UserSummary e1fowdfw1"
+          className="css-1fpw0f9-UserSummary er9r72h1"
           onlyActiveOnIndex={false}
           style={Object {}}
           to="/settings/account/details/"
         >
           <a
-            className="css-1fpw0f9-UserSummary e1fowdfw1"
+            className="css-1fpw0f9-UserSummary er9r72h1"
             onClick={[Function]}
             style={Object {}}
           >
@@ -1795,7 +1795,7 @@ exports[`Sidebar renders without org and router 1`] = `
             >
               <IdBadge
                 avatarSize={32}
-                className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                 user={
                   Object {
                     "email": "foo@example.com",
@@ -1818,12 +1818,12 @@ exports[`Sidebar renders without org and router 1`] = `
                   mini={true}
                 >
                   <ErrorBoundary
-                    className="css-otlbo1-InlineErrorBoundary e83vi020"
+                    className="css-otlbo1-InlineErrorBoundary el9753t0"
                     mini={true}
                   >
                     <UserBadge
                       avatarSize={32}
-                      className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                      className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                       hideEmail={false}
                       useLink={true}
                       user={
@@ -1845,10 +1845,10 @@ exports[`Sidebar renders without org and router 1`] = `
                       }
                     >
                       <StyledUserBadge
-                        className="css-1tz319h-UserBadgeNoOverflow e1fowdfw2"
+                        className="css-1tz319h-UserBadgeNoOverflow er9r72h2"
                       >
                         <div
-                          className="e1fowdfw2 css-1dpgz1o-StyledUserBadge-UserBadgeNoOverflow ev46mzr0"
+                          className="er9r72h2 css-1dpgz1o-StyledUserBadge-UserBadgeNoOverflow ezr1lsz0"
                         >
                           <StyledAvatar
                             size={32}
@@ -1871,7 +1871,7 @@ exports[`Sidebar renders without org and router 1`] = `
                             }
                           >
                             <Component
-                              className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                              className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                               size={32}
                               user={
                                 Object {
@@ -1892,7 +1892,7 @@ exports[`Sidebar renders without org and router 1`] = `
                               }
                             >
                               <Avatar
-                                className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                 hasTooltip={false}
                                 size={32}
                                 user={
@@ -1914,7 +1914,7 @@ exports[`Sidebar renders without org and router 1`] = `
                                 }
                               >
                                 <UserAvatar
-                                  className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                  className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                   gravatar={false}
                                   hasTooltip={false}
                                   size={32}
@@ -1937,7 +1937,7 @@ exports[`Sidebar renders without org and router 1`] = `
                                   }
                                 >
                                   <BaseAvatar
-                                    className="css-1u6j7yz-StyledAvatar ev46mzr4"
+                                    className="css-1u6j7yz-StyledAvatar ezr1lsz4"
                                     gravatarId="foo@example.com"
                                     hasTooltip={false}
                                     letterId="foo@example.com"
@@ -1954,7 +1954,7 @@ exports[`Sidebar renders without org and router 1`] = `
                                       title="Foo Bar (foo@example.com)"
                                     >
                                       <StyledBaseAvatar
-                                        className="avatar css-1u6j7yz-StyledAvatar ev46mzr4"
+                                        className="avatar css-1u6j7yz-StyledAvatar ezr1lsz4"
                                         loaded={true}
                                         round={true}
                                         style={
@@ -1965,7 +1965,7 @@ exports[`Sidebar renders without org and router 1`] = `
                                         }
                                       >
                                         <span
-                                          className="avatar ev46mzr4 css-wxw9er-StyledBaseAvatar-StyledAvatar e1z0ohzl0"
+                                          className="avatar ezr1lsz4 css-wxw9er-StyledBaseAvatar-StyledAvatar e1b7pbn80"
                                           style={
                                             Object {
                                               "height": "32px",
@@ -1983,7 +1983,7 @@ exports[`Sidebar renders without org and router 1`] = `
                                               viewBox="0 0 120 120"
                                             >
                                               <svg
-                                                className="css-1r4mnb9-Svg e1knxa8x0"
+                                                className="css-1r4mnb9-Svg e1lngh5w0"
                                                 viewBox="0 0 120 120"
                                               >
                                                 <rect
@@ -2022,17 +2022,17 @@ exports[`Sidebar renders without org and router 1`] = `
                           </StyledAvatar>
                           <StyledNameAndEmail>
                             <div
-                              className="css-9l6b2w-StyledNameAndEmail ev46mzr1"
+                              className="css-9l6b2w-StyledNameAndEmail ezr1lsz1"
                             >
                               <StyledName
                                 hideEmail={false}
                               >
                                 <Component
-                                  className="css-12fcmnb-StyledName ev46mzr3"
+                                  className="css-12fcmnb-StyledName ezr1lsz3"
                                   hideEmail={false}
                                 >
                                   <span
-                                    className="css-12fcmnb-StyledName ev46mzr3"
+                                    className="css-12fcmnb-StyledName ezr1lsz3"
                                   >
                                     Foo Bar
                                   </span>
@@ -2040,7 +2040,7 @@ exports[`Sidebar renders without org and router 1`] = `
                               </StyledName>
                               <StyledEmail>
                                 <div
-                                  className="css-3w2sfq-StyledEmail ev46mzr2"
+                                  className="css-3w2sfq-StyledEmail ezr1lsz2"
                                 >
                                   foo@example.com
                                 </div>
@@ -2066,21 +2066,21 @@ exports[`Sidebar renders without org and router 1`] = `
           to="/settings/account/"
         >
           <Component
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/account/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               to="/settings/account/"
             >
               <Link
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onlyActiveOnIndex={false}
                 style={Object {}}
                 to="/settings/account/"
               >
                 <a
-                  className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                  className="css-kge7p2-MenuItemLink e1hfjrkw1"
                   onClick={[Function]}
                   style={Object {}}
                 >
@@ -2088,7 +2088,7 @@ exports[`Sidebar renders without org and router 1`] = `
                     hasMenu={false}
                   >
                     <span
-                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                     >
                       User settings
                     </span>
@@ -2106,21 +2106,21 @@ exports[`Sidebar renders without org and router 1`] = `
           to="/settings/account/api/"
         >
           <Component
-            className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+            className="css-kge7p2-MenuItemLink e1hfjrkw1"
             to="/settings/account/api/"
           >
             <Link
-              className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+              className="css-kge7p2-MenuItemLink e1hfjrkw1"
               to="/settings/account/api/"
             >
               <Link
-                className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                className="css-kge7p2-MenuItemLink e1hfjrkw1"
                 onlyActiveOnIndex={false}
                 style={Object {}}
                 to="/settings/account/api/"
               >
                 <a
-                  className="css-1hgw4do-MenuItemLink e1ru2gxu1"
+                  className="css-kge7p2-MenuItemLink e1hfjrkw1"
                   onClick={[Function]}
                   style={Object {}}
                 >
@@ -2128,7 +2128,7 @@ exports[`Sidebar renders without org and router 1`] = `
                     hasMenu={false}
                   >
                     <span
-                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                      className="css-3xcmix-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                     >
                       API keys
                     </span>
@@ -2148,12 +2148,12 @@ exports[`Sidebar renders without org and router 1`] = `
           onClick={[Function]}
         >
           <Component
-            className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+            className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
             data-test-id="sidebarSignout"
             onClick={[Function]}
           >
             <div
-              className="css-1xkywpr-MenuItemLink e1ru2gxu1"
+              className="css-1f1sz6y-MenuItemLink e1hfjrkw1"
               data-test-id="sidebarSignout"
               onClick={[Function]}
             >
@@ -2161,7 +2161,7 @@ exports[`Sidebar renders without org and router 1`] = `
                 hasMenu={true}
               >
                 <span
-                  className="css-rkoh57-MenuItemLabel-MenuItemLabel e1ru2gxu0"
+                  className="css-rkoh57-MenuItemLabel-MenuItemLabel e1hfjrkw0"
                 >
                   Sign out
                 </span>

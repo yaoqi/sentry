@@ -55,18 +55,18 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
   >
     <SentryAppItem>
       <Base
-        className="css-h9gjd5-PanelItem-SentryAppItem eac2pqx0"
+        className="css-h9gjd5-PanelItem-SentryAppItem e13kksli0"
       >
         <div
-          className="css-h9gjd5-PanelItem-SentryAppItem eac2pqx0"
+          className="css-h9gjd5-PanelItem-SentryAppItem e13kksli0"
           is={null}
         >
           <StyledFlex>
             <Base
-              className="css-14n192s-StyledFlex eac2pqx1"
+              className="css-14n192s-StyledFlex e13kksli1"
             >
               <div
-                className="css-14n192s-StyledFlex eac2pqx1"
+                className="css-14n192s-StyledFlex e13kksli1"
                 is={null}
               >
                 <SentryAppAvatar
@@ -117,7 +117,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                         }
                       >
                         <span
-                          className="avatar css-1i62700-StyledBaseAvatar e1z0ohzl0"
+                          className="avatar css-1i62700-StyledBaseAvatar e1b7pbn80"
                           style={
                             Object {
                               "height": "36px",
@@ -133,7 +133,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                               viewBox="0 0 120 120"
                             >
                               <svg
-                                className="css-123ijso-Svg e1knxa8x0"
+                                className="css-123ijso-Svg e1lngh5w0"
                                 viewBox="0 0 120 120"
                               >
                                 <rect
@@ -169,33 +169,33 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                 </SentryAppAvatar>
                 <SentryAppBox>
                   <Base
-                    className="css-161g25b-SentryAppBox eac2pqx2"
+                    className="css-161g25b-SentryAppBox e13kksli2"
                   >
                     <div
-                      className="css-161g25b-SentryAppBox eac2pqx2"
+                      className="css-161g25b-SentryAppBox e13kksli2"
                       is={null}
                     >
                       <SentryAppName>
                         <div
-                          className="css-uiwo8x-SentryAppName eac2pqx4"
+                          className="css-uiwo8x-SentryAppName e13kksli4"
                         >
                           Sample App
                         </div>
                       </SentryAppName>
                       <SentryAppDetails>
                         <Base
-                          className="css-f0t6d-SentryAppDetails eac2pqx3"
+                          className="css-f0t6d-SentryAppDetails e13kksli3"
                         >
                           <div
-                            className="css-f0t6d-SentryAppDetails eac2pqx3"
+                            className="css-f0t6d-SentryAppDetails e13kksli3"
                             is={null}
                           >
                             <Status>
                               <WithTheme(Component)
-                                className="css-lk5f1o-Status eac2pqx8"
+                                className="css-lk5f1o-Status e13kksli8"
                               >
                                 <Component
-                                  className="css-lk5f1o-Status eac2pqx8"
+                                  className="css-lk5f1o-Status e13kksli8"
                                   theme={
                                     Object {
                                       "alert": Object {
@@ -456,14 +456,14 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                                             size={6}
                                           >
                                             <div
-                                              className="css-xhz9xw-Circle eljqieg0"
+                                              className="css-xhz9xw-Circle e1p0fadm0"
                                               color="#9585A3"
                                               size={6}
                                             />
                                           </Circle>
                                         </CircleIndicator>
                                         <div
-                                          className="css-lk5f1o-Status eac2pqx8"
+                                          className="css-lk5f1o-Status e13kksli8"
                                           theme={
                                             Object {
                                               "alert": Object {
@@ -714,13 +714,13 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                               onClick={[Function]}
                             >
                               <Link
-                                className="css-u3fgwp-StyledLink eac2pqx5"
+                                className="css-u3fgwp-StyledLink e13kksli5"
                                 onClick={[Function]}
                                 onlyActiveOnIndex={false}
                                 style={Object {}}
                               >
                                 <a
-                                  className="css-u3fgwp-StyledLink eac2pqx5"
+                                  className="css-u3fgwp-StyledLink e13kksli5"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >
@@ -761,7 +761,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                           <Component
                             aria-disabled={false}
                             aria-label="Install"
-                            className="btn btn-default css-dkprmi-StyledButton-getColors eqrebog0"
+                            className="btn btn-default css-dkprmi-StyledButton-getColors e7bsqvz0"
                             onClick={[Function]}
                             role="button"
                             size="small"
@@ -769,7 +769,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                             <button
                               aria-disabled={false}
                               aria-label="Install"
-                              className="btn btn-default css-dkprmi-StyledButton-getColors eqrebog0"
+                              className="btn btn-default css-dkprmi-StyledButton-getColors e7bsqvz0"
                               onClick={[Function]}
                               role="button"
                               size="small"
@@ -778,23 +778,23 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                                 size="small"
                               >
                                 <Component
-                                  className="css-7ui8bl-ButtonLabel eqrebog1"
+                                  className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                   size="small"
                                 >
                                   <span
-                                    className="css-7ui8bl-ButtonLabel eqrebog1"
+                                    className="css-7ui8bl-ButtonLabel e7bsqvz1"
                                   >
                                     <Icon
                                       hasChildren={true}
                                       size="small"
                                     >
                                       <Component
-                                        className="css-1vdnsie-Icon eqrebog2"
+                                        className="css-1vdnsie-Icon e7bsqvz2"
                                         hasChildren={true}
                                         size="small"
                                       >
                                         <span
-                                          className="css-1vdnsie-Icon eqrebog2"
+                                          className="css-1vdnsie-Icon e7bsqvz2"
                                           size="small"
                                         >
                                           <StyledInlineSvg
@@ -802,18 +802,18 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                                             src="icon-circle-add"
                                           >
                                             <InlineSvg
-                                              className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                              className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                               size="12px"
                                               src="icon-circle-add"
                                             >
                                               <StyledSvg
-                                                className="css-1ov3rcq-StyledInlineSvg eqrebog3"
+                                                className="css-1ov3rcq-StyledInlineSvg e7bsqvz3"
                                                 height="12px"
                                                 viewBox={Object {}}
                                                 width="12px"
                                               >
                                                 <svg
-                                                  className="eqrebog3 css-1jjmnki-StyledSvg-StyledInlineSvg e2idor0"
+                                                  className="e7bsqvz3 css-1jjmnki-StyledSvg-StyledInlineSvg ebb48o80"
                                                   height="12px"
                                                   viewBox={Object {}}
                                                   width="12px"

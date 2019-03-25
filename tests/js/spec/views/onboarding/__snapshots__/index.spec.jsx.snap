@@ -40,7 +40,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
 >
   <OnboardingBackground>
     <div
-      className="css-pv6tzi-OnboardingBackground e1nt3q690"
+      className="css-pv6tzi-OnboardingBackground eidxgu00"
     >
       <div
         className="onboarding-container"
@@ -81,24 +81,24 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                 key="0"
               >
                 <div
-                  className="css-zrjk08-Node e1en1fxy0"
+                  className="css-zrjk08-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-check"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-check"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -115,7 +115,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Create an organization in Sentry
@@ -130,24 +130,24 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                 key="1"
               >
                 <div
-                  className="css-pe396z-Node e1en1fxy0"
+                  className="css-pe396z-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-empty"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-empty"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -164,7 +164,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Tell us about your project
@@ -179,24 +179,24 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                 key="2"
               >
                 <div
-                  className="css-zrjk08-Node e1en1fxy0"
+                  className="css-zrjk08-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-empty"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-empty"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -213,7 +213,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Send an event from your application
@@ -258,7 +258,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                     withMargins={true}
                   >
                     <h1
-                      className="css-wxef79-Wrapper e1f8hk460"
+                      className="css-wxef79-Wrapper e3ifmx60"
                     >
                       Choose a language or framework:
                     </h1>
@@ -963,7 +963,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                         withMargins={true}
                       >
                         <h1
-                          className="css-wxef79-Wrapper e1f8hk460"
+                          className="css-wxef79-Wrapper e3ifmx60"
                         >
                           Give your project a name:
                         </h1>
@@ -1004,7 +1004,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                         withMargins={true}
                       >
                         <h1
-                          className="css-wxef79-Wrapper e1f8hk460"
+                          className="css-wxef79-Wrapper e3ifmx60"
                         >
                           Team:
                         </h1>
@@ -1052,7 +1052,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                               value=""
                             >
                               <SelectControl
-                                className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                                className="css-1yb4m7w-StyledSelectControl e17ygei0"
                                 clearable={false}
                                 disabled={false}
                                 height={36}
@@ -1067,7 +1067,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                                 <StyledSelect
                                   arrowRenderer={[Function]}
                                   backspaceRemoves={false}
-                                  className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                                  className="css-1yb4m7w-StyledSelectControl e17ygei0"
                                   clearable={false}
                                   deleteRemoves={false}
                                   disabled={false}
@@ -1083,7 +1083,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                                   <ForwardRef(SelectPicker)
                                     arrowRenderer={[Function]}
                                     backspaceRemoves={false}
-                                    className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                    className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                     clearable={false}
                                     deleteRemoves={false}
                                     disabled={false}
@@ -1099,7 +1099,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                                     <SelectPicker
                                       arrowRenderer={[Function]}
                                       backspaceRemoves={false}
-                                      className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                      className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                       clearable={false}
                                       deleteRemoves={false}
                                       disabled={false}
@@ -1118,7 +1118,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                                         autosize={true}
                                         backspaceRemoves={false}
                                         backspaceToRemoveMessage="Press backspace to remove {label}"
-                                        className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                        className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                         clearAllText="Clear all"
                                         clearRenderer={[Function]}
                                         clearValueText="Clear value"
@@ -1167,7 +1167,7 @@ exports[`OnboardingWizard render() should render and respond to click events 1`]
                                         valueKey="value"
                                       >
                                         <div
-                                          className="Select e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20 is-searchable Select--single"
+                                          className="Select e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0 is-searchable Select--single"
                                         >
                                           <div
                                             className="Select-control"
@@ -1304,7 +1304,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
 >
   <OnboardingBackground>
     <div
-      className="css-pv6tzi-OnboardingBackground e1nt3q690"
+      className="css-pv6tzi-OnboardingBackground eidxgu00"
     >
       <div
         className="onboarding-container"
@@ -1345,24 +1345,24 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                 key="0"
               >
                 <div
-                  className="css-zrjk08-Node e1en1fxy0"
+                  className="css-zrjk08-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-check"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-check"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -1379,7 +1379,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Create an organization in Sentry
@@ -1394,24 +1394,24 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                 key="1"
               >
                 <div
-                  className="css-pe396z-Node e1en1fxy0"
+                  className="css-pe396z-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-empty"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-empty"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -1428,7 +1428,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Tell us about your project
@@ -1443,24 +1443,24 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                 key="2"
               >
                 <div
-                  className="css-zrjk08-Node e1en1fxy0"
+                  className="css-zrjk08-Node e17l6i9c0"
                   data-test-id="node"
                 >
                   <NodeIcon
                     src="icon-circle-empty"
                   >
                     <InlineSvg
-                      className="css-1y5anzy-NodeIcon e1en1fxy1"
+                      className="css-1y5anzy-NodeIcon e17l6i9c1"
                       src="icon-circle-empty"
                     >
                       <StyledSvg
-                        className="css-1y5anzy-NodeIcon e1en1fxy1"
+                        className="css-1y5anzy-NodeIcon e17l6i9c1"
                         height="1em"
                         viewBox={Object {}}
                         width="1em"
                       >
                         <svg
-                          className="e1en1fxy1 css-x6jhby-StyledSvg-NodeIcon e2idor0"
+                          className="e17l6i9c1 css-x6jhby-StyledSvg-NodeIcon ebb48o80"
                           height="1em"
                           viewBox={Object {}}
                           width="1em"
@@ -1477,7 +1477,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                     data-test-id="node-description"
                   >
                     <div
-                      className="css-yyeqaq-NodeDescription e1en1fxy2"
+                      className="css-yyeqaq-NodeDescription e17l6i9c2"
                       data-test-id="node-description"
                     >
                       Send an event from your application
@@ -1536,7 +1536,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                     withMargins={true}
                   >
                     <h1
-                      className="css-wxef79-Wrapper e1f8hk460"
+                      className="css-wxef79-Wrapper e3ifmx60"
                     >
                       Choose a language or framework:
                     </h1>
@@ -2255,7 +2255,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                         withMargins={true}
                       >
                         <h1
-                          className="css-wxef79-Wrapper e1f8hk460"
+                          className="css-wxef79-Wrapper e3ifmx60"
                         >
                           Give your project a name:
                         </h1>
@@ -2296,7 +2296,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                         withMargins={true}
                       >
                         <h1
-                          className="css-wxef79-Wrapper e1f8hk460"
+                          className="css-wxef79-Wrapper e3ifmx60"
                         >
                           Team:
                         </h1>
@@ -2344,7 +2344,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                               value=""
                             >
                               <SelectControl
-                                className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                                className="css-1yb4m7w-StyledSelectControl e17ygei0"
                                 clearable={false}
                                 disabled={false}
                                 height={36}
@@ -2359,7 +2359,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                                 <StyledSelect
                                   arrowRenderer={[Function]}
                                   backspaceRemoves={false}
-                                  className="css-j6zs66-StyledSelectControl e1qrhqd00"
+                                  className="css-1yb4m7w-StyledSelectControl e17ygei0"
                                   clearable={false}
                                   deleteRemoves={false}
                                   disabled={false}
@@ -2375,7 +2375,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                                   <ForwardRef(SelectPicker)
                                     arrowRenderer={[Function]}
                                     backspaceRemoves={false}
-                                    className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                    className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                     clearable={false}
                                     deleteRemoves={false}
                                     disabled={false}
@@ -2391,7 +2391,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                                     <SelectPicker
                                       arrowRenderer={[Function]}
                                       backspaceRemoves={false}
-                                      className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                      className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                       clearable={false}
                                       deleteRemoves={false}
                                       disabled={false}
@@ -2410,7 +2410,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                                         autosize={true}
                                         backspaceRemoves={false}
                                         backspaceToRemoveMessage="Press backspace to remove {label}"
-                                        className="e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20"
+                                        className="e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0"
                                         clearAllText="Clear all"
                                         clearRenderer={[Function]}
                                         clearValueText="Clear value"
@@ -2459,7 +2459,7 @@ exports[`OnboardingWizard render() should render and respond to click events 2`]
                                         valueKey="value"
                                       >
                                         <div
-                                          className="Select e1qrhqd00 css-1cl3z8x-StyledSelect-StyledSelectControl eho28m20 is-searchable Select--single"
+                                          className="Select e17ygei0 css-lblmhw-StyledSelect-StyledSelectControl e1rv3krr0 is-searchable Select--single"
                                         >
                                           <div
                                             className="Select-control"

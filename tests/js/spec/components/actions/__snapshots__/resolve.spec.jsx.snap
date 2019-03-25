@@ -122,7 +122,7 @@ exports[`ResolveActions with confirmation step renders 1`] = `
                 type="text"
               >
                 <div
-                  className="css-9u5for-GuideAnchorContainer e130o4350"
+                  className="css-9u5for-GuideAnchorContainer e1l6bvjl0"
                   type="text"
                 >
                   <StyledGuideAnchor
@@ -130,11 +130,11 @@ exports[`ResolveActions with confirmation step renders 1`] = `
                     className="guide-anchor-ping resolve"
                   >
                     <div
-                      className="guide-anchor-ping resolve css-1yndvnf-StyledGuideAnchor e130o4351"
+                      className="guide-anchor-ping resolve css-1yndvnf-StyledGuideAnchor e1l6bvjl1"
                     >
                       <StyledGuideAnchorRipples>
                         <div
-                          className="css-3zj3g7-StyledGuideAnchorRipples e130o4352"
+                          className="css-3zj3g7-StyledGuideAnchorRipples e1l6bvjl2"
                         />
                       </StyledGuideAnchorRipples>
                     </div>
@@ -572,7 +572,7 @@ exports[`ResolveActions without confirmation renders 1`] = `
               type="text"
             >
               <div
-                className="css-9u5for-GuideAnchorContainer e130o4350"
+                className="css-9u5for-GuideAnchorContainer e1l6bvjl0"
                 type="text"
               >
                 <StyledGuideAnchor
@@ -580,11 +580,11 @@ exports[`ResolveActions without confirmation renders 1`] = `
                   className="guide-anchor-ping resolve"
                 >
                   <div
-                    className="guide-anchor-ping resolve css-1yndvnf-StyledGuideAnchor e130o4351"
+                    className="guide-anchor-ping resolve css-1yndvnf-StyledGuideAnchor e1l6bvjl1"
                   >
                     <StyledGuideAnchorRipples>
                       <div
-                        className="css-3zj3g7-StyledGuideAnchorRipples e130o4352"
+                        className="css-3zj3g7-StyledGuideAnchorRipples e1l6bvjl2"
                       />
                     </StyledGuideAnchorRipples>
                   </div>
