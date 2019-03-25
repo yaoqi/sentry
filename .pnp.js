@@ -3291,56 +3291,56 @@ let packageInformationStores = new Map([
     }],
   ])],
   ["@sentry/browser", new Map([
-    ["4.5.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-browser-4.5.2-d13a96a0638d16af47edef25b613d96ba3f9dc21/node_modules/@sentry/browser/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-browser-5.0.0-rc.3-4fdd46e160de6a86dd60c85161debbe9f742d7f1/node_modules/@sentry/browser/"),
       packageDependencies: new Map([
-        ["@sentry/core", "4.5.2"],
-        ["@sentry/types", "4.5.0"],
-        ["@sentry/utils", "4.5.2"],
+        ["@sentry/core", "5.0.0-rc.3"],
+        ["@sentry/types", "5.0.0-rc.3"],
+        ["@sentry/utils", "5.0.0-rc.3"],
         ["tslib", "1.9.3"],
-        ["@sentry/browser", "4.5.2"],
+        ["@sentry/browser", "5.0.0-rc.3"],
       ]),
     }],
   ])],
   ["@sentry/core", new Map([
-    ["4.5.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-core-4.5.2-b103b659857e0fabf7219e9f34c4070bcb2af0c2/node_modules/@sentry/core/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-core-5.0.0-rc.3-16f581fe90f18bac823d331791955bb49236d861/node_modules/@sentry/core/"),
       packageDependencies: new Map([
-        ["@sentry/hub", "4.5.2"],
-        ["@sentry/minimal", "4.5.2"],
-        ["@sentry/types", "4.5.0"],
-        ["@sentry/utils", "4.5.2"],
+        ["@sentry/hub", "5.0.0-rc.3"],
+        ["@sentry/minimal", "5.0.0-rc.3"],
+        ["@sentry/types", "5.0.0-rc.3"],
+        ["@sentry/utils", "5.0.0-rc.3"],
         ["tslib", "1.9.3"],
-        ["@sentry/core", "4.5.2"],
+        ["@sentry/core", "5.0.0-rc.3"],
       ]),
     }],
   ])],
   ["@sentry/hub", new Map([
-    ["4.5.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-hub-4.5.2-b1df97dccc8644f6ef9b36e8747fe04342cb92ef/node_modules/@sentry/hub/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-hub-5.0.0-rc.3-5ac368b37294e55e942f2084d8f8783bf5f34b4e/node_modules/@sentry/hub/"),
       packageDependencies: new Map([
-        ["@sentry/types", "4.5.0"],
-        ["@sentry/utils", "4.5.2"],
+        ["@sentry/types", "5.0.0-rc.3"],
+        ["@sentry/utils", "5.0.0-rc.3"],
         ["tslib", "1.9.3"],
-        ["@sentry/hub", "4.5.2"],
+        ["@sentry/hub", "5.0.0-rc.3"],
       ]),
     }],
   ])],
   ["@sentry/types", new Map([
-    ["4.5.0", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-types-4.5.0-59e2a27d48b01b44e8959aa5c8a30514fe1086a9/node_modules/@sentry/types/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-types-5.0.0-rc.3-4f9349d52f9c0e0974b0da09a70705204471e489/node_modules/@sentry/types/"),
       packageDependencies: new Map([
-        ["@sentry/types", "4.5.0"],
+        ["@sentry/types", "5.0.0-rc.3"],
       ]),
     }],
   ])],
   ["@sentry/utils", new Map([
-    ["4.5.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-utils-4.5.2-0de5bef1c71e0dd800d378c010e5bfad91add91a/node_modules/@sentry/utils/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-utils-5.0.0-rc.3-dc43a11fc4f677ef9ac21d01dd39a7022e5a8c98/node_modules/@sentry/utils/"),
       packageDependencies: new Map([
-        ["@sentry/types", "4.5.0"],
+        ["@sentry/types", "5.0.0-rc.3"],
         ["tslib", "1.9.3"],
-        ["@sentry/utils", "4.5.2"],
+        ["@sentry/utils", "5.0.0-rc.3"],
       ]),
     }],
   ])],
@@ -3353,13 +3353,13 @@ let packageInformationStores = new Map([
     }],
   ])],
   ["@sentry/minimal", new Map([
-    ["4.5.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-minimal-4.5.2-c090427f6ac276b4dc449e8be460ca5b35ce4fb3/node_modules/@sentry/minimal/"),
+    ["5.0.0-rc.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-@sentry-minimal-5.0.0-rc.3-bf4ac122a2ca34c846acd305bf0561deb040d84c/node_modules/@sentry/minimal/"),
       packageDependencies: new Map([
-        ["@sentry/hub", "4.5.2"],
-        ["@sentry/types", "4.5.0"],
+        ["@sentry/hub", "5.0.0-rc.3"],
+        ["@sentry/types", "5.0.0-rc.3"],
         ["tslib", "1.9.3"],
-        ["@sentry/minimal", "4.5.2"],
+        ["@sentry/minimal", "5.0.0-rc.3"],
       ]),
     }],
   ])],
@@ -4613,6 +4613,35 @@ let packageInformationStores = new Map([
       packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-tiny-emitter-2.0.2-82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c/node_modules/tiny-emitter/"),
       packageDependencies: new Map([
         ["tiny-emitter", "2.0.2"],
+      ]),
+    }],
+  ])],
+  ["color", new Map([
+    ["3.1.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-color-3.1.0-d8e9fb096732875774c84bf922815df0308d0ffc/node_modules/color/"),
+      packageDependencies: new Map([
+        ["color-convert", "1.9.3"],
+        ["color-string", "1.5.3"],
+        ["color", "3.1.0"],
+      ]),
+    }],
+  ])],
+  ["color-string", new Map([
+    ["1.5.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-color-string-1.5.3-c9bbc5f01b58b5492f3d6857459cb6590ce204cc/node_modules/color-string/"),
+      packageDependencies: new Map([
+        ["color-name", "1.1.3"],
+        ["simple-swizzle", "0.2.2"],
+        ["color-string", "1.5.3"],
+      ]),
+    }],
+  ])],
+  ["simple-swizzle", new Map([
+    ["0.2.2", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-simple-swizzle-0.2.2-a4da6b635ffcccca33f70d17cb92592de95e557a/node_modules/simple-swizzle/"),
+      packageDependencies: new Map([
+        ["is-arrayish", "0.3.2"],
+        ["simple-swizzle", "0.2.2"],
       ]),
     }],
   ])],
@@ -7464,35 +7493,6 @@ let packageInformationStores = new Map([
       ]),
     }],
   ])],
-  ["color", new Map([
-    ["3.1.0", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-color-3.1.0-d8e9fb096732875774c84bf922815df0308d0ffc/node_modules/color/"),
-      packageDependencies: new Map([
-        ["color-convert", "1.9.3"],
-        ["color-string", "1.5.3"],
-        ["color", "3.1.0"],
-      ]),
-    }],
-  ])],
-  ["color-string", new Map([
-    ["1.5.3", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-color-string-1.5.3-c9bbc5f01b58b5492f3d6857459cb6590ce204cc/node_modules/color-string/"),
-      packageDependencies: new Map([
-        ["color-name", "1.1.3"],
-        ["simple-swizzle", "0.2.2"],
-        ["color-string", "1.5.3"],
-      ]),
-    }],
-  ])],
-  ["simple-swizzle", new Map([
-    ["0.2.2", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-simple-swizzle-0.2.2-a4da6b635ffcccca33f70d17cb92592de95e557a/node_modules/simple-swizzle/"),
-      packageDependencies: new Map([
-        ["is-arrayish", "0.3.2"],
-        ["simple-swizzle", "0.2.2"],
-      ]),
-    }],
-  ])],
   ["postcss-convert-values", new Map([
     ["4.0.1", {
       packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-postcss-convert-values-4.0.1-ca3813ed4da0f812f9d43703584e449ebe189a7f/node_modules/postcss-convert-values/"),
@@ -10315,10 +10315,10 @@ let packageInformationStores = new Map([
     }],
   ])],
   ["u2f-api", new Map([
-    ["0.2.3", {
-      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-u2f-api-0.2.3-e489d9aa5ee929a4e5c47a173c72e227c09e7485/node_modules/u2f-api/"),
+    ["1.0.10", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v4/npm-u2f-api-1.0.10-38d898a72daa6362040b27e37c8286d96cb8d320/node_modules/u2f-api/"),
       packageDependencies: new Map([
-        ["u2f-api", "0.2.3"],
+        ["u2f-api", "1.0.10"],
       ]),
     }],
   ])],
@@ -20780,7 +20780,7 @@ let packageInformationStores = new Map([
         ["@babel/preset-react", "pnp:b0760341da9ced865db6467d3154c57df8031d17"],
         ["@babel/runtime", "7.2.0"],
         ["@emotion/is-prop-valid", "0.7.3"],
-        ["@sentry/browser", "4.5.2"],
+        ["@sentry/browser", "5.0.0-rc.3"],
         ["algoliasearch", "3.32.0"],
         ["app", "0.0.0"],
         ["babel-core", "7.0.0-bridge.0"],
@@ -20791,6 +20791,7 @@ let packageInformationStores = new Map([
         ["bootstrap", "3.3.5"],
         ["classnames", "2.2.0"],
         ["clipboard", "1.7.1"],
+        ["color", "3.1.0"],
         ["compression-webpack-plugin", "2.0.0"],
         ["create-react-class", "15.6.2"],
         ["crypto-js", "3.1.5"],
@@ -20851,7 +20852,7 @@ let packageInformationStores = new Map([
         ["svg-sprite-loader", "3.9.2"],
         ["svgo", "1.0.3"],
         ["svgo-loader", "2.1.0"],
-        ["u2f-api", "0.2.3"],
+        ["u2f-api", "1.0.10"],
         ["webpack", "4.28.1"],
         ["webpack-cli", "3.1.2"],
         ["webpack-fix-style-only-entries", "0.2.0"],
@@ -21483,13 +21484,13 @@ let locatorsByLocations = new Map([
   ["../../Library/Caches/Yarn/v4/npm-@emotion-memoize-0.7.1-e93c13942592cf5ef01aa8297444dc192beee52f/node_modules/@emotion/memoize/", {"name":"@emotion/memoize","reference":"0.7.1"}],
   ["../../Library/Caches/Yarn/v4/npm-@emotion-memoize-0.6.1-b2de5184e49f518b7115a5e6d0e727643ec531cf/node_modules/@emotion/memoize/", {"name":"@emotion/memoize","reference":"0.6.1"}],
   ["../../Library/Caches/Yarn/v4/npm-@emotion-memoize-0.6.6-004b98298d04c7ca3b4f50ca2035d4f60d2eed1b/node_modules/@emotion/memoize/", {"name":"@emotion/memoize","reference":"0.6.6"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-browser-4.5.2-d13a96a0638d16af47edef25b613d96ba3f9dc21/node_modules/@sentry/browser/", {"name":"@sentry/browser","reference":"4.5.2"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-core-4.5.2-b103b659857e0fabf7219e9f34c4070bcb2af0c2/node_modules/@sentry/core/", {"name":"@sentry/core","reference":"4.5.2"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-hub-4.5.2-b1df97dccc8644f6ef9b36e8747fe04342cb92ef/node_modules/@sentry/hub/", {"name":"@sentry/hub","reference":"4.5.2"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-types-4.5.0-59e2a27d48b01b44e8959aa5c8a30514fe1086a9/node_modules/@sentry/types/", {"name":"@sentry/types","reference":"4.5.0"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-utils-4.5.2-0de5bef1c71e0dd800d378c010e5bfad91add91a/node_modules/@sentry/utils/", {"name":"@sentry/utils","reference":"4.5.2"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-browser-5.0.0-rc.3-4fdd46e160de6a86dd60c85161debbe9f742d7f1/node_modules/@sentry/browser/", {"name":"@sentry/browser","reference":"5.0.0-rc.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-core-5.0.0-rc.3-16f581fe90f18bac823d331791955bb49236d861/node_modules/@sentry/core/", {"name":"@sentry/core","reference":"5.0.0-rc.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-hub-5.0.0-rc.3-5ac368b37294e55e942f2084d8f8783bf5f34b4e/node_modules/@sentry/hub/", {"name":"@sentry/hub","reference":"5.0.0-rc.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-types-5.0.0-rc.3-4f9349d52f9c0e0974b0da09a70705204471e489/node_modules/@sentry/types/", {"name":"@sentry/types","reference":"5.0.0-rc.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-utils-5.0.0-rc.3-dc43a11fc4f677ef9ac21d01dd39a7022e5a8c98/node_modules/@sentry/utils/", {"name":"@sentry/utils","reference":"5.0.0-rc.3"}],
   ["../../Library/Caches/Yarn/v4/npm-tslib-1.9.3-d7e4dd79245d85428c4d7e4822a79917954ca286/node_modules/tslib/", {"name":"tslib","reference":"1.9.3"}],
-  ["../../Library/Caches/Yarn/v4/npm-@sentry-minimal-4.5.2-c090427f6ac276b4dc449e8be460ca5b35ce4fb3/node_modules/@sentry/minimal/", {"name":"@sentry/minimal","reference":"4.5.2"}],
+  ["../../Library/Caches/Yarn/v4/npm-@sentry-minimal-5.0.0-rc.3-bf4ac122a2ca34c846acd305bf0561deb040d84c/node_modules/@sentry/minimal/", {"name":"@sentry/minimal","reference":"5.0.0-rc.3"}],
   ["../../Library/Caches/Yarn/v4/npm-algoliasearch-3.32.0-5818168c26ff921bd0346a919071bac928b747ce/node_modules/algoliasearch/", {"name":"algoliasearch","reference":"3.32.0"}],
   ["../../Library/Caches/Yarn/v4/npm-agentkeepalive-2.2.0-c5d1bd4b129008f1163f236f86e5faea2026e2ef/node_modules/agentkeepalive/", {"name":"agentkeepalive","reference":"2.2.0"}],
   ["../../Library/Caches/Yarn/v4/npm-envify-4.1.0-f39ad3db9d6801b4e6b478b61028d3f0b6819f7e/node_modules/envify/", {"name":"envify","reference":"4.1.0"}],
@@ -21629,6 +21630,9 @@ let locatorsByLocations = new Map([
   ["../../Library/Caches/Yarn/v4/npm-delegate-3.2.0-b66b71c3158522e8ab5744f720d8ca0c2af59166/node_modules/delegate/", {"name":"delegate","reference":"3.2.0"}],
   ["../../Library/Caches/Yarn/v4/npm-select-1.1.2-0e7350acdec80b1108528786ec1d4418d11b396d/node_modules/select/", {"name":"select","reference":"1.1.2"}],
   ["../../Library/Caches/Yarn/v4/npm-tiny-emitter-2.0.2-82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c/node_modules/tiny-emitter/", {"name":"tiny-emitter","reference":"2.0.2"}],
+  ["../../Library/Caches/Yarn/v4/npm-color-3.1.0-d8e9fb096732875774c84bf922815df0308d0ffc/node_modules/color/", {"name":"color","reference":"3.1.0"}],
+  ["../../Library/Caches/Yarn/v4/npm-color-string-1.5.3-c9bbc5f01b58b5492f3d6857459cb6590ce204cc/node_modules/color-string/", {"name":"color-string","reference":"1.5.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-simple-swizzle-0.2.2-a4da6b635ffcccca33f70d17cb92592de95e557a/node_modules/simple-swizzle/", {"name":"simple-swizzle","reference":"0.2.2"}],
   ["../../Library/Caches/Yarn/v4/npm-compression-webpack-plugin-2.0.0-46476350c1eb27f783dccc79ac2f709baa2cffbc/node_modules/compression-webpack-plugin/", {"name":"compression-webpack-plugin","reference":"2.0.0"}],
   ["../../Library/Caches/Yarn/v4/npm-cacache-11.3.1-d09d25f6c4aca7a6d305d141ae332613aa1d515f/node_modules/cacache/", {"name":"cacache","reference":"11.3.1"}],
   ["../../Library/Caches/Yarn/v4/npm-bluebird-3.5.1-d9551f9de98f1fcda1e683d17ee91a0602ee2eb9/node_modules/bluebird/", {"name":"bluebird","reference":"3.5.1"}],
@@ -21941,9 +21945,6 @@ let locatorsByLocations = new Map([
   ["../../Library/Caches/Yarn/v4/npm-indexes-of-1.0.1-f30f716c8e2bd346c7b67d3df3915566a7c05607/node_modules/indexes-of/", {"name":"indexes-of","reference":"1.0.1"}],
   ["../../Library/Caches/Yarn/v4/npm-uniq-1.0.1-b31c5ae8254844a3a8281541ce2b04b865a734ff/node_modules/uniq/", {"name":"uniq","reference":"1.0.1"}],
   ["../../Library/Caches/Yarn/v4/npm-postcss-colormin-4.0.2-93cd1fa11280008696887db1a528048b18e7ed99/node_modules/postcss-colormin/", {"name":"postcss-colormin","reference":"4.0.2"}],
-  ["../../Library/Caches/Yarn/v4/npm-color-3.1.0-d8e9fb096732875774c84bf922815df0308d0ffc/node_modules/color/", {"name":"color","reference":"3.1.0"}],
-  ["../../Library/Caches/Yarn/v4/npm-color-string-1.5.3-c9bbc5f01b58b5492f3d6857459cb6590ce204cc/node_modules/color-string/", {"name":"color-string","reference":"1.5.3"}],
-  ["../../Library/Caches/Yarn/v4/npm-simple-swizzle-0.2.2-a4da6b635ffcccca33f70d17cb92592de95e557a/node_modules/simple-swizzle/", {"name":"simple-swizzle","reference":"0.2.2"}],
   ["../../Library/Caches/Yarn/v4/npm-postcss-convert-values-4.0.1-ca3813ed4da0f812f9d43703584e449ebe189a7f/node_modules/postcss-convert-values/", {"name":"postcss-convert-values","reference":"4.0.1"}],
   ["../../Library/Caches/Yarn/v4/npm-postcss-discard-comments-4.0.1-30697735b0c476852a7a11050eb84387a67ef55d/node_modules/postcss-discard-comments/", {"name":"postcss-discard-comments","reference":"4.0.1"}],
   ["../../Library/Caches/Yarn/v4/npm-postcss-discard-duplicates-4.0.2-3fe133cd3c82282e550fc9b239176a9207b784eb/node_modules/postcss-discard-duplicates/", {"name":"postcss-discard-duplicates","reference":"4.0.2"}],
@@ -22233,7 +22234,7 @@ let locatorsByLocations = new Map([
   ["../../Library/Caches/Yarn/v4/npm-url-slug-2.0.0-a789d5aed4995c0d95af33377ad1d5c68d4d7027/node_modules/url-slug/", {"name":"url-slug","reference":"2.0.0"}],
   ["../../Library/Caches/Yarn/v4/npm-unidecode-0.1.8-efbb301538bc45246a9ac8c559d72f015305053e/node_modules/unidecode/", {"name":"unidecode","reference":"0.1.8"}],
   ["../../Library/Caches/Yarn/v4/npm-svgo-loader-2.1.0-e86c0ca08c1149bb1fb4b3a469dabac847f5e24a/node_modules/svgo-loader/", {"name":"svgo-loader","reference":"2.1.0"}],
-  ["../../Library/Caches/Yarn/v4/npm-u2f-api-0.2.3-e489d9aa5ee929a4e5c47a173c72e227c09e7485/node_modules/u2f-api/", {"name":"u2f-api","reference":"0.2.3"}],
+  ["../../Library/Caches/Yarn/v4/npm-u2f-api-1.0.10-38d898a72daa6362040b27e37c8286d96cb8d320/node_modules/u2f-api/", {"name":"u2f-api","reference":"1.0.10"}],
   ["../../Library/Caches/Yarn/v4/npm-webpack-4.28.1-d0e2856e75d1224b170bf16c30b6ca9b75f0d958/node_modules/webpack/", {"name":"webpack","reference":"4.28.1"}],
   ["../../Library/Caches/Yarn/v4/npm-webpack-4.28.3-8acef6e77fad8a01bfd0c2b25aa3636d46511874/node_modules/webpack/", {"name":"webpack","reference":"4.28.3"}],
   ["../../Library/Caches/Yarn/v4/npm-@webassemblyjs-ast-1.7.11-b988582cafbb2b095e8b556526f30c90d057cace/node_modules/@webassemblyjs/ast/", {"name":"@webassemblyjs/ast","reference":"1.7.11"}],
