@@ -251,7 +251,11 @@ def pytest_addoption(parser):
     group._addoption('--phantomjs-path', dest='phantomjs_path', help='path to phantomjs driver')
     group._addoption('--chrome-path', dest='chrome_path', help='path to google-chrome')
     group._addoption('--chromedriver-path', dest='chromedriver_path', help='path to chromedriver')
-    group._addoption('--no-headless', dest='no_headless', help='show a browser while running the tests (chrome)')
+    group._addoption(
+        '--no-headless',
+        dest='no_headless',
+        help='show a browser while running the tests (chrome)',
+    )
 
 
 def pytest_configure(config):
@@ -276,8 +280,15 @@ def percy(request):
     percy = percy.Runner(loader=loader, config=percy_config)
     percy.initialize_build()
 
-    request.addfinalizer(percy.finalize_build)
+    request.session._percy = percy
     return percy
+
+
+def pytest_sessionfinish(session, exitstatus):
+    # Always finalize if not running in parallel, otherwise only finalize if
+    # successful
+    if hasattr(session, '_percy') and ('PERCY_PARALLEL_TOTAL' not in os.environ or not exitstatus):
+        session._percy.finalize_build()
 
 
 @pytest.fixture(scope='function')
