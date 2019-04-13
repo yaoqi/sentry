@@ -73,9 +73,9 @@ const theme = {
   zIndex: {
     header: 1000,
     dropdown: 1001,
-    globalSelectionHeader: 1002,
-    sidebar: 1003,
-    orgAndUserMenu: 1004,
+    globalSelectionHeader: 1012,
+    sidebar: 1013,
+    orgAndUserMenu: 1014,
 
     dropdownAutocomplete: {
       // needs to be below actor but above other page elements (e.g. pagination)
