@@ -18,6 +18,14 @@ VERSION_RE = re.compile(r'(\d+\.\d+\.\d+)\s+(.*)')
 # Regex to guess whether we're dealing with Windows or Unix paths.
 WINDOWS_PATH_RE = re.compile(r'^([a-z]:\\|\\\\)', re.IGNORECASE)
 
+NATIVE_IMAGE_TYPES = (
+    'apple',     # Deprecated in favor of "macho"
+    'symbolic',  # Generic if type is not known
+    'elf',       # Linux
+    'macho',     # macOS, iOS
+    'pe'         # Windows
+)
+
 AppInfo = namedtuple('AppInfo', ['id', 'version', 'build', 'name'])
 
 
@@ -90,3 +98,16 @@ def signal_from_data(data):
         return int(signal)
 
     return None
+
+
+def is_native_image(image):
+    return bool(image) \
+        and image.get('type') in NATIVE_IMAGE_TYPES \
+        and image.get('image_addr') is not None \
+        and image.get('image_size') is not None \
+        and (image.get('debug_id') or image.get('id') or image.get('uuid')) is not None
+
+
+def native_images_from_data(data):
+    return get_path(data, 'debug_meta', 'images', default=(),
+                    filter=is_native_image)
