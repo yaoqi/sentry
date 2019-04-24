@@ -1043,11 +1043,15 @@ class SymbolicatorResolvingIntegrationTest(ResolvingIntegrationTestBase, Transac
     def initialize(self, live_server):
         new_prefix = live_server.url
 
+        self.project.update_option('sentry:symbolicator-enabled', True)
+
         with patch('sentry.lang.native.symbolizer.Symbolizer._symbolize_app_frame') \
             as symbolize_app_frame, \
-                patch('sentry.lang.native.utils.should_use_symbolicator', return_value=True), \
                 patch('sentry.auth.system.is_internal_ip', return_value=True), \
-                self.options({"system.url-prefix": new_prefix}):
+                self.options({
+                    'symbolicator.enabled': True,
+                    "system.url-prefix": new_prefix
+                }):
 
             # Run test case:
             yield
