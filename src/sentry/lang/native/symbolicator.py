@@ -20,7 +20,7 @@ from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
 from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
-from sentry.lang.native.utils import get_sdk_from_event, image_name, signal_from_data
+from sentry.lang.native.utils import get_sdk_from_event, image_name, signal_from_data, should_use_symbolicator
 from sentry.lang.native.unreal import parse_portable_callstack
 from sentry.models import EventError, Project
 from sentry.reprocessing import report_processing_issue
@@ -616,10 +616,9 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
                     new_frames.append(raw_frame)
 
             if sinfo.container is not None and native_frames_idx > 0:
-                sinfo.container['raw_stacktrace'] = dict(
-                    sinfo.stacktrace,
-                    frames=list(sinfo.stacktrace['frames'])
-                )
+                sinfo.container['raw_stacktrace'] = {
+                    'frames': list(sinfo.stacktrace['frames'])
+                }
 
             sinfo.stacktrace['frames'] = new_frames
 
@@ -876,11 +875,6 @@ def create_symbolicator(project):
     opts['sources'] = get_sources_for_project(project)
 
     return Symbolicator(**opts)
-
-
-def should_use_symbolicator(project):
-    return options.get('symbolicator.enabled') and \
-        project.get_option('sentry:symbolicator-enabled')
 
 
 def symbolicate_native_event(data):

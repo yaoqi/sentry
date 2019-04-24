@@ -1045,7 +1045,7 @@ class SymbolicatorResolvingIntegrationTest(ResolvingIntegrationTestBase, Transac
 
         with patch('sentry.lang.native.symbolizer.Symbolizer._symbolize_app_frame') \
             as symbolize_app_frame, \
-                patch('sentry.lang.native.symbolicator.should_use_symbolicator', return_value=True), \
+                patch('sentry.lang.native.utils.should_use_symbolicator', return_value=True), \
                 patch('sentry.auth.system.is_internal_ip', return_value=True), \
                 self.options({"system.url-prefix": new_prefix}):
 

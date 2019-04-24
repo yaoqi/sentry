@@ -1,8 +1,9 @@
 from __future__ import absolute_import
 from symbolic import Unreal4Crash
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
+from sentry.lang.native.utils import should_use_symbolicator
 from sentry.models import UserReport
-from sentry.utils.safe import set_path, setdefault_path
+from sentry.utils.safe import set_path, setdefault_path, get_path
 
 import re
 
@@ -169,15 +170,21 @@ def merge_unreal_context_event(unreal_context, event, project):
     # drop modules. minidump processing adds 'images loaded'
     runtime_prop.pop('modules', None)
 
-    # add everything else as unreal context or extra. This includes
-    # `portable_call_stack` which we will need in the event enhancer for
-    # symbolication.
+    # TODO(markus): Remove after all projects run through symbolicator
+    if not should_use_symbolicator(project):
+        merge_portable_callstack(event, runtime_prop)
+    else:
+        # We will need this in symbolicator
+        set_path(
+            event,
+            'contexts',
+            'unreal',
+            value={
+                'portable_call_stack': runtime_prop.pop('portable_call_stack', None)
+            }
+        )
 
-    set_path(
-        event, 'contexts', 'unreal', value={
-            'portable_call_stack': runtime_prop.pop(
-                'portable_call_stack', None)})
-
+    # add everything else as extra.
     # TODO(markus): Move to unreal context
     extra = event.setdefault('extra', {})
     extra.update(**runtime_prop)
@@ -186,6 +193,25 @@ def merge_unreal_context_event(unreal_context, event, project):
     event['sdk'] = {
         'name': 'sentry.unreal.crashreporter',
         'version': runtime_prop.pop('crash_reporter_client_version', '0.0.0')
+    }
+
+
+def merge_portable_callstack(event, runtime_prop):
+    if any(thread.get('stacktrace') and thread.get('crashed')
+           for thread in event.get('threads', [])):
+        return
+
+    portable_callstack = runtime_prop.pop('portable_call_stack', None)
+    if portable_callstack is None:
+        return
+
+    images = get_path(event, 'debug_meta', 'images', filter=True, default=())
+    frames = parse_portable_callstack(portable_callstack, images)
+    if not frames:
+        return
+
+    event['stacktrace'] = {
+        'frames': frames
     }
 
 
