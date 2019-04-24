@@ -182,24 +182,26 @@ class Symbolizer(object):
         ]
 
     def symbolize_frame(self, instruction_addr, sdk_info=None,
-                        symbolserver_match=None, trust=None):
+                        symbolserver_match=None, trust=None, symbolicator_used=False):
         app_err = None
 
-        obj = self.object_lookup.find_object(instruction_addr)
-        if obj is None:
-            if trust == 'scan':
-                return []
-            raise SymbolicationFailed(type=EventError.NATIVE_UNKNOWN_IMAGE)
+        if not symbolicator_used:
 
-        # Try to always prefer the images from the application storage.
-        # If the symbolication fails we keep the error for later
-        try:
-            match = self._symbolize_app_frame(
-                instruction_addr, obj, sdk_info=sdk_info, trust=trust)
-            if match:
-                return match
-        except SymbolicationFailed as err:
-            app_err = err
+            obj = self.object_lookup.find_object(instruction_addr)
+            if obj is None:
+                if trust == 'scan':
+                    return []
+                raise SymbolicationFailed(type=EventError.NATIVE_UNKNOWN_IMAGE)
+
+            # Try to always prefer the images from the application storage.
+            # If the symbolication fails we keep the error for later
+            try:
+                match = self._symbolize_app_frame(
+                    instruction_addr, obj, sdk_info=sdk_info, trust=trust)
+                if match:
+                    return match
+            except SymbolicationFailed as err:
+                app_err = err
 
         # Then we check the symbolserver for a match.
         match = self._convert_symbolserver_match(instruction_addr, symbolserver_match)

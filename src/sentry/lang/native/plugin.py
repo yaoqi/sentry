@@ -268,6 +268,8 @@ class NativeStacktraceProcessor(StacktraceProcessor):
                     self.sdk_info,
                     symbolserver_match=processable_frame.data['symbolserver_match'],
                     trust=raw_frame.get('trust'),
+                    symbolicator_used=get_path(
+                        raw_frame, 'data', 'symbolication_status') is not None
                 )
                 if not symbolicated_frames:
                     if raw_frame.get('trust') == 'scan':
