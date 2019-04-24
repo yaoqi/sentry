@@ -44,8 +44,9 @@ class RetryProcessing(Exception):
 
 
 class RetrySymbolication(Exception):
-    def __init__(self, retry_after=None):
+    def __init__(self, retry_after=None, new_data=None):
         self.retry_after = retry_after
+        self.new_data = new_data
 
 
 def should_process(data):
@@ -221,6 +222,9 @@ def _do_process_event(cache_key, start_time, event_id, process_task,
     except RetrySymbolication as e:
         if start_time and (time() - start_time) > 3600:
             raise RuntimeError('Event spent one hour in processing')
+
+        if e.new_data is not None:
+            default_cache.set(cache_key, e.new_data, 3600)
 
         retry_process_event.apply_async(
             args=(),

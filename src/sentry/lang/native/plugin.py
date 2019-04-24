@@ -12,7 +12,8 @@ from sentry.plugins import Plugin2
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import is_minidump_event
 from sentry.lang.native.symbolizer import Symbolizer, SymbolicationFailed
-from sentry.lang.native.symbolicator import run_symbolicator, merge_symbolicator_image
+from sentry.lang.native.symbolicator import run_symbolicator
+from sentry.lang.native.symbolicator2 import symbolicate_native_event
 from sentry.lang.native.utils import get_sdk_from_event, cpu_name_from_data, \
     rebase_addr, signal_from_data
 from sentry.lang.native.systemsymbols import lookup_system_symbols
@@ -128,8 +129,21 @@ class NativeStacktraceProcessor(StacktraceProcessor):
 
     def handles_frame(self, frame, stacktrace_info):
         platform = frame.get('platform') or self.data.get('platform')
-        return (platform in self.supported_platforms and self.available
-                and 'instruction_addr' in frame)
+
+        if not self.available:
+            return False
+
+        if platform not in self.supported_platforms:
+            return False
+
+        if 'instruction_addr' not in frame:
+            return False
+
+        if get_path(frame, 'data', 'symbolication_status') == 'symbolicated':
+            return False
+
+        return True
+
 
     def preprocess_frame(self, processable_frame):
         instr_addr = self.find_best_instruction(processable_frame)
@@ -406,8 +420,7 @@ class NativePlugin(Plugin2):
     can_disable = False
 
     def get_event_enhancers(self, data):
-        if is_minidump_event(data):
-            return [reprocess_minidump_with_cfi]
+        return [symbolicate_native_event]
 
     def get_stacktrace_processors(self, data, stacktrace_infos, platforms, **kwargs):
         if any(platform in NativeStacktraceProcessor.supported_platforms for platform in platforms):

@@ -166,24 +166,14 @@ def merge_unreal_context_event(unreal_context, event, project):
             comments=user_desc,
         )
 
-    if not any(thread.get('stacktrace') and thread.get('crashed')
-               for thread in event.get('threads', [])):
-        portable_callstack = runtime_prop.pop('portable_call_stack', None)
-        if portable_callstack is not None:
-            images = get_path(event, 'debug_meta', 'images', filter=True, default=())
-            frames = parse_portable_callstack(portable_callstack, images)
-
-            if len(frames) > 0:
-                event['stacktrace'] = {
-                    'frames': frames
-                }
 
     # drop modules. minidump processing adds 'images loaded'
     runtime_prop.pop('modules', None)
 
-    # add everything else as extra
-    extra = event.setdefault('extra', {})
-    extra.update(**runtime_prop)
+    # add everything else as unreal context. This includes
+    # `portable_call_stack` which we will need in the event enhancer for
+    # symbolication.
+    set_path(event, 'contexts', 'unreal', value=runtime_prop)
 
     # add sdk info
     event['sdk'] = {

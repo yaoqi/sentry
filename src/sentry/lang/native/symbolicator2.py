@@ -18,8 +18,12 @@ from sentry.cache import default_cache
 from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
+from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
 from sentry.lang.native.utils import image_name
+from sentry.lang.native.unreal import parse_portable_callstack
 from sentry.models import EventError, Project
+from sentry.reprocessing import report_processing_issue
+from sentry.stacktraces import find_stacktraces_in_data
 from sentry.tasks.store import RetrySymbolication
 from sentry.utils import json, metrics
 from sentry.utils.cache import memoize
@@ -273,27 +277,45 @@ class Symbolicator(object):
         )
 
 
-class NativeSymbolicationTask(object):
-    """
-    Base class for all native symbolication tasks.
-    """
+def handles_frame(self, frame):
+    if not frame:
+        return False
 
+    if get_path(frame, 'data', 'symbolication_status') is not None:
+        return False
+
+    platform = frame.get('platform') or self.data.get('platform')
+    return platform in self.supported_platforms and 'instruction_addr' in frame
+
+
+class SymbolicationTask(object):
     def __init__(self, symbolicator, project, data):
         self.symbolicator = symbolicator
         self.project = project
         self.data = data
         self.changed = False
 
-    @memoize
-    def _cache_key(self):
-        return u'symbolicator:{1}:{0}'.format(
-            self.data['project'],
-            self.data['event_id']
-        )
+    def symbolicate(self):
+        raise NotImplementedError
 
     def result(self):
         if self.changed:
             return self.data
+
+
+
+class NativeSymbolicationTask(SymbolicationTask):
+    """
+    Base class for all native symbolication tasks.
+    """
+
+    @memoize
+    def _cache_key(self):
+        return u'symbolicator-task-id:{}:{}:{}'.format(
+            self.__class__.__name__,
+            self.data['event_id'],
+            self.data['project'],
+        )
 
     def symbolicate(self):
         wait_timeout = 0
@@ -313,7 +335,8 @@ class NativeSymbolicationTask(object):
                         time.sleep(wait_timeout)
                         continue
 
-                    logger.error('Failed to contact symbolicator', exc_info=True)
+                    logger.error(
+                        'Failed to contact symbolicator', exc_info=True)
 
                 # Once we arrive here, we are done processing. Either, the
                 # result is now ready, or we have exceeded MAX_ATTEMPTS. In both
@@ -362,7 +385,8 @@ class NativeSymbolicationTask(object):
         default_cache.delete(self._cache_key)
 
         if response['status'] != 'completed':
-            raise SymbolicationError('Unexpected status: %s' % response['status'])
+            raise SymbolicationError(
+                'Unexpected status: %s' % response['status'])
 
         return response
 
@@ -374,7 +398,8 @@ class NativeSymbolicationTask(object):
 
     def apply_response(self, response):
         if response.get('crashed') is not None:
-            self.setdefault(['level'], 'fatal' if response['crashed'] else 'info')
+            self.setdefault(
+                ['level'], 'fatal' if response['crashed'] else 'info')
 
         # We cannot extract exception codes or signals with the breakpad
         # extractor just yet. Once these capabilities are added to symbolic,
@@ -384,17 +409,23 @@ class NativeSymbolicationTask(object):
         self._apply_system_info(response.get('system_info') or {})
         self._apply_images(response.get('images') or [])
 
+        self.apply_stacktraces(response.get('stacktraces') or [])
+
     def _apply_system_info(self, system_info):
         self.setdefault(['contexts', 'os', 'name'], system_info.get('os_name'))
-        self.setdefault(['contexts', 'os', 'version'], system_info.get('os_version'))
-        self.setdefault(['contexts', 'os', 'build'], system_info.get('os_build'))
-        self.setdefault(['contexts', 'device', 'arch'], system_info.get('cpu_arch'))
+        self.setdefault(['contexts', 'os', 'version'],
+                        system_info.get('os_version'))
+        self.setdefault(['contexts', 'os', 'build'],
+                        system_info.get('os_build'))
+        self.setdefault(['contexts', 'device', 'arch'],
+                        system_info.get('cpu_arch'))
 
     def _apply_images(self, complete_images):
         raw_images = self.setdefault(['debug_meta', 'images'], [])
 
         for index, complete_image in enumerate(complete_images):
-            raw_image = get_path(self.data, 'debug_meta', 'images', index, default={})
+            raw_image = get_path(self.data, 'debug_meta',
+                                 'images', index, default={})
             statuses = set()
 
             # Set image data from symbolicator as symbolicator might know more
@@ -452,12 +483,21 @@ class NativeSymbolicationTask(object):
         error = {k: v for k, v in six.iteritems(error) if v is not None}
         self.data.setdefault('errors', []).append(error)
         self.changed = True
-        # TODO(ja): Reprocessing?
+
+        if error['ty'] in FATAL_ERRORS and error['ty'] in USER_FIXABLE_ERRORS:
+            report_processing_issue(
+                self.data,
+                scope='native',
+                object=('dsym:%s' % error['image_uuid']) if error.get(
+                    'image_uuid') else None,
+                type=error['ty'],
+                data=error
+            )
 
     def map_frame(self, frame):
-        return {
+        frame = {
             'data': {
-                'status': frame['status'],
+                'symbolication_status': frame['status'],
             },
             'instruction_addr': frame['instruction_addr'],
             'package': frame.get('package'),
@@ -469,6 +509,9 @@ class NativeSymbolicationTask(object):
             'lineno': frame.get('lineno'),
         }
 
+        if frame['abs_path'] and not frame['filename']:
+            frame['filename'] = posixpath.basename(frame['abs_path'])
+
         return {k: v for k, v in six.iteritems(frame) if k is not None}
 
     def call_symbolicator(self, session):
@@ -478,33 +521,87 @@ class NativeSymbolicationTask(object):
         raise NotImplementedError
 
 
+
 class PayloadSymbolicationTask(NativeSymbolicationTask):
     """
     Symbolicates a native event where stack traces are given in the event
     payload.
     """
 
-    def __init__(self, project, data):
-        super(PayloadSymbolicationTask, self).__init__(project, data)
-        self.stacktraces = None
+    supported_platforms = ('cocoa', 'native')
+
+    @memoize
+    def stacktrace_infos(self):
+        """
+        List of stacktraces (with mixed frames) that should be symbolicated. An
+        important property relied upon by callers is that the stacktrace lists
+        themselves reference back into event data so they can be mutated in
+        place.
+        """
+        return [
+            stacktrace.stacktrace
+            for stacktrace in find_stacktraces_in_data(self.data)
+            if any(x in stacktrace.platforms for x in self.supported_platforms)
+        ]
+
+    @memoize
+    def modules(self):
+        return get_path(self.data, 'debug_meta', 'images', default=(), filter=True)
+
+    @memoize
+    def signal(self):
+        return signal_from_data(self.data)
 
     def call_symbolicator(self, session):
-        raise NotImplementedError
+        stacktraces = [
+            [f for f in sinfo.stacktrace if handles_frame(f)]
+            for sinfo in self.stacktrace_infos
+        ]
 
-    def apply_response(self, response):
-        raise NotImplementedError
+        if not any(stacktraces):
+            return {'status': 'completed'}
+
+        return session.symbolicate_stacktraces(
+            stacktraces=stacktraces,
+            modules=self.modules,
+            signal=self.signal
+        )
 
     def apply_stacktraces(self, stacktraces):
-        raise NotImplementedError
+        for sinfo, complete_stacktrace in zip(self.stacktrace_infos, stacktraces):
+            complete_frames_by_idx = {}
+            for complete_frame in complete_stacktrace['frames']:
+                complete_frames_by_idx \
+                    .setdefault(complete_frame['original_index'], []) \
+                    .append(complete_frame)
+
+            new_frames = []
+            native_frames_idx = 0
+
+            for raw_frame in sinfo.stacktrace['frames']:
+                if handles_frame(raw_frame):
+                    for complete_frame in complete_frames_by_idx[native_frames_idx]:
+                        merged_frame = dict(raw_frame)
+                        merged_frame.update(self.map_frame(complete_frame))
+                        new_frames.append(merged_frame)
+                    native_frames_idx += 1
+                    self.changed = True
+                else:
+                    new_frames.append(raw_frame)
+
+            if sinfo.container is not None and native_frames_idx > 0:
+                sinfo.container['raw_stacktrace'] = dict(
+                    sinfo.stacktrace,
+                    frames=list(sinfo.stacktrace['frames'])
+                )
+
+            sinfo.stacktrace['frames'] = new_frames
 
 
 class MinidumpSymbolicationTask(NativeSymbolicationTask):
     """
     Symbolicates a minidump and merges results into the event payload.
     """
-
-    def __init__(self, project, data):
-        super(MinidumpSymbolicationTask, self).__init__(project, data)
 
     @memoize
     def minidump(self):
@@ -534,20 +631,110 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
         }
 
 
-class UnrealSymbolicationTask(MinidumpSymbolicationTask):
+class UnrealSymbolicationTask(SymbolicationTask):
     """
     Symbolicates a UE4 crash report.
     """
 
-    def __init__(self, project, data):
-        super(UnrealSymbolicationTask, self).__init__(project, data)
-        self.minidump = None
+    @property
+    def get_threads(self):
+        return get_path(self.data, 'threads', 'values') or get_path(self.data, 'threads') or ()
 
-    def call_symbolicator(self, session):
-        raise NotImplementedError
+    def _apply_minidump(self):
+        minidump_task = MinidumpSymbolicationTask(self.symbolicator, self.project, self.data)
+        minidump_task.symbolicate()
+        self.data = minidump_task.result() or self.data
+        self.changed = self.changed or minidump_task.changed
 
-    def apply_response(self, session):
-        raise NotImplementedError
+
+    def _apply_portable_callstack(self):
+        if any(thread.get('stacktrace') and thread.get('crashed')
+               for thread in self.get_threads()):
+            return
+
+        portable_callstack = get_path(self.data, 'contexts', 'unreal',
+                                      'portable_call_stack')
+        if portable_callstack is None:
+            return
+
+        images = get_path(self.data, 'debug_meta', 'images', filter=True, default=())
+        frames = parse_portable_callstack(portable_callstack, images)
+
+        if not frames:
+            return
+
+        unreal_tmp_event = {
+            'debug_meta': {'images': images},
+            'threads': {
+                'values': [
+                    {
+                        'stacktrace': {'frames': frames},
+                        'crashed': True,
+                    }
+                ]
+            },
+            'platform': 'native',
+            'project': self.data['project'],
+            'event_id': self.data['event_id'],
+        }
+
+        portable_callstack_task = PayloadSymbolicationTask(
+            self.symbolicator,
+            self.project,
+            unreal_tmp_event
+        )
+
+        portable_callstack_task.symbolicate()
+        unreal_tmp_event = portable_callstack_task.result() or unreal_tmp_event
+        self.get_threads().extend(unreal_tmp_event['threads']['values'])
+        self.changed = bool(unreal_tmp_event['threads']['values'])
+
+    @memoize
+    def _state_cache_key(self):
+        return u'symbolicator-unreal-state:{}:{}'.format(
+            self.data['event_id'],
+            self.data['project']
+        )
+
+    def symbolicate(self):
+        # Build a state machine persisted in Redis so we know where to resume
+        # in case of `RetrySymbolication`. Otherwise we will e.g. attempt to
+        # process the minidump twice, should processing the portable callstack
+        # throw `RetrySymbolication`.
+        #
+        # None is both the beginning and the end state, but that's unavoidable
+        # considering we don't want to persist the state in Redis forever.
+        #
+        # None -> PROCESS_MINIDUMP -> PROCESS_PORTABLE_CALLSTACK -> None
+        PROCESS_MINIDUMP = 1
+        PROCESS_PORTABLE_CALLSTACK = 2
+
+        TRANSITIONS = {
+            PROCESS_MINIDUMP: (self._apply_minidump, PROCESS_PORTABLE_CALLSTACK),
+            PROCESS_PORTABLE_CALLSTACK: (self._apply_portable_callstack, None)
+        }
+
+        state = default_cache.get(self._state_cache_key)
+        if state is None:
+            state = PROCESS_MINIDUMP
+
+        original_state = state
+
+        try:
+            while state is not None:
+                func, new_state = TRANSITIONS[state]
+                func()
+                state = new_state
+
+        except RetrySymbolication as e:
+            e.new_data = self.data
+            raise e
+        finally:
+            if state != original_state:
+                if state is None:
+                    default_cache.delete(self._state_cache_key)
+                else:
+                    default_cache.set(self._state_cache_key, state)
 
 
 # TODO(ja): Move to minidump.py
@@ -612,9 +799,11 @@ def parse_sources(config):
     ids = set()
     for source in sources:
         if source['id'].startswith('sentry'):
-            raise InvalidSourcesError('Source ids must not start with "sentry:"')
+            raise InvalidSourcesError(
+                'Source ids must not start with "sentry:"')
         if source['id'] in ids:
-            raise InvalidSourcesError('Duplicate source id: %s' % (source['id'], ))
+            raise InvalidSourcesError(
+                'Duplicate source id: %s' % (source['id'], ))
         ids.add(source['id'])
 
     return sources
