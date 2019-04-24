@@ -26,8 +26,8 @@ from sentry.models import EventError, Project
 from sentry.reprocessing import report_processing_issue
 from sentry.stacktraces import find_stacktraces_in_data
 from sentry.tasks.store import RetrySymbolication
-from sentry.utils import json, metrics
 from sentry.utils.cache import memoize
+from sentry.utils import json, metrics
 from sentry.utils.in_app import is_known_third_party, is_optional_package
 from sentry.utils.safe import get_path, setdefault_path
 
@@ -166,6 +166,7 @@ class SymbolicatorSession(object):
 
     def __enter__(self):
         self.open()
+        return self
 
     def __exit__(self, *args):
         self.close()
@@ -288,17 +289,6 @@ class Symbolicator(object):
         )
 
 
-def handles_frame(self, frame):
-    if not frame:
-        return False
-
-    if get_path(frame, 'data', 'symbolication_status') is not None:
-        return False
-
-    platform = frame.get('platform') or self.data.get('platform')
-    return platform in self.supported_platforms and 'instruction_addr' in frame
-
-
 class SymbolicationTask(object):
     def __init__(self, symbolicator, project, data):
         self.symbolicator = symbolicator
@@ -326,6 +316,16 @@ class NativeSymbolicationTask(SymbolicationTask):
             self.data['event_id'],
             self.data['project'],
         )
+
+    def handles_frame(self, frame):
+        if not frame:
+            return False
+
+        if get_path(frame, 'data', 'symbolication_status') is not None:
+            return False
+
+        platform = frame.get('platform') or self.data.get('platform')
+        return platform in self.supported_platforms and 'instruction_addr' in frame
 
     def symbolicate(self):
         wait_timeout = 0
@@ -522,7 +522,7 @@ class NativeSymbolicationTask(SymbolicationTask):
         if frame['abs_path'] and not frame['filename']:
             frame['filename'] = posixpath.basename(frame['abs_path'])
 
-        return {k: v for k, v in six.iteritems(frame) if k is not None}
+        return {k: v for k, v in six.iteritems(frame) if v is not None}
 
     def call_symbolicator(self, session):
         raise NotImplementedError
@@ -548,7 +548,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
         place.
         """
         return [
-            stacktrace.stacktrace
+            stacktrace
             for stacktrace in find_stacktraces_in_data(self.data)
             if any(x in stacktrace.platforms for x in self.supported_platforms)
         ]
@@ -563,7 +563,13 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
 
     def call_symbolicator(self, session):
         stacktraces = [
-            [f for f in sinfo.stacktrace if handles_frame(f)]
+            dict(
+                sinfo.stacktrace,
+                frames=[
+                    f for f in sinfo.stacktrace['frames']
+                    if self.handles_frame(f)
+                ]
+            )
             for sinfo in self.stacktrace_infos
         ]
 
@@ -588,7 +594,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
             native_frames_idx = 0
 
             for raw_frame in sinfo.stacktrace['frames']:
-                if handles_frame(raw_frame):
+                if self.handles_frame(raw_frame):
                     for complete_frame in complete_frames_by_idx[native_frames_idx]:
                         merged_frame = dict(raw_frame)
                         merged_frame.update(self.map_frame(complete_frame))

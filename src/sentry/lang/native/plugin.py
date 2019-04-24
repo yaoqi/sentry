@@ -29,11 +29,6 @@ SYMBOLICATOR_FRAME_ATTRS = ("instruction_addr", "package", "lang", "symbol",
                             "line_addr")
 
 
-def _is_symbolicator_enabled(project):
-    return options.get('symbolicator.enabled') and \
-        project.get_option('sentry:symbolicator-enabled')
-
-
 def request_id_cache_key_for_event(data):
     return u'symbolicator:{1}:{0}'.format(data['project'], data['event_id'])
 
