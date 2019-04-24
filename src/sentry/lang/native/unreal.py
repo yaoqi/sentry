@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from symbolic import Unreal4Crash
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
 from sentry.models import UserReport
-from sentry.utils.safe import set_path, setdefault_path, get_path
+from sentry.utils.safe import set_path, setdefault_path
 
 import re
 
@@ -166,14 +166,21 @@ def merge_unreal_context_event(unreal_context, event, project):
             comments=user_desc,
         )
 
-
     # drop modules. minidump processing adds 'images loaded'
     runtime_prop.pop('modules', None)
 
-    # add everything else as unreal context. This includes
+    # add everything else as unreal context or extra. This includes
     # `portable_call_stack` which we will need in the event enhancer for
     # symbolication.
-    set_path(event, 'contexts', 'unreal', value=runtime_prop)
+
+    set_path(
+        event, 'contexts', 'unreal', value={
+            'portable_call_stack': runtime_prop.pop(
+                'portable_call_stack', None)})
+
+    # TODO(markus): Move to unreal context
+    extra = event.setdefault('extra', {})
+    extra.update(**runtime_prop)
 
     # add sdk info
     event['sdk'] = {
