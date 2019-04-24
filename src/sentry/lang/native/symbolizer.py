@@ -182,50 +182,24 @@ class Symbolizer(object):
         ]
 
     def symbolize_frame(self, instruction_addr, sdk_info=None,
-                        symbolserver_match=None, symbolicator_match=None,
-                        trust=None):
+                        symbolserver_match=None, trust=None):
         app_err = None
 
-        # A missing symbolicator match indicates that the symbolicator was not
-        # active for this event. Symbolize the app frame directly using
-        # symbolic.
-        # TODO: Remove this after fully switching to symbolicator
-        if symbolicator_match is None:
-            obj = self.object_lookup.find_object(instruction_addr)
-            if obj is None:
-                if trust == 'scan':
-                    return []
-                raise SymbolicationFailed(type=EventError.NATIVE_UNKNOWN_IMAGE)
+        obj = self.object_lookup.find_object(instruction_addr)
+        if obj is None:
+            if trust == 'scan':
+                return []
+            raise SymbolicationFailed(type=EventError.NATIVE_UNKNOWN_IMAGE)
 
-            # Try to always prefer the images from the application storage.
-            # If the symbolication fails we keep the error for later
-            try:
-                match = self._symbolize_app_frame(
-                    instruction_addr, obj, sdk_info=sdk_info, trust=trust)
-                if match:
-                    return match
-            except SymbolicationFailed as err:
-                app_err = err
-
-        # If the symbolicator was used, trust its result. Errors that were
-        # generated during symbolication are merged into the event's error
-        # array separately and do not need to be handled here. The match
-        # returned can either be:
-        #  - empty: Symbolicator has explicitly discarded this
-        #    frame as a false positive. This happens especially when
-        #    stackwalking without CFI.
-        #  - all unsymbolicated frames:
-        #    Symbolicator was unable to resolve symbols for this frame, so we
-        #    fall back to (iOS) symbolserver (see below).
-        #  - some unsymbolicated frames:
-        #    Symbolicator was able to resolve e.g.
-        #    an inline frame but then failed to symbolicate. This is not really
-        #    that useful either.
-        #
-        # TODO: Remove this fallback once symbolicator supports iOS system
-        # symbols and fully trust the symbolicator response.
-        elif all(x["status"] == "symbolicated" for x in symbolicator_match) or symbolicator_match == []:
-            return symbolicator_match
+        # Try to always prefer the images from the application storage.
+        # If the symbolication fails we keep the error for later
+        try:
+            match = self._symbolize_app_frame(
+                instruction_addr, obj, sdk_info=sdk_info, trust=trust)
+            if match:
+                return match
+        except SymbolicationFailed as err:
+            app_err = err
 
         # Then we check the symbolserver for a match.
         match = self._convert_symbolserver_match(instruction_addr, symbolserver_match)
