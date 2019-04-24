@@ -1,5 +1,5 @@
 ---
-created: '2019-04-24T21:02:36.086683Z'
+created: '2019-04-24T21:26:23.504679Z'
 creator: sentry
 source: tests/symbolicator/test_native_plugin.py
 ---
@@ -20,21 +20,25 @@ debug_meta:
     version_patchlevel: 4
 errors:
 - image_arch: x86_64
+  image_name: Foo
   image_path: Foo.app/Contents/Foo
   image_uuid: 502fc0a5-1ec1-3e47-9998-684fa139dca7
-  message: None
   type: native_missing_dsym
 exception:
   values:
   - raw_stacktrace:
       frames:
-      - function: unknown
+      - data:
+          symbolication_status: missing
+        function: unknown
         in_app: false
         instruction_addr: '0x100000fa0'
         package: Foo.app/Contents/Foo
     stacktrace:
       frames:
-      - function: unknown
+      - data:
+          symbolication_status: missing
+        function: unknown
         in_app: false
         instruction_addr: '0x100000fa0'
         package: Foo.app/Contents/Foo

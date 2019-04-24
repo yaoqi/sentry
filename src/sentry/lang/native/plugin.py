@@ -182,7 +182,7 @@ class NativeStacktraceProcessor(StacktraceProcessor):
             obj = pf.data['obj']
             package = obj and obj.code_file
             # TODO(ja): This should check for iOS specifically
-            if not package or not is_known_third_party(package):
+            if not package or not is_known_third_party(package, sdk_info=self.sdk_info):
                 continue
 
             # We can only look up objects in the symbol server that have a

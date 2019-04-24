@@ -20,7 +20,7 @@ from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
 from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
-from sentry.lang.native.utils import image_name, signal_from_data
+from sentry.lang.native.utils import get_sdk_from_event, image_name, signal_from_data
 from sentry.lang.native.unreal import parse_portable_callstack
 from sentry.models import EventError, Project
 from sentry.reprocessing import report_processing_issue
@@ -136,6 +136,7 @@ SOURCES_SCHEMA = {
 }
 
 IMAGE_STATUS_FIELDS = frozenset((
+    'status',  # TODO(markus): Legacy key. Remove after next deploy
     'unwind_status',
     'debug_status'
 ))
@@ -143,13 +144,6 @@ IMAGE_STATUS_FIELDS = frozenset((
 
 class SymbolicationError(Exception):
     pass
-
-
-IMAGE_STATUS_FIELDS = frozenset((
-    'status',  # TODO(markus): Legacy key. Remove after next deploy
-    'unwind_status',
-    'debug_status'
-))
 
 
 class InvalidSourcesError(Exception):
@@ -317,6 +311,10 @@ class NativeSymbolicationTask(SymbolicationTask):
             self.data['project'],
         )
 
+    @memoize
+    def sdk_info(self):
+        return get_sdk_from_event(self.data)
+
     def handles_frame(self, frame):
         if not frame:
             return False
@@ -417,7 +415,7 @@ class NativeSymbolicationTask(SymbolicationTask):
         # TODO(ja): Check this
 
         self._apply_system_info(response.get('system_info') or {})
-        self._apply_images(response.get('images') or [])
+        self._apply_images(response.get('modules') or [])
 
         self.apply_stacktraces(response.get('stacktraces') or [])
 
@@ -443,7 +441,8 @@ class NativeSymbolicationTask(SymbolicationTask):
             for k, v in six.iteritems(complete_image):
                 if k in IMAGE_STATUS_FIELDS:
                     statuses.add(v)
-                elif not (v is None or (k, v) == ('arch', 'unknown')):
+                elif not raw_image.get(k) and \
+                        not (v is None or (k, v) == ('arch', 'unknown')):
                     raw_image[k] = v
                     self.changed = True
 
@@ -461,7 +460,7 @@ class NativeSymbolicationTask(SymbolicationTask):
 
         if status == 'missing':
             package = image.get('code_file')
-            if not package or is_known_third_party(package):
+            if not package or is_known_third_party(package, sdk_info=self.sdk_info):
                 return
 
             if is_optional_package(package):
@@ -481,7 +480,7 @@ class NativeSymbolicationTask(SymbolicationTask):
             return
 
         self.add_error({
-            'ty': ty,
+            'type': ty,
             'message': None,  # TODO(ja): check this
             'image_arch': image.get('arch'),
             'image_path': image.get('code_file'),
@@ -494,13 +493,13 @@ class NativeSymbolicationTask(SymbolicationTask):
         self.data.setdefault('errors', []).append(error)
         self.changed = True
 
-        if error['ty'] in FATAL_ERRORS and error['ty'] in USER_FIXABLE_ERRORS:
+        if error['type'] in FATAL_ERRORS and error['type'] in USER_FIXABLE_ERRORS:
             report_processing_issue(
                 self.data,
                 scope='native',
                 object=('dsym:%s' % error['image_uuid']) if error.get(
                     'image_uuid') else None,
-                type=error['ty'],
+                type=error['type'],
                 data=error
             )
 
