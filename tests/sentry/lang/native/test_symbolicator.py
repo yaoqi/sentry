@@ -96,8 +96,8 @@ def test_merge_symbolicator_image_errors(code_file, error):
 
     e, = errors
 
-    assert e.image_name == "foo"
-    assert e.type == error
+    assert e['image_name'] == 'foo'
+    assert e['type'] == error
 
     assert raw_image == {
         "instruction_addr": 0xFEEBEE,

@@ -251,6 +251,61 @@ class SymbolicatorSession(object):
         return self._request('get', 'healthcheck')
 
 
+def merge_symbolicator_image(raw_image, complete_image, sdk_info, add_error):
+    statuses = set()
+    changed = False
+
+    # Set image data from symbolicator as symbolicator might know more
+    # than the SDK, especially for minidumps
+    for k, v in six.iteritems(complete_image):
+        if k in IMAGE_STATUS_FIELDS:
+            statuses.add(v)
+        elif not raw_image.get(k) and \
+                not (v is None or (k, v) == ('arch', 'unknown')):
+            raw_image[k] = v
+            changed = True
+
+    for status in set(statuses):
+        handle_symbolicator_image_status(status, raw_image, sdk_info, add_error)
+
+    return changed
+
+
+def handle_symbolicator_image_status(status, raw_image, sdk_info, add_error):
+    if status in ('found', 'unused'):
+        return
+
+    if status == 'missing':
+        package = raw_image.get('code_file')
+        if not package or is_known_third_party(package, sdk_info=sdk_info):
+            return
+
+        if is_optional_package(package):
+            ty = EventError.NATIVE_MISSING_OPTIONALLY_BUNDLED_DSYM
+        else:
+            ty = EventError.NATIVE_MISSING_DSYM
+    elif status == 'malformed':
+        ty = EventError.NATIVE_BAD_DSYM
+    elif status == 'too_large':
+        ty = EventError.FETCH_TOO_LARGE
+    elif status == 'fetching_failed':
+        ty = EventError.FETCH_GENERIC_ERROR
+    elif status == 'other':
+        ty = EventError.UNKNOWN_ERROR
+    else:
+        logger.error("Unknown status: %s", status)
+        return
+
+    add_error({
+        'type': ty,
+        'message': None,  # TODO(ja): check this
+        'image_arch': raw_image.get('arch'),
+        'image_path': raw_image.get('code_file'),
+        'image_name': image_name(raw_image.get('code_file')),
+        'image_uuid': raw_image.get('debug_id'),
+    })
+
+
 class Symbolicator(object):
     def __init__(self, url, sources=None, scope=None, timeout=None):
         self.url = url
@@ -434,59 +489,16 @@ class NativeSymbolicationTask(SymbolicationTask):
         for index, complete_image in enumerate(complete_images):
             raw_image = get_path(self.data, 'debug_meta',
                                  'images', index, default={})
-            statuses = set()
 
-            # Set image data from symbolicator as symbolicator might know more
-            # than the SDK, especially for minidumps
-            for k, v in six.iteritems(complete_image):
-                if k in IMAGE_STATUS_FIELDS:
-                    statuses.add(v)
-                elif not raw_image.get(k) and \
-                        not (v is None or (k, v) == ('arch', 'unknown')):
-                    raw_image[k] = v
-                    self.changed = True
+            changed = merge_symbolicator_image(raw_image, complete_image,
+                                               self.sdk_info, self.add_error)
 
-            for status in set(statuses):
-                self._apply_image_status(status, raw_image)
+            self.changed = self.changed or changed
 
             # TODO(ja): Doc this
             assert len(raw_images) >= index
             if len(raw_images) == index:
                 raw_images.append(raw_image)
-
-    def _apply_image_status(self, status, image):
-        if status in ('found', 'unused'):
-            return
-
-        if status == 'missing':
-            package = image.get('code_file')
-            if not package or is_known_third_party(package, sdk_info=self.sdk_info):
-                return
-
-            if is_optional_package(package):
-                ty = EventError.NATIVE_MISSING_OPTIONALLY_BUNDLED_DSYM
-            else:
-                ty = EventError.NATIVE_MISSING_DSYM
-        elif status == 'malformed':
-            ty = EventError.NATIVE_BAD_DSYM
-        elif status == 'too_large':
-            ty = EventError.FETCH_TOO_LARGE
-        elif status == 'fetching_failed':
-            ty = EventError.FETCH_GENERIC_ERROR
-        elif status == 'other':
-            ty = EventError.UNKNOWN_ERROR
-        else:
-            logger.error("Unknown status: %s", status)
-            return
-
-        self.add_error({
-            'type': ty,
-            'message': None,  # TODO(ja): check this
-            'image_arch': image.get('arch'),
-            'image_path': image.get('code_file'),
-            'image_name': image_name(image.get('code_file')),
-            'image_uuid': image.get('debug_id'),
-        })
 
     def add_error(self, error):
         error = {k: v for k, v in six.iteritems(error) if v is not None}
