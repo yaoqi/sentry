@@ -46,12 +46,6 @@ class NativeStacktraceProcessor(StacktraceProcessor):
     def __init__(self, *args, **kwargs):
         StacktraceProcessor.__init__(self, *args, **kwargs)
 
-        # If true, the project has been opted into using the symbolicator
-        # service for native symbolication, which also means symbolic is not
-        # used at all anymore.
-        # The (iOS) symbolserver is still used regardless of this value.
-        self.use_symbolicator = _is_symbolicator_enabled(self.project)
-
         self.arch = cpu_name_from_data(self.data)
         self.signal = signal_from_data(self.data)
 
@@ -182,9 +176,6 @@ class NativeStacktraceProcessor(StacktraceProcessor):
 
         if options.get('symbolserver.enabled'):
             self.fetch_ios_system_symbols(processing_task)
-
-        if self.use_symbolicator:
-            self.run_symbolicator(processing_task)
 
     def fetch_ios_system_symbols(self, processing_task):
         to_lookup = []
