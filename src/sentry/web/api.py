@@ -736,7 +736,7 @@ class MinidumpView(StoreView):
             data['platform'] = 'native'
             set_path(data, 'contexts', 'minidump', value={})
             # Presence of exception required for correct eventtype.
-            # XXX: We only set exception title to get through store normalization
+            # XXX: We only set exception type to get through store normalization
             data['exception'] = {
                 'values': [
                     {
