@@ -533,8 +533,6 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
     payload.
     """
 
-    supported_platforms = ('cocoa', 'native')
-
     def _handles_frame(self, frame):
         if not frame:
             return False
@@ -544,7 +542,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
 
         # TODO: Consider ignoring platform
         platform = frame.get('platform') or self.data.get('platform')
-        return platform in self.supported_platforms and 'instruction_addr' in frame
+        return is_native_platform(platform) and 'instruction_addr' in frame
 
     @memoize
     def stacktrace_infos(self):
@@ -557,7 +555,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
         return [
             stacktrace
             for stacktrace in find_stacktraces_in_data(self.data)
-            if any(x in stacktrace.platforms for x in self.supported_platforms)
+            if any(is_native_platform(x) for x in stacktrace.platforms)
         ]
 
     @memoize
@@ -577,9 +575,9 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
     def call_symbolicator(self, session):
         stacktraces = [
             {
-                'registers': sinfo.stacktrace['registers'],
+                'registers': sinfo.stacktrace.get('registers') or {},
                 'frames': [
-                    f for f in sinfo.stacktrace['frames']
+                    f for f in sinfo.stacktrace.get('frames') or ()
                     if self._handles_frame(f)
                 ]
             }
@@ -607,7 +605,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
             native_frames_idx = 0
 
             for raw_frame in sinfo.stacktrace['frames']:
-                if self.handles_frame(raw_frame):
+                if self._handles_frame(raw_frame):
                     for complete_frame in complete_frames_by_idx.get(native_frames_idx) or ():
                         # TODO(markus): write package back into raw_frame
                         merged_frame = dict(raw_frame)
@@ -895,6 +893,21 @@ def create_symbolicator(project):
     opts['sources'] = get_sources_for_project(project)
 
     return Symbolicator(**opts)
+
+
+def is_native_platform(platform):
+    return platform in ('native', 'cocoa')
+
+
+def is_native_event(data):
+    if is_native_platform(data.get('platform')):
+        return True
+
+    for stacktrace in find_stacktraces_in_data(data):
+        if any(is_native_platform(x) for x in stacktrace.platforms):
+            return True
+
+    return False
 
 
 def symbolicate_native_event(data):

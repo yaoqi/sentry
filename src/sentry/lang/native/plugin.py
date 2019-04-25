@@ -10,7 +10,7 @@ from symbolic import parse_addr, find_best_instruction, arch_get_ip_reg_name, \
 from sentry import options
 from sentry.plugins import Plugin2
 from sentry.lang.native.symbolizer import Symbolizer, SymbolicationFailed
-from sentry.lang.native.symbolicator import symbolicate_native_event
+from sentry.lang.native.symbolicator import is_native_event, symbolicate_native_event
 from sentry.lang.native.utils import get_sdk_from_event, cpu_name_from_data, \
     rebase_addr, signal_from_data
 from sentry.lang.native.systemsymbols import lookup_system_symbols
@@ -313,7 +313,8 @@ class NativePlugin(Plugin2):
     can_disable = False
 
     def get_event_enhancers(self, data):
-        return [symbolicate_native_event]
+        if is_native_event(data):
+            return [symbolicate_native_event]
 
     def get_stacktrace_processors(self, data, stacktrace_infos, platforms, **kwargs):
         if any(platform in NativeStacktraceProcessor.supported_platforms for platform in platforms):
