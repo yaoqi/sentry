@@ -464,11 +464,6 @@ class NativeSymbolicationTask(SymbolicationTask):
             self.setdefault(
                 ['level'], 'fatal' if response['crashed'] else 'info')
 
-        # We cannot extract exception codes or signals with the breakpad
-        # extractor just yet. Once these capabilities are added to symbolic,
-        # these values should go in the mechanism here.
-        # TODO(ja): Check this
-
         self._apply_system_info(response.get('system_info') or {})
         self._apply_images(response.get('modules') or [])
 
@@ -642,17 +637,50 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
         return session.upload_minidump(minidump.data)
 
     def apply_stacktraces(self, stacktraces):
-        threads = [{
-            'id': thread.get('thread_id'),
-            'crashed': thread.get('is_requesting'),
-            'stacktrace': {
-                'frames': [self.map_frame(f) for f in thread['frames']],
-                'registers': thread.get('registers'),
+        pass
+
+    def apply_response(self, response):
+        super(MinidumpSymbolicationTask, self).apply_response(response)
+
+        threads = []
+        crashed_thread = None
+
+        for thread in response.get('stacktraces') or ():
+            thread = {
+                'id': thread.get('thread_id'),
+                'crashed': thread.get('is_requesting'),
+                'stacktrace': {
+                    'frames': [self.map_frame(f) for f in thread['frames']],
+                    'registers': thread.get('registers'),
+                }
             }
-        } for thread in stacktraces]
+
+            if thread['crashed']:
+                crashed_thread = thread
+            threads.append(thread)
 
         self.data['threads'] = {
             'values': threads
+        }
+
+        exc_value = 'Assertion Error: %s' % response.get('assertion') \
+            if response.get('crashed') else \
+            'Fatal Error: %s' % response.get('crash_reason')
+
+        self.data['exception'] = {
+            'value': exc_value,
+            'thread_id': crashed_thread['id'],
+            # Move stacktrace here from crashed_thread (mutating!)
+            'stacktrace': crashed_thread.pop('stacktrace'),
+            'mechanism': {
+                'type': 'minidump',
+                'handled': False,
+                'synthetic': True,
+                # We cannot extract exception codes or signals with the breakpad
+                # extractor just yet. Once these capabilities are added to symbolic,
+                # these values should go in the mechanism here.
+                # TODO(ja): Check this
+            }
         }
 
 
@@ -763,14 +791,12 @@ class UnrealSymbolicationTask(SymbolicationTask):
 
 # TODO(ja): Move to minidump.py
 def is_minidump_event(data):
-    context = get_path(data, 'contexts', 'minidump')
-    return bool(context)
+    return get_path(data, 'contexts', 'minidump') is not None
 
 
 # TODO(ja): Move to unreal.py
 def is_unreal_event(data):
-    context = get_path(data, 'contexts', 'unreal')
-    return bool(context)
+    return get_path(data, 'contexts', 'unreal') is not None
 
 
 def get_internal_source(project):

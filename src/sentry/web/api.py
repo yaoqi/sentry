@@ -39,6 +39,7 @@ from sentry.interfaces import schemas
 from sentry.interfaces.base import get_interface
 from sentry.lang.native.unreal import process_unreal_crash, merge_apple_crash_report, \
     unreal_attachment_type, merge_unreal_context_event, merge_unreal_logs_event
+from sentry.lang.native.utils import should_use_symbolicator
 from sentry.lang.native.minidump import merge_process_state_event, process_minidump, \
     merge_attached_event, merge_attached_breadcrumbs, MINIDUMP_ATTACHMENT_TYPE
 from sentry.models import Project, OrganizationOption, Organization
@@ -55,7 +56,7 @@ from sentry.utils.http import (
     is_same_domain,
 )
 from sentry.utils.pubsub import QueuedPublisherService, KafkaPublisher
-from sentry.utils.safe import safe_execute
+from sentry.utils.safe import safe_execute, set_path
 from sentry.web.helpers import render_to_response
 
 logger = logging.getLogger('sentry')
@@ -721,12 +722,19 @@ class MinidumpView(StoreView):
             if has_event_attachments:
                 attachments.append(CachedAttachment.from_upload(file))
 
-        try:
-            state = process_minidump(minidump)
-            merge_process_state_event(data, state)
-        except ProcessMinidumpError as e:
-            minidumps_logger.exception(e)
-            raise APIError(e.message.split('\n', 1)[0])
+        if not should_use_symbolicator(project):
+            # TODO(markus): Remove codepath after symbolicator is used everywhere
+            # TODO(markus): Move into enhancer?
+            try:
+                state = process_minidump(minidump)
+                merge_process_state_event(data, state)
+            except ProcessMinidumpError as e:
+                minidumps_logger.exception(e)
+                raise APIError(e.message.split('\n', 1)[0])
+
+        # Required to detect minidumps later in event enhancers
+        data['platform'] = 'native'
+        set_path(data, 'contexts', 'minidump', value={})
 
         event_id = self.process(
             request,

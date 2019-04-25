@@ -117,7 +117,7 @@ def is_newest_frame_first(event):
 
 
 def is_url(filename):
-    return filename.startswith(('file:', 'http:', 'https:', 'applewebdata:'))
+    return filename and filename.startswith(('file:', 'http:', 'https:', 'applewebdata:'))
 
 
 def slim_frame_data(frames, frame_allowance=settings.SENTRY_MAX_STACKTRACE_FRAMES):
@@ -385,7 +385,7 @@ class Frame(Interface):
         if self.data:
             data.update(
                 {
-                    'map': self.data['sourcemap'].rsplit('/', 1)[-1],
+                    'map': self.data.get('sourcemap', '').rsplit('/', 1)[-1],
                     'origFunction': self.data.get('orig_function', '?'),
                     'origAbsPath': self.data.get('orig_abs_path', '?'),
                     'origFilename': self.data.get('orig_filename', '?'),
@@ -393,7 +393,7 @@ class Frame(Interface):
                     'origColNo': self.data.get('orig_colno', '?'),
                 }
             )
-            if is_url(self.data['sourcemap']):
+            if is_url(self.data.get('sourcemap')):
                 data['mapUrl'] = self.data['sourcemap']
 
         return data
