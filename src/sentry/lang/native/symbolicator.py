@@ -20,7 +20,7 @@ from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
 from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
-from sentry.lang.native.utils import get_sdk_from_event, image_name, signal_from_data, should_use_symbolicator
+from sentry.lang.native.utils import get_sdk_from_event, image_name, native_images_from_data, signal_from_data, should_use_symbolicator
 from sentry.lang.native.unreal import parse_portable_callstack
 from sentry.models import EventError, Project
 from sentry.reprocessing import report_processing_issue
@@ -535,13 +535,14 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
 
     supported_platforms = ('cocoa', 'native')
 
-    def handles_frame(self, frame):
+    def _handles_frame(self, frame):
         if not frame:
             return False
 
         if get_path(frame, 'data', 'symbolication_status') is not None:
             return False
 
+        # TODO: Consider ignoring platform
         platform = frame.get('platform') or self.data.get('platform')
         return platform in self.supported_platforms and 'instruction_addr' in frame
 
@@ -561,21 +562,27 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
 
     @memoize
     def modules(self):
-        return get_path(self.data, 'debug_meta', 'images', default=(), filter=True)
+        return native_images_from_data(self.data)
 
     @memoize
     def signal(self):
         return signal_from_data(self.data)
 
+    def symbolicate(self):
+        if not self.modules:
+            return
+
+        return super(PayloadSymbolicationTask, self).symbolicate()
+
     def call_symbolicator(self, session):
         stacktraces = [
-            dict(
-                sinfo.stacktrace,
-                frames=[
+            {
+                'registers': sinfo.stacktrace['registers'],
+                'frames': [
                     f for f in sinfo.stacktrace['frames']
-                    if self.handles_frame(f)
+                    if self._handles_frame(f)
                 ]
-            )
+            }
             for sinfo in self.stacktrace_infos
         ]
 
@@ -601,7 +608,8 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
 
             for raw_frame in sinfo.stacktrace['frames']:
                 if self.handles_frame(raw_frame):
-                    for complete_frame in complete_frames_by_idx[native_frames_idx]:
+                    for complete_frame in complete_frames_by_idx.get(native_frames_idx) or ():
+                        # TODO(markus): write package back into raw_frame
                         merged_frame = dict(raw_frame)
                         merged_frame.update(self.map_frame(complete_frame))
                         new_frames.append(merged_frame)
@@ -637,6 +645,7 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
         return session.upload_minidump(minidump.data)
 
     def apply_stacktraces(self, stacktraces):
+        # TODO: kill method? Or rename? We want to retain an abstract method.
         pass
 
     def apply_response(self, response):
@@ -667,7 +676,7 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
             if response.get('crashed') else \
             'Fatal Error: %s' % response.get('crash_reason')
 
-        self.data['exception'] = {
+        exception = {
             'value': exc_value,
             'thread_id': crashed_thread['id'],
             # Move stacktrace here from crashed_thread (mutating!)
@@ -683,13 +692,14 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
             }
         }
 
+        self.data['exception'] = {'values': [exception]}
+
 
 class UnrealSymbolicationTask(SymbolicationTask):
     """
     Symbolicates a UE4 crash report.
     """
 
-    @property
     def get_threads(self):
         return get_path(self.data, 'threads', 'values') or get_path(self.data, 'threads') or ()
 
@@ -700,16 +710,12 @@ class UnrealSymbolicationTask(SymbolicationTask):
         self.changed = self.changed or minidump_task.changed
 
     def _apply_portable_callstack(self):
-        if any(thread.get('stacktrace') and thread.get('crashed')
-               for thread in self.get_threads()):
-            return
-
         portable_callstack = get_path(self.data, 'contexts', 'unreal',
                                       'portable_call_stack')
         if portable_callstack is None:
             return
 
-        images = get_path(self.data, 'debug_meta', 'images', filter=True, default=())
+        images = native_images_from_data(self.data)
         frames = parse_portable_callstack(portable_callstack, images)
 
         if not frames:
@@ -717,14 +723,7 @@ class UnrealSymbolicationTask(SymbolicationTask):
 
         unreal_tmp_event = {
             'debug_meta': {'images': images},
-            'threads': {
-                'values': [
-                    {
-                        'stacktrace': {'frames': frames},
-                        'crashed': True,
-                    }
-                ]
-            },
+            'exception': {'values': [{'stacktrace': {'frames': frames}}]},
             'platform': 'native',
             'project': self.data['project'],
             'event_id': self.data['event_id'],
@@ -738,8 +737,11 @@ class UnrealSymbolicationTask(SymbolicationTask):
 
         portable_callstack_task.symbolicate()
         unreal_tmp_event = portable_callstack_task.result() or unreal_tmp_event
-        self.get_threads().extend(unreal_tmp_event['threads']['values'])
-        self.changed = bool(unreal_tmp_event['threads']['values'])
+
+        self.data['exception']['values'][0]['stacktrace'] = \
+            unreal_tmp_event['exception']['values'][0]['stacktrace']
+
+        self.changed = True
 
     @memoize
     def _state_cache_key(self):
@@ -757,29 +759,21 @@ class UnrealSymbolicationTask(SymbolicationTask):
         # None is both the beginning and the end state, but that's unavoidable
         # considering we don't want to persist the state in Redis forever.
         #
-        # None -> PROCESS_MINIDUMP -> PROCESS_PORTABLE_CALLSTACK -> None
-        PROCESS_MINIDUMP = 1
-        PROCESS_PORTABLE_CALLSTACK = 2
-
-        TRANSITIONS = {
-            PROCESS_MINIDUMP: (self._apply_minidump, PROCESS_PORTABLE_CALLSTACK),
-            PROCESS_PORTABLE_CALLSTACK: (self._apply_portable_callstack, None)
-        }
-
+        # None -> 'apply_portable_callstack' -> None
         state = default_cache.get(self._state_cache_key)
-        if state is None:
-            state = PROCESS_MINIDUMP
-
         original_state = state
 
         try:
-            while state is not None:
-                func, new_state = TRANSITIONS[state]
-                func()
-                state = new_state
+            if state is None:
+                self._apply_minidump()
+                state = 'apply_portable_callstack'
 
+            if state == 'apply_portable_callstack':
+                self._apply_portable_callstack()
+                state = None
         except RetrySymbolication as e:
-            e.new_data = self.data
+            if self.changed:
+                e.new_data = self.data
             raise e
         finally:
             if state != original_state:
@@ -913,7 +907,6 @@ def symbolicate_native_event(data):
     if not should_use_symbolicator(project):
         return reprocess_minidump_with_cfi(data) if is_minidump_event(data) else None
 
-    # TODO: Check for unreal portable callstack
     if is_unreal_event(data):
         task_cls = UnrealSymbolicationTask
     elif is_minidump_event(data):
