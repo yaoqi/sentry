@@ -731,10 +731,24 @@ class MinidumpView(StoreView):
             except ProcessMinidumpError as e:
                 minidumps_logger.exception(e)
                 raise APIError(e.message.split('\n', 1)[0])
-
-        # Required to detect minidumps later in event enhancers
-        data['platform'] = 'native'
-        set_path(data, 'contexts', 'minidump', value={})
+        else:
+            # Required to detect minidumps later in event enhancers
+            data['platform'] = 'native'
+            set_path(data, 'contexts', 'minidump', value={})
+            # Presence of exception required for correct eventtype.
+            # XXX: We only set exception title to get through store normalization
+            data['exception'] = {
+                'values': [
+                    {
+                        'type': 'minidump',
+                        'mechanism': {
+                            'type': 'minidump',
+                            'handled': False,
+                            'synthetic': True,
+                        }
+                    }
+                ]
+            }
 
         event_id = self.process(
             request,

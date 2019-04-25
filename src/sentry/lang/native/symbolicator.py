@@ -11,6 +11,7 @@ from django.core.urlresolvers import reverse
 from requests import Session
 from requests.exceptions import RequestException
 from six.moves.urllib.parse import urljoin
+from symbolic.utils import make_buffered_slice_reader
 
 from sentry import options
 from sentry.attachments import attachment_cache
@@ -240,7 +241,7 @@ class SymbolicatorSession(object):
         }
 
         params = self._get_task_params(timeout=timeout, scope=scope)
-        return self._request('post', 'symbolicate', params=params, data=data, files=files)
+        return self._request('post', 'minidump', params=params, data=data, files=files)
 
     def query_task(self, task_id, timeout=None):
         task_url = 'requests/%s' % (task_id, )
@@ -380,6 +381,9 @@ class NativeSymbolicationTask(SymbolicationTask):
                     response = self._do_symbolicate(session)
                     self.apply_response(response)
                 except (RequestException, IOError):
+                    logger.error(
+                        'Failed to contact symbolicator', exc_info=True)
+
                     # Any server error needs to be treated as a failure. We can
                     # retry a couple of times, but ultimately need to bail out.
                     current_attempt += 1
@@ -387,9 +391,6 @@ class NativeSymbolicationTask(SymbolicationTask):
                         wait_timeout = 1.6 * wait_timeout + 0.5
                         time.sleep(wait_timeout)
                         continue
-
-                    logger.error(
-                        'Failed to contact symbolicator', exc_info=True)
 
                 # Once we arrive here, we are done processing. Either, the
                 # result is now ready, or we have exceeded MAX_ATTEMPTS. In both
@@ -419,7 +420,9 @@ class NativeSymbolicationTask(SymbolicationTask):
             # 503 can indicate that symbolicator is restarting. Wait for a
             # reboot, then try again. This overrides the default behavior of
             # retrying after just a second.
-            if e.response.status_code == 503:
+            #
+            # If there is no response attached, it's a connection error.
+            if not e.response or e.response.status_code == 503:
                 raise RetrySymbolication(retry_after=10)
 
             raise
@@ -451,8 +454,7 @@ class NativeSymbolicationTask(SymbolicationTask):
 
     def apply_response(self, response):
         if response.get('crashed') is not None:
-            self.setdefault(
-                ['level'], 'fatal' if response['crashed'] else 'info')
+            self.data['level'] = 'fatal' if response['crashed'] else 'info'
 
         self._apply_system_info(response.get('system_info') or {})
         self._apply_images(response.get('modules') or [])
@@ -640,7 +642,7 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
         if not minidump:
             raise SymbolicationError('Missing minidump for minidump event')
 
-        return session.upload_minidump(minidump.data)
+        return session.upload_minidump(make_buffered_slice_reader(minidump.data, None))
 
     def apply_stacktraces(self, stacktraces):
         # TODO: kill method? Or rename? We want to retain an abstract method.
@@ -671,26 +673,20 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
         }
 
         exc_value = 'Assertion Error: %s' % response.get('assertion') \
-            if response.get('crashed') else \
+            if response.get('assertion') else \
             'Fatal Error: %s' % response.get('crash_reason')
 
-        exception = {
-            'value': exc_value,
-            'thread_id': crashed_thread['id'],
-            # Move stacktrace here from crashed_thread (mutating!)
-            'stacktrace': crashed_thread.pop('stacktrace'),
-            'mechanism': {
-                'type': 'minidump',
-                'handled': False,
-                'synthetic': True,
-                # We cannot extract exception codes or signals with the breakpad
-                # extractor just yet. Once these capabilities are added to symbolic,
-                # these values should go in the mechanism here.
-                # TODO(ja): Check this
-            }
-        }
+        exception, = self.data['exception']['values']
 
-        self.data['exception'] = {'values': [exception]}
+        # We cannot extract exception codes or signals with the breakpad
+        # extractor just yet. Once these capabilities are added to symbolic,
+        # these values should go in the mechanism here.
+        # TODO(ja): Check this
+        exception['value'] = exc_value
+        exception['type'] = response.get('crash_reason')
+        exception['thread_id'] = crashed_thread['id']
+        # Move stacktrace here from crashed_thread (mutating!)
+        exception['stacktrace'] = crashed_thread.pop('stacktrace')
 
 
 class UnrealSymbolicationTask(SymbolicationTask):

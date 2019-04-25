@@ -60,8 +60,24 @@ def should_process(data):
         if processors:
             return True
 
+    if should_process_for_enhancers(data):
+        return True
+
     if should_process_for_stacktraces(data):
         return True
+
+    return False
+
+
+def should_process_for_enhancers(data):
+    from sentry.plugins import plugins
+
+    for plugin in plugins.all(version=2):
+        processors = safe_execute(
+            plugin.get_event_enhancers, data=data, _with_transaction=False
+        )
+        if processors:
+            return True
 
     return False
 
@@ -209,7 +225,8 @@ def _do_process_event(cache_key, start_time, event_id, process_task,
         for plugin in plugins.all(version=2):
             enhancers = safe_execute(plugin.get_event_enhancers, data=data)
             for enhancer in (enhancers or ()):
-                enhanced = safe_execute(enhancer, data)
+                enhanced = safe_execute(enhancer, data,
+                                        _passthrough_errors=(RetrySymbolication,))
                 if enhanced:
                     data = enhanced
                     has_changed = True
