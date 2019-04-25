@@ -370,16 +370,6 @@ class NativeSymbolicationTask(SymbolicationTask):
     def sdk_info(self):
         return get_sdk_from_event(self.data)
 
-    def handles_frame(self, frame):
-        if not frame:
-            return False
-
-        if get_path(frame, 'data', 'symbolication_status') is not None:
-            return False
-
-        platform = frame.get('platform') or self.data.get('platform')
-        return platform in self.supported_platforms and 'instruction_addr' in frame
-
     def symbolicate(self):
         wait_timeout = 0
         current_attempt = 0
@@ -544,6 +534,16 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
     """
 
     supported_platforms = ('cocoa', 'native')
+
+    def handles_frame(self, frame):
+        if not frame:
+            return False
+
+        if get_path(frame, 'data', 'symbolication_status') is not None:
+            return False
+
+        platform = frame.get('platform') or self.data.get('platform')
+        return platform in self.supported_platforms and 'instruction_addr' in frame
 
     @memoize
     def stacktrace_infos(self):
