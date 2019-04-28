@@ -19,6 +19,10 @@ VERSION_RE = re.compile(r'(\d+\.\d+\.\d+)\s+(.*)')
 # Regex to guess whether we're dealing with Windows or Unix paths.
 WINDOWS_PATH_RE = re.compile(r'^([a-z]:\\|\\\\)', re.IGNORECASE)
 
+# Event platforms that could contain native stacktraces
+NATIVE_PLATFORMS = ('cocoa', 'native')
+
+# Debug image types that can be handled by the symbolicator
 NATIVE_IMAGE_TYPES = (
     'apple',     # Deprecated in favor of "macho"
     'symbolic',  # Generic if type is not known
@@ -99,6 +103,10 @@ def signal_from_data(data):
         return int(signal)
 
     return None
+
+
+def is_native_platform(platform):
+    return platform in NATIVE_PLATFORMS
 
 
 def is_native_image(image):

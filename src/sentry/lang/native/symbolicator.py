@@ -21,7 +21,9 @@ from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.cfi import reprocess_minidump_with_cfi
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
 from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
-from sentry.lang.native.utils import get_sdk_from_event, image_name, native_images_from_data, signal_from_data, should_use_symbolicator
+from sentry.lang.native.utils import get_sdk_from_event, image_name, \
+    native_images_from_data, signal_from_data, should_use_symbolicator, \
+    is_native_platform
 from sentry.lang.native.unreal import parse_portable_callstack
 from sentry.models import EventError, Project
 from sentry.reprocessing import report_processing_issue
@@ -889,10 +891,6 @@ def create_symbolicator(project):
     opts['sources'] = get_sources_for_project(project)
 
     return Symbolicator(**opts)
-
-
-def is_native_platform(platform):
-    return platform in ('native', 'cocoa')
 
 
 def is_native_event(data):

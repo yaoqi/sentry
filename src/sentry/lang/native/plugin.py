@@ -12,7 +12,7 @@ from sentry.plugins import Plugin2
 from sentry.lang.native.symbolizer import Symbolizer, SymbolicationFailed
 from sentry.lang.native.symbolicator import is_native_event, symbolicate_native_event
 from sentry.lang.native.utils import get_sdk_from_event, cpu_name_from_data, \
-    rebase_addr, signal_from_data
+    is_native_platform, native_images_from_data, rebase_addr, signal_from_data
 from sentry.lang.native.systemsymbols import lookup_system_symbols
 from sentry.utils import metrics
 from sentry.utils.in_app import is_known_third_party
@@ -34,10 +34,6 @@ def request_id_cache_key_for_event(data):
 
 
 class NativeStacktraceProcessor(StacktraceProcessor):
-    supported_platforms = ('cocoa', 'native')
-    # TODO(ja): Clean up all uses of image type "apple", "uuid", "id" and "name"
-    supported_images = ('apple', 'symbolic', 'elf', 'macho', 'pe')
-
     def __init__(self, *args, **kwargs):
         StacktraceProcessor.__init__(self, *args, **kwargs)
 
@@ -47,9 +43,7 @@ class NativeStacktraceProcessor(StacktraceProcessor):
         self.sym = None
         self.difs_referenced = set()
 
-        images = get_path(self.data, 'debug_meta', 'images', default=(),
-                          filter=self._is_valid_image)
-
+        images = native_images_from_data(self.data)
         if images:
             self.available = True
             self.sdk_info = get_sdk_from_event(self.data)
@@ -57,15 +51,6 @@ class NativeStacktraceProcessor(StacktraceProcessor):
             self.images = images
         else:
             self.available = False
-
-    def _is_valid_image(self, image):
-        # TODO(ja): Deprecate this. The symbolicator should take care of
-        # filtering valid images.
-        return bool(image) \
-            and image.get('type') in self.supported_images \
-            and image.get('image_addr') is not None \
-            and image.get('image_size') is not None \
-            and (image.get('debug_id') or image.get('id') or image.get('uuid')) is not None
 
     def close(self):
         StacktraceProcessor.close(self)
@@ -115,10 +100,7 @@ class NativeStacktraceProcessor(StacktraceProcessor):
     def handles_frame(self, frame, stacktrace_info):
         platform = frame.get('platform') or self.data.get('platform')
 
-        if not self.available:
-            return False
-
-        if platform not in self.supported_platforms:
+        if not self.available or not is_native_platform(platform):
             return False
 
         if 'instruction_addr' not in frame:
@@ -317,5 +299,5 @@ class NativePlugin(Plugin2):
             return [symbolicate_native_event]
 
     def get_stacktrace_processors(self, data, stacktrace_infos, platforms, **kwargs):
-        if any(platform in NativeStacktraceProcessor.supported_platforms for platform in platforms):
+        if any(is_native_platform(platform) for platform in platforms):
             return [NativeStacktraceProcessor]
