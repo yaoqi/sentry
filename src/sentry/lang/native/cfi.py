@@ -3,12 +3,10 @@ from __future__ import absolute_import
 import logging
 import six
 
-from symbolic import FrameInfoMap, FrameTrust, ObjectLookup
+from symbolic import FrameInfoMap, FrameTrust, ObjectLookup, ProcessMinidumpError
 
-from sentry.attachments import attachment_cache
-from sentry.coreapi import cache_key_for_event
 from sentry.lang.native.minidump import process_minidump, frames_from_minidump_thread, \
-    MINIDUMP_ATTACHMENT_TYPE
+    merge_process_state_event, get_attached_minidump
 from sentry.lang.native.utils import parse_addr, rebase_addr
 from sentry.models import Project, ProjectDebugFile
 from sentry.utils.cache import cache
@@ -207,17 +205,34 @@ class ThreadProcessingHandle(object):
             return self.data
 
 
-def reprocess_minidump_with_cfi(data):
-    """Reprocesses a minidump event if CFI(call frame information) is available
+def process_minidump_with_cfi(data):
+    """Processes a minidump event if CFI(call frame information) is available
     and viable. The event is only processed if there are stack traces that
     contain scanned frames.
     """
 
-    handle = ThreadProcessingHandle(data)
+    # Check if we have a minidump to reprocess. If it is missing this is likely
+    # a sign of timed out processing.
+    minidump = get_attached_minidump(data)
+    if not minidump:
+        return None
 
-    # Check stacktrace caches first and skip all that do not need CFI. This is
-    # either if a thread is trusted (i.e. it does not contain scanned frames) or
-    # since it can be fetched from the cache.
+    # Initially process the minidump to get preliminary stack traces and the
+    # list of debug images. If processing fails, there's no point in fetching
+    # CFI caches.
+    try:
+        state = process_minidump(minidump)
+        merge_process_state_event(data, state)
+    except ProcessMinidumpError as e:
+        logger.exception(e)
+        return None
+
+    handle = ThreadProcessingHandle(data)
+    handle.indicate_change()
+
+    # Check stacktrace caches and skip all that do not need CFI. This is either
+    # if a thread is trusted (i.e. it does not contain scanned frames) or since
+    # it can be fetched from the cache.
     threads = {}
     for tid, thread in handle.iter_threads():
         if not thread.needs_cfi:
@@ -231,13 +246,6 @@ def reprocess_minidump_with_cfi(data):
         threads[tid] = thread
 
     if not threads:
-        return handle.result()
-
-    # Check if we have a minidump to reprocess
-    cache_key = cache_key_for_event(data)
-    attachments = attachment_cache.get(cache_key) or []
-    minidump = next((a for a in attachments if a.type == MINIDUMP_ATTACHMENT_TYPE), None)
-    if not minidump:
         return handle.result()
 
     # Determine modules loaded into the process during the crash
@@ -255,7 +263,12 @@ def reprocess_minidump_with_cfi(data):
     cfi_map = FrameInfoMap.new()
     for debug_id, cficache in six.iteritems(cficaches):
         cfi_map.add(debug_id, cficache)
-    state = process_minidump(minidump.data, cfi=cfi_map)
+
+    try:
+        state = process_minidump(minidump.data, cfi=cfi_map)
+    except ProcessMinidumpError as e:
+        logger.exception(e)
+        return handle.result()
 
     # Merge existing stack traces with new ones from the minidump
     for minidump_thread in state.threads():

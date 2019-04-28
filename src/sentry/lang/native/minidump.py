@@ -7,7 +7,9 @@ import logging
 from msgpack import unpack, Unpacker, UnpackException, ExtraData
 from symbolic import normalize_arch, ProcessState, id_from_breakpad
 
-from sentry.utils.safe import get_path
+from sentry.attachments import attachment_cache
+from sentry.coreapi import cache_key_for_event
+from sentry.utils.safe import get_path, setdefault_path
 
 minidumps_logger = logging.getLogger('sentry.minidumps')
 
@@ -36,8 +38,47 @@ MINIDUMP_IMAGE_TYPES = {
 
 
 def is_minidump_event(data):
+    if get_path(data, 'contexts', 'minidump') is not None:
+        return True
+
+    # TODO(ja): Legacy code path. Remove after switching to symbolicator
     exceptions = get_path(data, 'exception', 'values', filter=True)
     return get_path(exceptions, 0, 'mechanism', 'type') == 'minidump'
+
+
+def add_minidump_payload(data, name=None):
+    # Minidump events must be native platform.
+    data['platform'] = 'native'
+
+    # Assume that this minidump is the result of a crash and assign the fatal
+    # level. This can be overridden in processing, in case the minidump was
+    # requested manually.
+    data['level'] = 'fatal'
+
+    # Create a placeholder exception. This signals normalization that this is an
+    # error event and also serves as a placeholder if processing of the minidump
+    # fails.
+    exception = {
+        'type': 'Minidump',
+        'mechanism': {
+            'type': 'minidump',
+            'handled': False,
+            'synthetic': True,
+        }
+    }
+    data['exception'] = {'values': [exception]}
+
+    # The context is required to trigger minidump processing. Additional values
+    # can be set by the client, so merge with what's already there. The context
+    # cannot be empty.
+    setdefault_path(data, 'contexts', 'minidump', value={})
+    data['contexts']['minidump']['name'] = name or '<unknown>'
+
+
+def get_attached_minidump(data):
+    cache_key = cache_key_for_event(data)
+    attachments = attachment_cache.get(cache_key) or []
+    return next((a for a in attachments if a.type == MINIDUMP_ATTACHMENT_TYPE), None)
 
 
 def process_minidump(minidump, cfi=None):
@@ -51,7 +92,6 @@ def process_minidump(minidump, cfi=None):
 
 
 def merge_process_state_event(data, state, cfi=None):
-    data['platform'] = 'native'
     data['level'] = 'fatal' if state.crashed else 'info'
 
     if state.timestamp:

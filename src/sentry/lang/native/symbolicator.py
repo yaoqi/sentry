@@ -14,18 +14,16 @@ from six.moves.urllib.parse import urljoin
 from symbolic.utils import make_buffered_slice_reader
 
 from sentry import options
-from sentry.attachments import attachment_cache
 from sentry.auth.system import get_system_token
 from sentry.cache import default_cache
-from sentry.coreapi import cache_key_for_event
-from sentry.lang.native.cfi import reprocess_minidump_with_cfi
-from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
+from sentry.lang.native.cfi import process_minidump_with_cfi
+from sentry.lang.native.minidump import get_attached_minidump, is_minidump_event
 from sentry.lang.native.symbolizer import FATAL_ERRORS, USER_FIXABLE_ERRORS
+from sentry.lang.native.unreal import is_unreal_event
 from sentry.lang.native.utils import get_sdk_from_event, image_name, \
-    native_images_from_data, signal_from_data, should_use_symbolicator, \
-    is_native_platform
+    native_images_from_data, signal_from_data, is_native_platform
 from sentry.lang.native.unreal import parse_portable_callstack
-from sentry.models import EventError, Project
+from sentry.models import EventError, Project, UserReport
 from sentry.reprocessing import report_processing_issue
 from sentry.stacktraces import find_stacktraces_in_data
 from sentry.tasks.store import RetrySymbolication
@@ -635,9 +633,7 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
 
     @memoize
     def minidump(self):
-        cache_key = cache_key_for_event(self.data)
-        attachments = attachment_cache.get(cache_key) or []
-        return next((a for a in attachments if a.type == MINIDUMP_ATTACHMENT_TYPE), None)
+        return get_attached_minidump(self.data)
 
     def call_symbolicator(self, session):
         minidump = self.minidump
@@ -739,6 +735,27 @@ class UnrealSymbolicationTask(SymbolicationTask):
 
         self.changed = True
 
+    def _apply_user_feedback(self):
+        unreal_context = get_path(self.data, 'contexts', 'unreal')
+        if not unreal_context:
+            return
+
+        # Since a user report is created, duplicate information can be removed
+        user_desc = unreal_context.pop('user_description', None)
+        if not user_desc:
+            return
+
+        user_name = get_path(self.data, 'user', 'name', default='unknown')
+        user_email = get_path(self.data, 'user', 'email', default='')
+
+        UserReport.objects.create(
+            project=self.project,
+            event_id=self.data['event_id'],
+            name=user_name,
+            email=user_email,
+            comments=user_desc,
+        )
+
     @memoize
     def _state_cache_key(self):
         return u'symbolicator-unreal-state:{}:{}'.format(
@@ -755,17 +772,21 @@ class UnrealSymbolicationTask(SymbolicationTask):
         # None is both the beginning and the end state, but that's unavoidable
         # considering we don't want to persist the state in Redis forever.
         #
-        # None -> 'apply_portable_callstack' -> None
+        # None -> 'portable_callstack' -> 'user_feedback' -> None
         state = default_cache.get(self._state_cache_key)
         original_state = state
 
         try:
             if state is None:
                 self._apply_minidump()
-                state = 'apply_portable_callstack'
+                state = 'portable_callstack'
 
-            if state == 'apply_portable_callstack':
+            if state == 'portable_callstack':
                 self._apply_portable_callstack()
+                state = 'user_feedback'
+
+            if state == 'user_feedback':
+                self._apply_user_feedback()
                 state = None
         except RetrySymbolication as e:
             if self.changed:
@@ -777,16 +798,6 @@ class UnrealSymbolicationTask(SymbolicationTask):
                     default_cache.delete(self._state_cache_key)
                 else:
                     default_cache.set(self._state_cache_key, state)
-
-
-# TODO(ja): Move to minidump.py
-def is_minidump_event(data):
-    return get_path(data, 'contexts', 'minidump') is not None
-
-
-# TODO(ja): Move to unreal.py
-def is_unreal_event(data):
-    return get_path(data, 'contexts', 'unreal') is not None
 
 
 def get_internal_source(project):
@@ -904,6 +915,11 @@ def is_native_event(data):
     return False
 
 
+def should_use_symbolicator(project):
+    return options.get('symbolicator.enabled') and \
+        project.get_option('sentry:symbolicator-enabled')
+
+
 def symbolicate_native_event(data):
     project = Project.objects.get_from_cache(id=data['project'])
 
@@ -912,7 +928,7 @@ def symbolicate_native_event(data):
     # all project have been switched.
     # TODO(ja): Remove this
     if not should_use_symbolicator(project):
-        return reprocess_minidump_with_cfi(data) if is_minidump_event(data) else None
+        return process_minidump_with_cfi(data) if is_minidump_event(data) else None
 
     if is_unreal_event(data):
         task_cls = UnrealSymbolicationTask

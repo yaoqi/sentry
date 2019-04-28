@@ -26,7 +26,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import View as BaseView
 from functools import wraps
 from querystring_parser import parser
-from symbolic import ProcessMinidumpError, Unreal4Error
+from symbolic import Unreal4Error
 
 from sentry import features, quotas, tsdb, options
 from sentry.attachments import CachedAttachment
@@ -39,8 +39,7 @@ from sentry.interfaces import schemas
 from sentry.interfaces.base import get_interface
 from sentry.lang.native.unreal import process_unreal_crash, merge_apple_crash_report, \
     unreal_attachment_type, merge_unreal_context_event, merge_unreal_logs_event
-from sentry.lang.native.utils import should_use_symbolicator
-from sentry.lang.native.minidump import merge_process_state_event, process_minidump, \
+from sentry.lang.native.minidump import add_minidump_payload, \
     merge_attached_event, merge_attached_breadcrumbs, MINIDUMP_ATTACHMENT_TYPE
 from sentry.models import Project, OrganizationOption, Organization
 from sentry.signals import (
@@ -56,7 +55,7 @@ from sentry.utils.http import (
     is_same_domain,
 )
 from sentry.utils.pubsub import QueuedPublisherService, KafkaPublisher
-from sentry.utils.safe import safe_execute, set_path
+from sentry.utils.safe import safe_execute
 from sentry.web.helpers import render_to_response
 
 logger = logging.getLogger('sentry')
@@ -695,17 +694,24 @@ class MinidumpView(StoreView):
                 for chunk in minidump.chunks():
                     out.write(chunk)
 
+        # Generate a special event payload for this minidump event to trigger
+        # minidump processing. Uses the actual file name from the form rather
+        # than the form field "upload_file_minidump" as name.
+        add_minidump_payload(data, name=minidump.name)
+
         # Always store the minidump in attachments so we can access it during
         # processing, regardless of the event-attachments feature. This will
         # allow us to stack walk again with CFI once symbols are loaded.
         attachments = []
         minidump.seek(0)
         attachments.append(CachedAttachment.from_upload(minidump, type=MINIDUMP_ATTACHMENT_TYPE))
+
         has_event_attachments = features.has('organizations:event-attachments',
                                              project.organization, actor=request.user)
 
-        # Append all other files as generic attachments. We can skip this if the
-        # feature is disabled since they won't be saved.
+        # Scan through all other attachments and see if they need special
+        # handling. All unknown files are treated as generic attachments and are
+        # only persisted if attachments are enabled for the organization.
         for name, file in six.iteritems(request.FILES):
             if name == 'upload_file_minidump':
                 continue
@@ -721,34 +727,6 @@ class MinidumpView(StoreView):
             # Add any other file as attachment
             if has_event_attachments:
                 attachments.append(CachedAttachment.from_upload(file))
-
-        if not should_use_symbolicator(project):
-            # TODO(markus): Remove codepath after symbolicator is used everywhere
-            # TODO(markus): Move into enhancer?
-            try:
-                state = process_minidump(minidump)
-                merge_process_state_event(data, state)
-            except ProcessMinidumpError as e:
-                minidumps_logger.exception(e)
-                raise APIError(e.message.split('\n', 1)[0])
-        else:
-            # Required to detect minidumps later in event enhancers
-            data['platform'] = 'native'
-            set_path(data, 'contexts', 'minidump', value={})
-            # Presence of exception required for correct eventtype.
-            # XXX: We only set exception type to get through store normalization
-            data['exception'] = {
-                'values': [
-                    {
-                        'type': 'minidump',
-                        'mechanism': {
-                            'type': 'minidump',
-                            'handled': False,
-                            'synthetic': True,
-                        }
-                    }
-                ]
-            }
 
         event_id = self.process(
             request,
@@ -804,16 +782,10 @@ class UnrealView(StoreView):
         try:
             unreal = process_unreal_crash(request.body, request.GET.get(
                 'UserID'), request.GET.get('AppEnvironment'), event)
-            process_state = unreal.process_minidump()
-            if process_state:
-                merge_process_state_event(event, process_state)
-            else:
-                apple_crash_report = unreal.get_apple_crash_report()
-                if apple_crash_report:
-                    merge_apple_crash_report(apple_crash_report, event)
-                else:
-                    raise APIError("missing minidump in unreal crash report")
-        except (ProcessMinidumpError, Unreal4Error) as e:
+            apple_crash_report = unreal.get_apple_crash_report()
+            if apple_crash_report:
+                merge_apple_crash_report(apple_crash_report, event)
+        except Unreal4Error as e:
             minidumps_logger.exception(e)
             raise APIError(e.message.split('\n', 1)[0])
 
@@ -841,6 +813,10 @@ class UnrealView(StoreView):
             if file.name in ("__sentry-breadcrumb1", "__sentry-breadcrumb2"):
                 merge_attached_breadcrumbs(file.open_stream(), event)
                 continue
+
+            # Mark this event as minidump event for processing.
+            if file.type == "minidump":
+                add_minidump_payload(event, name=file.name)
 
             # Always store the minidump in attachments so we can access it during
             # processing, regardless of the event-attachments feature. This will

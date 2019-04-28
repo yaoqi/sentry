@@ -1,8 +1,6 @@
 from __future__ import absolute_import
 from symbolic import Unreal4Crash
 from sentry.lang.native.minidump import MINIDUMP_ATTACHMENT_TYPE
-from sentry.lang.native.utils import should_use_symbolicator
-from sentry.models import UserReport
 from sentry.utils.safe import set_path, setdefault_path, get_path
 
 import re
@@ -15,6 +13,10 @@ _portable_callstack_regexp = re.compile(r'''(?x)
     \s\+\s
     (?P<offset>[\da-fA-F]+)
 ''')
+
+
+def is_unreal_event(data):
+    return get_path(data, 'contexts', 'unreal') is not None
 
 
 def process_unreal_crash(payload, user_id, environment, event):
@@ -125,10 +127,17 @@ def parse_portable_callstack(portable_callstack, images):
     return frames
 
 
-def merge_unreal_context_event(unreal_context, event, project):
+def merge_unreal_context_event(unreal, event, project):
     """Merges the context from an Unreal Engine 4 crash
-    with the given event."""
-    runtime_prop = unreal_context.get('runtime_properties')
+    with the given event. """
+
+    # Create an entry in contexts to signal that this event is an unreal event.
+    # This is used in processing to attach portable callstacks (if available)
+    # and generate a user feedback report.
+    setdefault_path(event, 'contexts', 'unreal', value={})
+    unreal_context = event['contexts']['unreal']
+
+    runtime_prop = unreal.get('runtime_properties')
     if runtime_prop is None:
         return
 
@@ -153,41 +162,23 @@ def merge_unreal_context_event(unreal_context, event, project):
     if gpu_brand is not None:
         set_path(event, 'contexts', 'gpu', 'name', value=gpu_brand)
 
+    # Put the user description into the unreal context. The processing task
+    # picks this up and generate a user feedback report.
     user_desc = runtime_prop.pop('user_description', None)
     if user_desc is not None:
-        feedback_user = 'unknown'
-        if username is not None:
-            feedback_user = username
+        unreal_context['user_description'] = user_desc
 
-        UserReport.objects.create(
-            project=project,
-            event_id=event['event_id'],
-            name=feedback_user,
-            email='',
-            comments=user_desc,
-        )
+    # Same for portable callstack. This is merged in after the minidump has been
+    # processed.
+    portable_call_stack = runtime_prop.pop('portable_call_stack', None)
+    if portable_call_stack is not None:
+        unreal_context['portable_call_stack'] = portable_call_stack
 
-    # drop modules. minidump processing adds 'images loaded'
+    # Drop modules. minidump processing adds 'images loaded'
     runtime_prop.pop('modules', None)
 
-    # TODO(markus): Remove after all projects run through symbolicator
-    if not should_use_symbolicator(project):
-        merge_portable_callstack(event, runtime_prop)
-    else:
-        # We will need this in symbolicator
-        set_path(
-            event,
-            'contexts',
-            'unreal',
-            value={
-                'portable_call_stack': runtime_prop.pop('portable_call_stack', None)
-            }
-        )
-
-    # add everything else as extra.
-    # TODO(markus): Move to unreal context
-    extra = event.setdefault('extra', {})
-    extra.update(**runtime_prop)
+    # Add everything else to the unreal context.
+    unreal_context.update(**runtime_prop)
 
     # add sdk info
     event['sdk'] = {

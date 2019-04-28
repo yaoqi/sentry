@@ -7,7 +7,6 @@ import logging
 from collections import namedtuple
 from symbolic import parse_addr
 
-from sentry import options
 from sentry.interfaces.contexts import DeviceContextType
 from sentry.utils.safe import get_path
 
@@ -120,8 +119,3 @@ def is_native_image(image):
 def native_images_from_data(data):
     return get_path(data, 'debug_meta', 'images', default=(),
                     filter=is_native_image)
-
-
-def should_use_symbolicator(project):
-    return options.get('symbolicator.enabled') and \
-        project.get_option('sentry:symbolicator-enabled')
