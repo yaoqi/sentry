@@ -579,7 +579,7 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
             {
                 'registers': sinfo.stacktrace.get('registers') or {},
                 'frames': [
-                    f for f in sinfo.stacktrace.get('frames') or ()
+                    f for f in reversed(sinfo.stacktrace.get('frames') or ())
                     if self._handles_frame(f)
                 ]
             }
@@ -606,23 +606,26 @@ class PayloadSymbolicationTask(NativeSymbolicationTask):
             new_frames = []
             native_frames_idx = 0
 
-            for raw_frame in sinfo.stacktrace['frames']:
-                if self._handles_frame(raw_frame):
-                    for complete_frame in complete_frames_by_idx.get(native_frames_idx) or ():
-                        # TODO(markus): write package back into raw_frame
-                        merged_frame = dict(raw_frame)
-                        merged_frame.update(self.map_frame(complete_frame))
-                        new_frames.append(merged_frame)
-                    native_frames_idx += 1
-                    self.changed = True
-                else:
+            for raw_frame in reversed(sinfo.stacktrace['frames']):
+                if not self._handles_frame(raw_frame):
                     new_frames.append(raw_frame)
+                    continue
+
+                for complete_frame in complete_frames_by_idx.get(native_frames_idx) or ():
+                    # TODO(markus): write package back into raw_frame
+                    merged_frame = dict(raw_frame)
+                    merged_frame.update(self.map_frame(complete_frame))
+                    new_frames.append(merged_frame)
+
+                native_frames_idx += 1
+                self.changed = True
 
             if sinfo.container is not None and native_frames_idx > 0:
                 sinfo.container['raw_stacktrace'] = {
                     'frames': list(sinfo.stacktrace['frames'])
                 }
 
+            new_frames.reverse()
             sinfo.stacktrace['frames'] = new_frames
 
 
@@ -657,7 +660,7 @@ class MinidumpSymbolicationTask(NativeSymbolicationTask):
                 'id': thread.get('thread_id'),
                 'crashed': thread.get('is_requesting'),
                 'stacktrace': {
-                    'frames': [self.map_frame(f) for f in thread['frames']],
+                    'frames': [self.map_frame(f) for f in reversed(thread['frames'])],
                     'registers': thread.get('registers'),
                 }
             }
