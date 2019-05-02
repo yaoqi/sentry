@@ -961,6 +961,97 @@ class GetSnubaQueryArgsTest(TestCase):
         }
 
 
+class GetSnubaQueryWithBooleanArgsTest(TestCase):
+    def test_simple(self):
+        assert get_snuba_query_args('user.email:foo@example.com AND user.email:bar@example.com') == {
+            'conditions': [
+                ['email', '=', 'foo@example.com'],
+                ['email', '=', 'bar@example.com'],
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+
+        assert get_snuba_query_args('user.email:foo@example.com OR user.email:bar@example.com') == {
+            'conditions': [
+                [
+                    ['email', '=', 'foo@example.com'],
+                    ['email', '=', 'bar@example.com'],
+                ]
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+
+    def test_longer_boolean_terms(self):
+        assert get_snuba_query_args(
+            'user.email:foo@example.com AND user.email:bar@example.com AND user.email:foobar@example.com'
+        ) == {
+            'conditions': [
+                ['email', '=', 'foo@example.com'],
+                ['email', '=', 'bar@example.com'],
+                ['email', '=', 'foobar@example.com'],
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+        assert get_snuba_query_args(
+            'user.email:foo@example.com OR user.email:bar@example.com OR user.email:foobar@example.com'
+        ) == {
+            'conditions': [
+                [
+                    ['email', '=', 'foo@example.com'],
+                    ['email', '=', 'bar@example.com'],
+                    ['email', '=', 'foobar@example.com'],
+                ]
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+
+        SearchBoolean(
+            left_term=SearchFilter(
+                key=SearchKey(
+                    name='user.email'), operator='=', value=SearchValue(
+                    raw_value='foo@example.com')),
+            operator='OR',
+            right_term=SearchBoolean(
+                left_term=SearchFilter(
+                    key=SearchKey(
+                        name='user.email'), operator='=', value=SearchValue(
+                        raw_value='bar@example.com')),
+                operator='AND',
+                right_term=SearchFilter(key=SearchKey(name='user.email'), operator='=', value=SearchValue(raw_value='foobar@example.com'))))
+        sq = get_snuba_query_args(
+            'user.email:foo@example.com OR user.email:bar@example.com AND user.email:foobar@example.com'
+        )
+        assert sq == {
+            'conditions': [
+                [
+                    ['email', '=', 'foo@example.com'],
+                ],
+                ['email', '=', 'bar@example.com'],
+                ['email', '=', 'foobar@example.com'],
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+        sq = get_snuba_query_args(
+            'user.email:foo@example.com AND user.email:bar@example.com OR user.email:foobar@example.com'
+        )
+        assert sq == {
+            'conditions': [
+                [
+                    ['email', '=', 'foo@example.com'],
+                    ['email', '=', 'bar@example.com'],
+                ],
+                ['email', '=', 'foobar@example.com'],
+            ],
+            'filter_keys': {},
+            'has_boolean_terms': True,
+        }
+
+
 class ConvertEndpointParamsTests(TestCase):
     def test_simple(self):
         assert convert_endpoint_params({

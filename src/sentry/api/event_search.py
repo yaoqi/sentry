@@ -474,6 +474,45 @@ def convert_endpoint_params(params):
     ]
 
 
+def convert_search_boolean_to_snuba_query(search_boolean):
+    # TODO(lb): probably handle groups here.
+    def handle_term(term):
+        if isinstance(term, SearchBoolean):
+            # recurse
+            condition, last_operator = _convert_helper(term)
+        elif isinstance(term, SearchFilter):
+            condition, last_operator = [convert_search_filter_to_snuba_query(term)], None
+        return condition, last_operator
+
+    def _convert_helper(search_boolean):
+        left_term, right_term = search_boolean.left_term, search_boolean.right_term
+        conditions = []  # should be built as part of the recursion
+
+        left_conditions, last_operator = handle_term(left_term)
+        right_conditions, last_operator = handle_term(right_term)
+
+        if search_boolean.operator == SearchBoolean.BOOLEAN_AND:
+            conditions += left_conditions + right_conditions
+
+        elif search_boolean.operator == SearchBoolean.BOOLEAN_OR:
+            if last_operator == SearchBoolean.BOOLEAN_OR:
+                conditions += [left_conditions + right_conditions[0]]
+            elif last_operator == SearchBoolean.BOOLEAN_AND:
+                conditions += [left_conditions, right_conditions]
+            elif last_operator is None:
+                conditions += [left_conditions + right_conditions]
+
+        else:
+            raise InvalidSearchQuery(
+                'Unrecognized boolean operator %s.' %
+                (search_boolean.operator))
+
+        return conditions, search_boolean.operator
+
+    conditions, _ = _convert_helper(search_boolean)
+    return conditions
+
+
 def convert_search_filter_to_snuba_query(search_filter):
     snuba_name = search_filter.key.snuba_name
     value = search_filter.value.value
@@ -553,6 +592,17 @@ def convert_search_filter_to_snuba_query(search_filter):
 
 
 def get_snuba_query_args(query=None, params=None):
+    def convert_filter(_filter, kwargs):
+        snuba_name = _filter.key.snuba_name
+
+        if snuba_name in ('start', 'end'):
+            kwargs[snuba_name] = _filter.value.value
+        elif snuba_name in ('project_id', 'issue'):
+            kwargs['filter_keys'][snuba_name] = _filter.value.value
+        else:
+            converted_filter = convert_search_filter_to_snuba_query(_filter)
+            kwargs['conditions'].append(converted_filter)
+
     # NOTE: this function assumes project permissions check already happened
     parsed_filters = []
     if query is not None:
@@ -579,15 +629,10 @@ def get_snuba_query_args(query=None, params=None):
     for _filter in parsed_filters:
         # TODO(lb): remove when boolean terms fully functional
         if isinstance(_filter, SearchBoolean):
-            continue
-
-        snuba_name = _filter.key.snuba_name
-
-        if snuba_name in ('start', 'end'):
-            kwargs[snuba_name] = _filter.value.value
-        elif snuba_name in ('project_id', 'issue'):
-            kwargs['filter_keys'][snuba_name] = _filter.value.value
+            # TODO(lb): this is wrong. see convert_filter, we're going to need to add
+            # that to this method
+            kwargs['conditions'] += convert_search_boolean_to_snuba_query(_filter)
         else:
-            converted_filter = convert_search_filter_to_snuba_query(_filter)
-            kwargs['conditions'].append(converted_filter)
+            convert_filter(_filter, kwargs)
+
     return kwargs
