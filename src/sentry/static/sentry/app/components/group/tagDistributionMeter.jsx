@@ -89,7 +89,6 @@ const TagDistributionMeter = createReactClass({
    * |  web-1 |web-2|     other      |
    * `--------'-----'----------------'
    */
-
   renderSegments() {
     const {organization, projectId, group, totalValues, topValues, tag} = this.props;
     const hasSentry10 = new Set(organization.features).has('sentry10');
