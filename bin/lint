@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir, 'src'))
 
 
-def run(files, js, python, format, parseable):
+def run(files, js, python, format, parseable, relax):
     from sentry.lint import engine
 
     if js and not python:
@@ -22,7 +22,7 @@ def run(files, js, python, format, parseable):
     if not files:
         files = None
 
-    return engine.run(files, js=js, py=python, format=format, parseable=parseable)
+    return engine.run(files, js=js, py=python, format=format, parseable=parseable, relax=relax)
 
 
 if __name__ == '__main__':
