@@ -41,8 +41,8 @@ def get_prettier_path():
     return get_node_modules_bin('prettier')
 
 
-def get_strict_eslint_config():
-    return os.path.join(get_node_modules(), 'eslint-config-sentry-app-strict', 'index.js')
+def get_relax_eslint_config():
+    return os.path.join(get_project_root(), '.eslintrc.relax.js')
 
 
 def get_files(path):
@@ -128,9 +128,9 @@ def js_lint(file_list=None, parseable=False, format=False, relax=False):
         if parseable:
             cmd.append('--format=checkstyle')
 
-        if not relax:
+        if relax:
             cmd.append('--config')
-            cmd.append(get_strict_eslint_config())
+            cmd.append(get_relax_eslint_config())
 
         status = Popen(cmd + js_file_list).wait()
         has_errors = status != 0
@@ -236,9 +236,9 @@ def js_lint_format(file_list=None, relax=False):
     js_file_list = [x for x in js_file_list if '/javascript/example-project/' not in x]
     cmd = [eslint_path, '--fix', ]
 
-    if not relax:
+    if relax:
         cmd.append('--config')
-        cmd.append(get_strict_eslint_config())
+        cmd.append(get_relax_eslint_config())
 
     has_package_json_errors = False if 'package.json' not in file_list else run_formatter(
         [
@@ -384,7 +384,12 @@ def run(file_list=None, format=True, lint=True, js=True, py=True,
 
                 if not format:
                     # these tasks are called when we need to format, so skip it here
-                    results.append(js_lint(file_list, parseable=parseable, format=format, relax=relax))
+                    results.append(
+                        js_lint(
+                            file_list,
+                            parseable=parseable,
+                            format=format,
+                            relax=relax))
 
         if test:
             if js:
