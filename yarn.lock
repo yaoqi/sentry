@@ -5077,7 +5077,14 @@ eslint-config-prettier@3.3.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-sentry-app@1.13.0:
+eslint-config-sentry-app-strict@1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-sentry-app-strict/-/eslint-config-sentry-app-strict-1.13.0.tgz#d284d1cd1f3c5d2b7b2a38460e20cd9085126bb9"
+  integrity sha512-xPpoStnsvo4miwvSRDjTARSODA7Qua6aXm65+Jo7Ox0KwmqVrz3POigZv8jFF40xNVhVDm10byYxjLvno4asUw==
+  dependencies:
+    eslint-config-sentry-app "^1.13.0"
+
+eslint-config-sentry-app@1.13.0, eslint-config-sentry-app@^1.13.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/eslint-config-sentry-app/-/eslint-config-sentry-app-1.13.0.tgz#39b9b3d029008221c8c2ff7534af78dbb3dc4477"
   integrity sha512-tJ23n40+q2co49iDDHq+lYlkTqYDnYDbNpomxdHFZoWnfEl1f3/t+7rwtCvFaK23tRlBJk3GFMmtBzfVog4f5A==
