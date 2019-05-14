@@ -1444,7 +1444,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Create your first Sentry project
-
+                                   
                                 </p>
                               </div>
                             </div>
@@ -1491,7 +1491,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Install Sentry's client
-
+                                   
                                 </p>
                               </div>
                             </div>
@@ -1537,7 +1537,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Bring your team aboard
-
+                                   
                                 </p>
                               </div>
                               <a
@@ -1591,7 +1591,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Add Sentry to a second platform
-
+                                   
                                 </p>
                               </div>
                               <a
@@ -1646,7 +1646,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Know who is being affected by crashes
-
+                                   
                                 </p>
                               </div>
                               <a
@@ -1701,7 +1701,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   See what releases are generating errors
-
+                                   
                                 </p>
                               </div>
                               <a
@@ -1756,7 +1756,7 @@ exports[`Sidebar can have onboarding feature 1`] = `
                               <div>
                                 <p>
                                   Deminify JavaScript stack traces
-
+                                   
                                 </p>
                               </div>
                               <a
