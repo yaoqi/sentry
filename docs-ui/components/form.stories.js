@@ -1,8 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {storiesOf} from '@storybook/react';
-import {withInfo} from '@storybook/addon-info';
-import {action} from '@storybook/addon-actions';
+import React from 'react';
 
 import {
   Form as LegacyForm,
@@ -10,16 +7,20 @@ import {
   PasswordField,
   BooleanField,
 } from 'app/components/forms';
+import {Panel} from 'app/components/panels';
+import {action} from '@storybook/addon-actions';
+import {storiesOf} from '@storybook/react';
+import {withInfo} from '@storybook/addon-info';
+import DatePickerField from 'app/views/settings/components/forms/datePickerField';
+import Form from 'app/views/settings/components/forms/form';
+import FormField from 'app/views/settings/components/forms/formField';
 import NewBooleanField from 'app/views/settings/components/forms/booleanField';
 import RadioField from 'app/views/settings/components/forms/radioField';
 import RadioGroup from 'app/views/settings/components/forms/controls/radioGroup';
 import RangeSlider from 'app/views/settings/components/forms/controls/rangeSlider';
-import Form from 'app/views/settings/components/forms/form';
-import FormField from 'app/views/settings/components/forms/formField';
-import {Panel} from 'app/components/panels';
-import TextField from 'app/views/settings/components/forms/textField';
 import SelectField from 'app/views/settings/components/forms/selectField';
 import Switch from 'app/components/switch';
+import TextField from 'app/views/settings/components/forms/textField';
 
 class UndoButton extends React.Component {
   handleClick(e) {
@@ -154,6 +155,17 @@ storiesOf('Forms|Fields', module)
     })(() => (
       <Form>
         <NewBooleanField name="field" label="New Boolean Field" />
+      </Form>
+    ))
+  )
+  .add(
+    'DatePickerField',
+    withInfo({
+      text: 'Date picker field with a popup calendar picker (for a single date)',
+      propTablesExclude: [Form],
+    })(() => (
+      <Form>
+        <DatePickerField name="field" label="Date Picker Field" />
       </Form>
     ))
   )
